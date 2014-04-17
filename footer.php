@@ -18,6 +18,12 @@
 					?>
 				</div>
 				<?php  wp_nav_menu( array( 'theme_location' => 'footer_menu', 'depth' => -1, 'walker' => new cwp_custom_menu_walker, 'items_wrap'     => '<nav class="fnav">%3$s</nav>' ) ); ?>
+				<?php
+				echo '<div class="clearfix"></div>
+					<div class="copyright">
+					<a href="http://themeisle.com/themes/music-band/?utm_source=themefooter&utm_medium=logo&utm_campaign=themefooter" target="_blank">Music band Pro</a> powered by <a href="http://wordpress.org/" target="_blank">WordPress</a>
+					</div>';
+				?>	
 				<div class="clearfix"></div>
 			</div><!--/footercenter-->
 		</footer>
