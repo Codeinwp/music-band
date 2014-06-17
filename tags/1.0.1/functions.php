@@ -374,7 +374,7 @@ function cwp_album_metaboxes() {
 	</p>
 	<p>
 	<label for="cpi_song8_option"><?php _e('Song no8 title:','cwp'); ?></label><br />
-	<input type="text" name="cpi_song8_option" id="cpi_song8_option" value="<?php echo get_post_meta($post->ID, 'cpi_song8_option', true); ?>">
+	<input type="text" name="cpi_song8_option" id="cpi_song8_option" value="<?php echo get_post_meta($post->ID, 'cpi_song88_option', true); ?>">
 	</p>
 	<p>
 	<label for="cpi_time8_option"><?php _e('Song no8 duration:','cwp'); ?></label><br />
@@ -765,12 +765,6 @@ function cwp_custom_add_save($postID){
 	}
 	if (isset($_POST['cpi_career_option'])) {
 		cwp_update_custom_meta($postID, $_POST['cpi_career_option'], 'cpi_career_option');
-	}
-	if (isset($_POST['cpi_buyalbum_option'])) {
-		cwp_update_custom_meta($postID, $_POST['cpi_buyalbum_option'], 'cpi_buyalbum_option');
-	}
-	if (isset($_POST['cpi_itunes_option'])) {
-		cwp_update_custom_meta($postID, $_POST['cpi_itunes_option'], 'cpi_itunes_option');
 	}
 }
  

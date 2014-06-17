@@ -21,7 +21,7 @@
 				<?php
 				echo '<div class="clearfix"></div>
 					<div class="copyright">
-					<a href="http://themeisle.com/themes/music-band/?utm_source=music-band&utm_medium=link&utm_campaign=themefooter" target="_blank">Music band Pro</a> powered by <a href="http://wordpress.org/" target="_blank">WordPress</a>
+					<a href="http://themeisle.com/themes/music-band/?utm_source=themefooter&utm_medium=logo&utm_campaign=themefooter" target="_blank">Music band Pro</a> powered by <a href="http://wordpress.org/" target="_blank">WordPress</a>
 					</div>';
 				?>	
 				<div class="clearfix"></div>
