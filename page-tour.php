@@ -48,7 +48,7 @@ get_header();
 
 		<div class="pagetitle">
 			<div class="pagetitlecenter">
-				<h3><?php _e('upcoming events','cwp'); ?></h3>
+				<h3><?php _e('upcoming events','music-band-pro'); ?></h3>
 			</div><!--/pagetitlecenter-->
 		</div><!--/pagetitle-->
 		
@@ -89,7 +89,7 @@ get_header();
 									<div class="clearfix"></div>
 									<?php
 										if(isset($tickets[0]) && $tickets[0] != '')
-											echo '<div class="getticket"><a href="'.$tickets[0].'">'.__('Get tickets','cwp').'</a></div>';
+											echo '<div class="getticket"><a href="'.$tickets[0].'">'.__('Get tickets','music-band-pro').'</a></div>';
 									?>
 								</div>
 								
