@@ -38,7 +38,7 @@
 					else {
 				?>
 						<div id="no-logo">
-							<a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php _e('Music Band','cwp'); ?></a>
+							<a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php _e('Music Band','music-band-pro'); ?></a>
 						</div><!--/logo-->
 				<?php	
 					}

@@ -10,7 +10,9 @@ if ( ! isset( $content_width ) )
 	$content_width = 640; /* pixels */
 	
 function cwp_setup() {
-	load_theme_textdomain( 'cwp', get_template_directory() . '/languages' );
+
+	load_theme_textdomain( 'music-band-pro', FALSE, basename( dirname( __FILE__ ) ) . '/languages/' );
+	
 	/*
 	 * Add default posts and comments RSS feed links to head
 	 */
@@ -21,8 +23,8 @@ function cwp_setup() {
 	add_theme_support( 'post-thumbnails' );
 	
 	register_nav_menus( array(
-		'primary' => __( 'Primary Menu', 'cwp' ),
-		'footer_menu' => __('Footer Menu', 'cwp')
+		'primary' => __( 'Primary Menu', 'music-band-pro' ),
+		'footer_menu' => __('Footer Menu', 'music-band-pro')
 		) 
 	);
 	/*
@@ -43,7 +45,7 @@ add_action( 'after_setup_theme', 'cwp_setup' );
  */
 function cwp_widgets_init() {
 	register_sidebar( array(
-		'name'          => __( 'Sidebar', 'cwp' ),
+		'name'          => __( 'Sidebar', 'music-band-pro' ),
 		'id'            => 'sidebar-1',
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</div>',
@@ -123,7 +125,7 @@ add_filter( 'the_title', 'cwp_default_title' );
 function cwp_default_title( $title ) {
 
 	if($title == '')
-		$title = "Default title";
+		$title = __("Default title",'music-band-pro');
 
 	return $title;
 }
@@ -133,8 +135,8 @@ function cwp_create_post_type() {
 	register_post_type( 'album',
 							array(
 								'labels' => array(
-									'name' => __( 'Albums','cwp' ),
-									'singular_name' => __( 'Album','cwp' )
+									'name' => __( 'Albums','music-band-pro' ),
+									'singular_name' => __( 'Album','music-band-pro' )
 								),
 							'public' => true,
 							'has_archive' => true,
@@ -148,8 +150,8 @@ function cwp_create_post_type() {
 	register_post_type( 'event',
 							array(
 								'labels' => array(
-									'name' => __( 'Events','cwp' ),
-									'singular_name' => __( 'Event','cwp' )
+									'name' => __( 'Events','music-band-pro' ),
+									'singular_name' => __( 'Event','music-band-pro' )
 								),
 							'public' => true,
 							'has_archive' => true,
@@ -163,8 +165,8 @@ function cwp_create_post_type() {
 	register_post_type( 'media',
 							array(
 								'labels' => array(
-									'name' => __( 'Media','cwp' ),
-									'singular_name' => __( 'Media','cwp' )
+									'name' => __( 'Media','music-band-pro' ),
+									'singular_name' => __( 'Media','music-band-pro' )
 								),
 							'public' => true,
 							'has_archive' => true,
@@ -178,8 +180,8 @@ function cwp_create_post_type() {
 	register_post_type( 'band_member',
 							array(
 								'labels' => array(
-									'name' => __( 'Band members','cwp' ),
-									'singular_name' => __( 'Band member','cwp' )
+									'name' => __( 'Band members','music-band-pro' ),
+									'singular_name' => __( 'Band member','music-band-pro' )
 								),
 							'public' => true,
 							'has_archive' => true,
@@ -225,7 +227,7 @@ function cwp_setPostViews($postID) {
 add_filter('manage_posts_columns', 'cwp_posts_column_views');
 add_action('manage_posts_custom_column', 'cwp_posts_custom_column_views',5,2);
 function cwp_posts_column_views($defaults){
-    $defaults['post_views'] = __('Views','cwp');
+    $defaults['post_views'] = __('Views','music-band-pro');
     return $defaults;
 }
 function cwp_posts_custom_column_views($column_name, $id){
@@ -249,7 +251,7 @@ function cwp_career_metaboxes() {
 	<fieldset id="mycustom-div">
 	<div>
 	<p>
-	<label for="cpi_career_option"><?php _e('Band member career:','cwp'); ?></label><br />
+	<label for="cpi_career_option"><?php _e('Band member career:','music-band-pro'); ?></label><br />
 	<input type="text" name="cpi_career_option" id="cpi_career_option" value="<?php echo get_post_meta($post->ID, 'cpi_career_option', true); ?>">
 	</p>
 	</div>
@@ -263,7 +265,7 @@ function cwp_caption_image() {
 	<fieldset id="mycustom-div">
 	<div>
 	<p>
-	<label for="cpi_caption_option"><?php _e('Caption image text:','cwp'); ?></label><br />
+	<label for="cpi_caption_option"><?php _e('Caption image text:','music-band-pro'); ?></label><br />
 	<input type="text" name="cpi_caption_option" id="cpi_caption_option" value="<?php echo get_post_meta($post->ID, 'cpi_caption_option', true); ?>">
 	</p>
 	</div>
@@ -277,255 +279,255 @@ function cwp_album_metaboxes() {
 	<fieldset id="mycustom-div">
 	<div>
 	<p>
-	<label for="cpi_price_option"><?php _e('Price:','cwp'); ?></label><br />
+	<label for="cpi_price_option"><?php _e('Price:','music-band-pro'); ?></label><br />
 	<input type="text" name="cpi_price_option" id="cpi_price_option" value="<?php echo get_post_meta($post->ID, 'cpi_price_option', true); ?>">
 	</p>
 	<p>
-	<label for="cpi_buyalbum_option"><?php _e('Buy album link(for sidebar):','cwp'); ?></label><br />
+	<label for="cpi_buyalbum_option"><?php _e('Buy album link(for sidebar):','music-band-pro'); ?></label><br />
 	<input type="text" name="cpi_buyalbum_option" id="cpi_buyalbum_option" value="<?php echo get_post_meta($post->ID, 'cpi_buyalbum_option', true); ?>">
 	</p>
 	<p>
-	<label for="cpi_itunes_option"><?php _e('Get on itunes(for sidebar):','cwp'); ?></label><br />
+	<label for="cpi_itunes_option"><?php _e('Get on itunes(for sidebar):','music-band-pro'); ?></label><br />
 	<input type="text" name="cpi_itunes_option" id="cpi_itunes_option" value="<?php echo get_post_meta($post->ID, 'cpi_itunes_option', true); ?>">
 	</p>
 	<p>
-	<label for="cpi_song1_option"><?php _e('Song no1 title:','cwp'); ?></label><br />
+	<label for="cpi_song1_option"><?php _e('Song no1 title:','music-band-pro'); ?></label><br />
 	<input type="text" name="cpi_song1_option" id="cpi_song1_option" value="<?php echo get_post_meta($post->ID, 'cpi_song1_option', true); ?>">
 	</p>
 	<p>
-	<label for="cpi_time1_option"><?php _e('Song no1 duration:','cwp'); ?></label><br />
+	<label for="cpi_time1_option"><?php _e('Song no1 duration:','music-band-pro'); ?></label><br />
 	<input type="text" name="cpi_time1_option" id="cpi_time1_option" value="<?php echo get_post_meta($post->ID, 'cpi_time1_option', true); ?>">
 	</p>
 	<p>
-	<label for="cpi_link1_option"><?php _e('Song no1 lyrics link:','cwp'); ?></label><br />
+	<label for="cpi_link1_option"><?php _e('Song no1 lyrics link:','music-band-pro'); ?></label><br />
 	<input type="text" name="cpi_link1_option" id="cpi_link1_option" value="<?php echo get_post_meta($post->ID, 'cpi_link1_option', true); ?>">
 	</p>
 	<p>
-	<label for="cpi_song2_option"><?php _e('Song no2 title','cwp'); ?></label><br />
+	<label for="cpi_song2_option"><?php _e('Song no2 title','music-band-pro'); ?></label><br />
 	<input type="text" name="cpi_song2_option" id="cpi_song2_option" value="<?php echo get_post_meta($post->ID, 'cpi_song2_option', true); ?>">
 	</p>
 	<p>
-	<label for="cpi_time2_option"><?php _e('Song no2 duration:','cwp'); ?></label><br />
+	<label for="cpi_time2_option"><?php _e('Song no2 duration:','music-band-pro'); ?></label><br />
 	<input type="text" name="cpi_time2_option" id="cpi_time2_option" value="<?php echo get_post_meta($post->ID, 'cpi_time2_option', true); ?>">
 	</p>
 	<p>
-	<label for="cpi_link2_option"><?php _e('Song no2 lyrics link:','cwp'); ?></label><br />
+	<label for="cpi_link2_option"><?php _e('Song no2 lyrics link:','music-band-pro'); ?></label><br />
 	<input type="text" name="cpi_link2_option" id="cpi_link2_option" value="<?php echo get_post_meta($post->ID, 'cpi_link2_option', true); ?>">
 	</p>
 	<p>
-	<label for="cpi_song3_option"><?php _e('Song no3 title:','cwp'); ?></label><br />
+	<label for="cpi_song3_option"><?php _e('Song no3 title:','music-band-pro'); ?></label><br />
 	<input type="text" name="cpi_song3_option" id="cpi_song3_option" value="<?php echo get_post_meta($post->ID, 'cpi_song3_option', true); ?>">
 	</p>
 	<p>
-	<label for="cpi_time3_option"><?php _e('Song no3 duration:','cwp'); ?></label><br />
+	<label for="cpi_time3_option"><?php _e('Song no3 duration:','music-band-pro'); ?></label><br />
 	<input type="text" name="cpi_time3_option" id="cpi_time3_option" value="<?php echo get_post_meta($post->ID, 'cpi_time3_option', true); ?>">
 	</p>
 	<p>
-	<label for="cpi_link3_option"><?php _e('Song no3 lyrics link:','cwp'); ?></label><br />
+	<label for="cpi_link3_option"><?php _e('Song no3 lyrics link:','music-band-pro'); ?></label><br />
 	<input type="text" name="cpi_link3_option" id="cpi_link3_option" value="<?php echo get_post_meta($post->ID, 'cpi_link3_option', true); ?>">
 	</p>
 	<p>
-	<label for="cpi_song4_option"><?php _e('Song no4 title:','cwp'); ?></label><br />
+	<label for="cpi_song4_option"><?php _e('Song no4 title:','music-band-pro'); ?></label><br />
 	<input type="text" name="cpi_song4_option" id="cpi_song4_option" value="<?php echo get_post_meta($post->ID, 'cpi_song4_option', true); ?>">
 	</p>
 	<p>
-	<label for="cpi_time4_option"><?php _e('Song no4 duration:','cwp'); ?></label><br />
+	<label for="cpi_time4_option"><?php _e('Song no4 duration:','music-band-pro'); ?></label><br />
 	<input type="text" name="cpi_time4_option" id="cpi_time4_option" value="<?php echo get_post_meta($post->ID, 'cpi_time4_option', true); ?>">
 	</p>
 	<p>
-	<label for="cpi_link4_option"><?php _e('Song no4 lyrics link:','cwp'); ?></label><br />
+	<label for="cpi_link4_option"><?php _e('Song no4 lyrics link:','music-band-pro'); ?></label><br />
 	<input type="text" name="cpi_link4_option" id="cpi_link4_option" value="<?php echo get_post_meta($post->ID, 'cpi_link4_option', true); ?>">
 	</p>
 	<p>
-	<label for="cpi_song5_option"><?php _e('Song no5 title:','cwp'); ?></label><br />
+	<label for="cpi_song5_option"><?php _e('Song no5 title:','music-band-pro'); ?></label><br />
 	<input type="text" name="cpi_song5_option" id="cpi_song5_option" value="<?php echo get_post_meta($post->ID, 'cpi_song5_option', true); ?>">
 	</p>
 	<p>
-	<label for="cpi_time5_option"><?php _e('Song no5 duration:','cwp'); ?></label><br />
+	<label for="cpi_time5_option"><?php _e('Song no5 duration:','music-band-pro'); ?></label><br />
 	<input type="text" name="cpi_time5_option" id="cpi_time5_option" value="<?php echo get_post_meta($post->ID, 'cpi_time5_option', true); ?>">
 	</p>
 	<p>
-	<label for="cpi_link5_option"><?php _e('Song no5 lyrics link:','cwp'); ?></label><br />
+	<label for="cpi_link5_option"><?php _e('Song no5 lyrics link:','music-band-pro'); ?></label><br />
 	<input type="text" name="cpi_link5_option" id="cpi_link5_option" value="<?php echo get_post_meta($post->ID, 'cpi_link5_option', true); ?>">
 	</p>
 	<p>
-	<label for="cpi_song6_option"><?php _e('Song no6 title:','cwp'); ?></label><br />
+	<label for="cpi_song6_option"><?php _e('Song no6 title:','music-band-pro'); ?></label><br />
 	<input type="text" name="cpi_song6_option" id="cpi_song6_option" value="<?php echo get_post_meta($post->ID, 'cpi_song6_option', true); ?>">
 	</p>
 	<p>
-	<label for="cpi_time6_option"><?php _e('Song no6 duration:','cwp'); ?></label><br />
+	<label for="cpi_time6_option"><?php _e('Song no6 duration:','music-band-pro'); ?></label><br />
 	<input type="text" name="cpi_time6_option" id="cpi_time6_option" value="<?php echo get_post_meta($post->ID, 'cpi_time6_option', true); ?>">
 	</p>
 	<p>
-	<label for="cpi_link6_option"><?php _e('Song no6 lyrics link:','cwp'); ?></label><br />
+	<label for="cpi_link6_option"><?php _e('Song no6 lyrics link:','music-band-pro'); ?></label><br />
 	<input type="text" name="cpi_link6_option" id="cpi_link6_option" value="<?php echo get_post_meta($post->ID, 'cpi_link6_option', true); ?>">
 	</p>
 	<p>
-	<label for="cpi_song7_option"><?php _e('Song no7 title:','cwp'); ?></label><br />
+	<label for="cpi_song7_option"><?php _e('Song no7 title:','music-band-pro'); ?></label><br />
 	<input type="text" name="cpi_song7_option" id="cpi_song7_option" value="<?php echo get_post_meta($post->ID, 'cpi_song7_option', true); ?>">
 	</p>
 	<p>
-	<label for="cpi_time7_option"><?php _e('Song no7 duration:','cwp'); ?></label><br />
+	<label for="cpi_time7_option"><?php _e('Song no7 duration:','music-band-pro'); ?></label><br />
 	<input type="text" name="cpi_time7_option" id="cpi_time7_option" value="<?php echo get_post_meta($post->ID, 'cpi_time7_option', true); ?>">
 	</p>
 	<p>
-	<label for="cpi_link7_option"><?php _e('Song no7 lyrics link:','cwp'); ?></label><br />
+	<label for="cpi_link7_option"><?php _e('Song no7 lyrics link:','music-band-pro'); ?></label><br />
 	<input type="text" name="cpi_link7_option" id="cpi_link7_option" value="<?php echo get_post_meta($post->ID, 'cpi_link7_option', true); ?>">
 	</p>
 	<p>
-	<label for="cpi_song8_option"><?php _e('Song no8 title:','cwp'); ?></label><br />
+	<label for="cpi_song8_option"><?php _e('Song no8 title:','music-band-pro'); ?></label><br />
 	<input type="text" name="cpi_song8_option" id="cpi_song8_option" value="<?php echo get_post_meta($post->ID, 'cpi_song8_option', true); ?>">
 	</p>
 	<p>
-	<label for="cpi_time8_option"><?php _e('Song no8 duration:','cwp'); ?></label><br />
+	<label for="cpi_time8_option"><?php _e('Song no8 duration:','music-band-pro'); ?></label><br />
 	<input type="text" name="cpi_time8_option" id="cpi_time8_option" value="<?php echo get_post_meta($post->ID, 'cpi_time8_option', true); ?>">
 	</p>
 	<p>
-	<label for="cpi_link8_option"><?php _e('Song no8 lyrics link:','cwp'); ?></label><br />
+	<label for="cpi_link8_option"><?php _e('Song no8 lyrics link:','music-band-pro'); ?></label><br />
 	<input type="text" name="cpi_link8_option" id="cpi_link8_option" value="<?php echo get_post_meta($post->ID, 'cpi_link8_option', true); ?>">
 	</p>
 	<p>
-	<label for="cpi_song9_option"><?php _e('Song no9 title:','cwp'); ?></label><br />
+	<label for="cpi_song9_option"><?php _e('Song no9 title:','music-band-pro'); ?></label><br />
 	<input type="text" name="cpi_song9_option" id="cpi_song9_option" value="<?php echo get_post_meta($post->ID, 'cpi_song9_option', true); ?>">
 	</p>
 	<p>
-	<label for="cpi_time9_option"><?php _e('Song no9 duration:','cwp'); ?></label><br />
+	<label for="cpi_time9_option"><?php _e('Song no9 duration:','music-band-pro'); ?></label><br />
 	<input type="text" name="cpi_time9_option" id="cpi_time9_option" value="<?php echo get_post_meta($post->ID, 'cpi_time9_option', true); ?>">
 	</p>
 	<p>
-	<label for="cpi_link9_option"><?php _e('Song no9 lyrics link:','cwp'); ?></label><br />
+	<label for="cpi_link9_option"><?php _e('Song no9 lyrics link:','music-band-pro'); ?></label><br />
 	<input type="text" name="cpi_link9_option" id="cpi_link9_option" value="<?php echo get_post_meta($post->ID, 'cpi_link9_option', true); ?>">
 	</p>
 	<p>
-	<label for="cpi_song10_option"><?php _e('Song no10 title:','cwp'); ?></label><br />
+	<label for="cpi_song10_option"><?php _e('Song no10 title:','music-band-pro'); ?></label><br />
 	<input type="text" name="cpi_song10_option" id="cpi_song10_option" value="<?php echo get_post_meta($post->ID, 'cpi_song10_option', true); ?>">
 	</p>
 	<p>
-	<label for="cpi_time10_option"><?php _e('Song no10 duration:','cwp'); ?></label><br />
+	<label for="cpi_time10_option"><?php _e('Song no10 duration:','music-band-pro'); ?></label><br />
 	<input type="text" name="cpi_time10_option" id="cpi_time10_option" value="<?php echo get_post_meta($post->ID, 'cpi_time10_option', true); ?>">
 	</p>
 	<p>
-	<label for="cpi_link10_option"><?php _e('Song no10 lyrics link:','cwp'); ?></label><br />
+	<label for="cpi_link10_option"><?php _e('Song no10 lyrics link:','music-band-pro'); ?></label><br />
 	<input type="text" name="cpi_link10_option" id="cpi_link10_option" value="<?php echo get_post_meta($post->ID, 'cpi_link10_option', true); ?>">
 	</p>
 	<p>
-	<label for="cpi_song11_option"><?php _e('Song no11 title:','cwp'); ?></label><br />
+	<label for="cpi_song11_option"><?php _e('Song no11 title:','music-band-pro'); ?></label><br />
 	<input type="text" name="cpi_song11_option" id="cpi_song11_option" value="<?php echo get_post_meta($post->ID, 'cpi_song11_option', true); ?>">
 	</p>
 	<p>
-	<label for="cpi_time11_option"><?php _e('Song no11 duration:','cwp'); ?></label><br />
+	<label for="cpi_time11_option"><?php _e('Song no11 duration:','music-band-pro'); ?></label><br />
 	<input type="text" name="cpi_time11_option" id="cpi_time11_option" value="<?php echo get_post_meta($post->ID, 'cpi_time11_option', true); ?>">
 	</p>
 	<p>
-	<label for="cpi_link11_option"><?php _e('Song no11 lyrics link:','cwp'); ?></label><br />
+	<label for="cpi_link11_option"><?php _e('Song no11 lyrics link:','music-band-pro'); ?></label><br />
 	<input type="text" name="cpi_link11_option" id="cpi_link11_option" value="<?php echo get_post_meta($post->ID, 'cpi_link11_option', true); ?>">
 	</p>
 	<p>
-	<label for="cpi_song12_option"><?php _e('Song no12 title:','cwp'); ?></label><br />
+	<label for="cpi_song12_option"><?php _e('Song no12 title:','music-band-pro'); ?></label><br />
 	<input type="text" name="cpi_song12_option" id="cpi_song12_option" value="<?php echo get_post_meta($post->ID, 'cpi_song12_option', true); ?>">
 	</p>
 	<p>
-	<label for="cpi_time12_option"><?php _e('Song no12 duration:','cwp'); ?></label><br />
+	<label for="cpi_time12_option"><?php _e('Song no12 duration:','music-band-pro'); ?></label><br />
 	<input type="text" name="cpi_time12_option" id="cpi_time12_option" value="<?php echo get_post_meta($post->ID, 'cpi_time12_option', true); ?>">
 	</p>
 	<p>
-	<label for="cpi_link12_option"><?php _e('Song no12 lyrics link:','cwp'); ?></label><br />
+	<label for="cpi_link12_option"><?php _e('Song no12 lyrics link:','music-band-pro'); ?></label><br />
 	<input type="text" name="cpi_link12_option" id="cpi_link12_option" value="<?php echo get_post_meta($post->ID, 'cpi_link12_option', true); ?>">
 	</p>
 	<p>
-	<label for="cpi_song13_option"><?php _e('Song no13 duration:','cwp'); ?></label><br />
+	<label for="cpi_song13_option"><?php _e('Song no13 duration:','music-band-pro'); ?></label><br />
 	<input type="text" name="cpi_song13_option" id="cpi_song13_option" value="<?php echo get_post_meta($post->ID, 'cpi_song13_option', true); ?>">
 	</p>
 	<p>
-	<label for="cpi_time13_option"><?php _e('Song no13 duration:','cwp'); ?></label><br />
+	<label for="cpi_time13_option"><?php _e('Song no13 duration:','music-band-pro'); ?></label><br />
 	<input type="text" name="cpi_time13_option" id="cpi_time13_option" value="<?php echo get_post_meta($post->ID, 'cpi_time13_option', true); ?>">
 	</p>
 	<p>
-	<label for="cpi_link13_option"><?php _e('Song no13 lyrics link:','cwp'); ?></label><br />
+	<label for="cpi_link13_option"><?php _e('Song no13 lyrics link:','music-band-pro'); ?></label><br />
 	<input type="text" name="cpi_link13_option" id="cpi_link13_option" value="<?php echo get_post_meta($post->ID, 'cpi_link13_option', true); ?>">
 	</p>
 	<p>
-	<label for="cpi_song14_option"><?php _e('Song no14 title:','cwp'); ?></label><br />
+	<label for="cpi_song14_option"><?php _e('Song no14 title:','music-band-pro'); ?></label><br />
 	<input type="text" name="cpi_song14_option" id="cpi_song14_option" value="<?php echo get_post_meta($post->ID, 'cpi_song14_option', true); ?>">
 	</p>
 	<p>
-	<label for="cpi_time14_option"><?php _e('Song no14 duration:','cwp'); ?></label><br />
+	<label for="cpi_time14_option"><?php _e('Song no14 duration:','music-band-pro'); ?></label><br />
 	<input type="text" name="cpi_time14_option" id="cpi_time14_option" value="<?php echo get_post_meta($post->ID, 'cpi_time14_option', true); ?>">
 	</p>
 	<p>
-	<label for="cpi_link14_option"><?php _e('Song no14 lyrics link:','cwp'); ?></label><br />
+	<label for="cpi_link14_option"><?php _e('Song no14 lyrics link:','music-band-pro'); ?></label><br />
 	<input type="text" name="cpi_link14_option" id="cpi_link14_option" value="<?php echo get_post_meta($post->ID, 'cpi_link14_option', true); ?>">
 	</p>
 	<p>
-	<label for="cpi_song15_option"><?php _e('Song no15 title:','cwp'); ?></label><br />
+	<label for="cpi_song15_option"><?php _e('Song no15 title:','music-band-pro'); ?></label><br />
 	<input type="text" name="cpi_song15_option" id="cpi_song15_option" value="<?php echo get_post_meta($post->ID, 'cpi_song15_option', true); ?>">
 	</p>
 	<p>
-	<label for="cpi_time15_option"><?php _e('Song no15 duration:','cwp'); ?></label><br />
+	<label for="cpi_time15_option"><?php _e('Song no15 duration:','music-band-pro'); ?></label><br />
 	<input type="text" name="cpi_time15_option" id="cpi_time15_option" value="<?php echo get_post_meta($post->ID, 'cpi_time15_option', true); ?>">
 	</p>
 	<p>
-	<label for="cpi_link15_option"><?php _e('Song no15 lyrics link:','cwp'); ?></label><br />
+	<label for="cpi_link15_option"><?php _e('Song no15 lyrics link:','music-band-pro'); ?></label><br />
 	<input type="text" name="cpi_link15_option" id="cpi_link15_option" value="<?php echo get_post_meta($post->ID, 'cpi_link15_option', true); ?>">
 	</p>
 	<p>
-	<label for="cpi_song16_option"><?php _e('Song no16 title:','cwp'); ?></label><br />
+	<label for="cpi_song16_option"><?php _e('Song no16 title:','music-band-pro'); ?></label><br />
 	<input type="text" name="cpi_song16_option" id="cpi_song16_option" value="<?php echo get_post_meta($post->ID, 'cpi_song16_option', true); ?>">
 	</p>
 	<p>
-	<label for="cpi_time16_option"><?php _e('Song no16 duration:','cwp'); ?></label><br />
+	<label for="cpi_time16_option"><?php _e('Song no16 duration:','music-band-pro'); ?></label><br />
 	<input type="text" name="cpi_time16_option" id="cpi_time16_option" value="<?php echo get_post_meta($post->ID, 'cpi_time16_option', true); ?>">
 	</p>
 	<p>
-	<label for="cpi_link16_option"><?php _e('Song no16 lyrics link:','cwp'); ?></label><br />
+	<label for="cpi_link16_option"><?php _e('Song no16 lyrics link:','music-band-pro'); ?></label><br />
 	<input type="text" name="cpi_link16_option" id="cpi_link16_option" value="<?php echo get_post_meta($post->ID, 'cpi_link16_option', true); ?>">
 	</p>
 	<p>
-	<label for="cpi_song17_option"><?php _e('Song no17 title:','cwp'); ?></label><br />
+	<label for="cpi_song17_option"><?php _e('Song no17 title:','music-band-pro'); ?></label><br />
 	<input type="text" name="cpi_song17_option" id="cpi_song17_option" value="<?php echo get_post_meta($post->ID, 'cpi_song17_option', true); ?>">
 	</p>
 	<p>
-	<label for="cpi_time17_option"><?php _e('Song no17 duration:','cwp'); ?></label><br />
+	<label for="cpi_time17_option"><?php _e('Song no17 duration:','music-band-pro'); ?></label><br />
 	<input type="text" name="cpi_time17_option" id="cpi_time17_option" value="<?php echo get_post_meta($post->ID, 'cpi_time17_option', true); ?>">
 	</p>
 	<p>
-	<label for="cpi_link17_option"><?php _e('Song no17 lyrics link:','cwp'); ?></label><br />
+	<label for="cpi_link17_option"><?php _e('Song no17 lyrics link:','music-band-pro'); ?></label><br />
 	<input type="text" name="cpi_link17_option" id="cpi_link17_option" value="<?php echo get_post_meta($post->ID, 'cpi_link17_option', true); ?>">
 	</p>
 	<p>
-	<label for="cpi_song18_option"><?php _e('Song no18 title:','cwp'); ?></label><br />
+	<label for="cpi_song18_option"><?php _e('Song no18 title:','music-band-pro'); ?></label><br />
 	<input type="text" name="cpi_song18_option" id="cpi_song18_option" value="<?php echo get_post_meta($post->ID, 'cpi_song18_option', true); ?>">
 	</p>
 	<p>
-	<label for="cpi_time18_option"><?php _e('Song no18 duration:','cwp'); ?></label><br />
+	<label for="cpi_time18_option"><?php _e('Song no18 duration:','music-band-pro'); ?></label><br />
 	<input type="text" name="cpi_time18_option" id="cpi_time18_option" value="<?php echo get_post_meta($post->ID, 'cpi_time18_option', true); ?>">
 	</p>
 	<p>
-	<label for="cpi_link18_option"><?php _e('Song no18 lyrics link:','cwp'); ?></label><br />
+	<label for="cpi_link18_option"><?php _e('Song no18 lyrics link:','music-band-pro'); ?></label><br />
 	<input type="text" name="cpi_link18_option" id="cpi_link18_option" value="<?php echo get_post_meta($post->ID, 'cpi_link18_option', true); ?>">
 	</p>
 	<p>
-	<label for="cpi_song19_option"><?php _e('Song no19 title:','cwp'); ?></label><br />
+	<label for="cpi_song19_option"><?php _e('Song no19 title:','music-band-pro'); ?></label><br />
 	<input type="text" name="cpi_song19_option" id="cpi_song19_option" value="<?php echo get_post_meta($post->ID, 'cpi_song19_option', true); ?>">
 	</p>
 	<p>
-	<label for="cpi_time19_option"><?php _e('Song no19 duration:','cwp'); ?></label><br />
+	<label for="cpi_time19_option"><?php _e('Song no19 duration:','music-band-pro'); ?></label><br />
 	<input type="text" name="cpi_time19_option" id="cpi_time19_option" value="<?php echo get_post_meta($post->ID, 'cpi_time19_option', true); ?>">
 	</p>
 	<p>
-	<label for="cpi_link19_option"><?php _e('Song no19 lyrics link:','cwp'); ?></label><br />
+	<label for="cpi_link19_option"><?php _e('Song no19 lyrics link:','music-band-pro'); ?></label><br />
 	<input type="text" name="cpi_link19_option" id="cpi_link19_option" value="<?php echo get_post_meta($post->ID, 'cpi_link19_option', true); ?>">
 	</p>
 	<p>
-	<label for="cpi_song20_option"><?php _e('Song no20 title:','cwp'); ?></label><br />
+	<label for="cpi_song20_option"><?php _e('Song no20 title:','music-band-pro'); ?></label><br />
 	<input type="text" name="cpi_song20_option" id="cpi_song20_option" value="<?php echo get_post_meta($post->ID, 'cpi_song20_option', true); ?>">
 	</p>
 	<p>
-	<label for="cpi_time20_option"><?php _e('Song no20 duration:','cwp'); ?></label><br />
+	<label for="cpi_time20_option"><?php _e('Song no20 duration:','music-band-pro'); ?></label><br />
 	<input type="text" name="cpi_time20_option" id="cpi_time20_option" value="<?php echo get_post_meta($post->ID, 'cpi_time20_option', true); ?>">
 	</p>
 	<p>
-	<label for="cpi_link20_option"><?php _e('Song no20 lyrics link:','cwp'); ?></label><br />
+	<label for="cpi_link20_option"><?php _e('Song no20 lyrics link:','music-band-pro'); ?></label><br />
 	<input type="text" name="cpi_link20_option" id="cpi_link20_option" value="<?php echo get_post_meta($post->ID, 'cpi_link20_option', true); ?>">
 	</p>
 	</div>
@@ -540,13 +542,13 @@ function cwp_custom_post_info() {
 	<fieldset id="mycustom-div">
 	<div>
 	<p>
-	<label for="cpi_day_option"><?php _e('Day:','cwp'); ?></label><br />
+	<label for="cpi_day_option"><?php _e('Day:','music-band-pro'); ?></label><br />
 	<input type="text" name="cpi_day_option" id="cpi_day_option" value="<?php echo get_post_meta($post->ID, 'cpi_day_option', true); ?>">
 	<br />
-	<label for="cpi_month_option"><?php _e('Month:','cwp'); ?></label><br />
+	<label for="cpi_month_option"><?php _e('Month:','music-band-pro'); ?></label><br />
 	<input type="text" name="cpi_month_option" id="cpi_month_option" value="<?php echo get_post_meta($post->ID, 'cpi_month_option', true); ?>">
 	<br />
-	<label for="cpi_tickets_option"><?php _e('Get tickets link:','cwp'); ?></label><br />
+	<label for="cpi_tickets_option"><?php _e('Get tickets link:','music-band-pro'); ?></label><br />
 	<input type="text" name="cpi_tickets_option" id="cpi_tickets_option" value="<?php echo get_post_meta($post->ID, 'cpi_tickets_option', true); ?>">
 	
 	</p>
@@ -827,7 +829,7 @@ function cwp_related_posts() {
 	}
 	$the_query = new WP_Query( $args );
 	echo '<div class="widget related_news">';
-	echo '<div class="title dark">'.__('Related News','cwp').'</div>';
+	echo '<div class="title dark">'.__('Related News','music-band-pro').'</div>';
 	while ( $the_query->have_posts() ) : $the_query->the_post();
 		?> 
 			<div class="news">

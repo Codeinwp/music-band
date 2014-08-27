@@ -12,7 +12,7 @@
 						while ($queryObject->have_posts()) {
 							$queryObject->the_post();
 							?>
-								<div class="title dark"><?php _e('Latest Album:','cwp'); ?> <span><?php the_title(); ?></span></div>
+								<div class="title dark"><?php _e('Latest Album:','music-band-pro'); ?> <span><?php the_title(); ?></span></div>
 								<div class="album_cover">
 									<?php
 										if ( has_post_thumbnail()) {
@@ -21,7 +21,7 @@
 									?>
 								</div>
 								<div class="tracklist">
-									<h4><?php _e('Tracklisting','cwp'); ?></h4>
+									<h4><?php _e('Tracklisting','music-band-pro'); ?></h4>
 									<?php 
 										$song_counter = 1;
 										$song_title1 = get_post_meta($id, 'cpi_song1_option');
@@ -333,9 +333,9 @@
 								</div>
 								<?php 
 									if(isset($cpi_buyalbum_option[0]) && $cpi_buyalbum_option[0] != '')
-										echo '<div class="button"><a href="'.$cpi_buyalbum_option[0].'">'.__('BUY album','cwp').'</a></div>';
+										echo '<div class="button"><a href="'.$cpi_buyalbum_option[0].'">'.__('BUY album','music-band-pro').'</a></div>';
 									if(isset($cpi_itunes_option[0]) && $cpi_itunes_option[0] != '')
-										echo '<div class="button"><a href="'.$cpi_itunes_option[0].'">'.__('GET on itunes','cwp').'</a></div>';
+										echo '<div class="button"><a href="'.$cpi_itunes_option[0].'">'.__('GET on itunes','music-band-pro').'</a></div>';
 						}	
 					}
 					wp_reset_postdata();
@@ -349,7 +349,7 @@
 					if($count_posts->publish >= 3):
 						?>
 						<div class="title dark">
-							<?php _e('Next Event','cwp'); ?>
+							<?php _e('Next Event','music-band-pro'); ?>
 							<div class="slidernav">
 								<a href=""></a>
 								<a href=""></a>
@@ -397,7 +397,7 @@
 							$queryObject->the_post();
 							?>
 							<div class="widget latest_video">
-								<div class="title"><?php _e('Latest video','cwp'); ?></div>
+								<div class="title"><?php _e('Latest video','music-band-pro'); ?></div>
 								<div class="video">
 									<?php the_content(); ?>
 								</div><!--/video-->

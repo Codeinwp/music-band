@@ -9,7 +9,7 @@ get_header(); ?>
 <div class="pagetitle">
 			<div class="pagetitlecenter">
 				<h3>
-					<?php printf( __( 'Search Results for: %s', 'cwp' ), '<span>' . get_search_query() . '</span>' ); ?>
+					<?php printf( __( 'Search Results for: %s', 'music-band-pro' ), '<span>' . get_search_query() . '</span>' ); ?>
 				</h3>
 			</div><!--/pagetitlecenter-->
 		</div><!--/pagetitle-->
@@ -37,7 +37,7 @@ get_header(); ?>
 											if($di == 'author')
 												echo '<a href="'.get_author_posts_url( get_the_author_meta( 'ID' )).'">'.get_the_author().'</a> &#8226;';
 											if($di == 'number_of_comments')	{
-												comments_number( __('No Comments','cwp'), __('one Comment','cwp'), '% '.__('Comments','cwp') );
+												comments_number( __('No Comments','music-band-pro'), __('one Comment','music-band-pro'), '% '.__('Comments','music-band-pro') );
 												echo ' &#8226;';
 											}	
 											if($di == 'category'){
@@ -58,7 +58,7 @@ get_header(); ?>
 							?>
 						</div>
 					</div><!--/topdetails-->
-					<div class="readmore"><a href="<?php the_permalink(); ?>"><?php _e('Read More','cwp'); ?></a></div>
+					<div class="readmore"><a href="<?php the_permalink(); ?>"><?php _e('Read More','music-band-pro'); ?></a></div>
 					<div class="clearfix"></div>
 					<?php 
 						$fi_index = cwp('fi_index');
@@ -74,8 +74,8 @@ get_header(); ?>
 				</div><!--/post-->
 				<?php endwhile; ?>
 				<div class="pagination">
-					<div class="prev"><?php previous_posts_link( __( 'Prev', 'cwp' ) ); ?></div>	
-					<div class="next"><?php next_posts_link( __( 'Next', 'cwp' ) ); ?></div>
+					<div class="prev"><?php previous_posts_link( __( 'Prev', 'music-band-pro' ) ); ?></div>	
+					<div class="next"><?php next_posts_link( __( 'Next', 'music-band-pro' ) ); ?></div>
 				</div><!-- /pagination-->
 			</section><!--/content-->
 			<aside id="sidebar">

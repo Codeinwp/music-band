@@ -11,7 +11,7 @@ if ( post_password_required() )
 ?>
 	<div id="comments" class="comments-area">
 	<?php if ( have_comments() ) : ?>
-        <div class="comments_headline"><?php comments_number( 'No Comments', 'Comments (1)', 'Comments(%)' ); ?></div>
+        <div class="comments_headline"><?php comments_number( __('No Comments','music-band-pro'), __('Comments (1)','music-band-pro'), __('Comments(%)','music-band-pro') ); ?></div>
 			<?php
 				wp_list_comments('callback=cwp_comment');
 			?>
@@ -25,7 +25,7 @@ if ( post_password_required() )
 		// If comments are closed and there are comments, let's leave a little note, shall we?
 		if ( ! comments_open() && '0' != get_comments_number() && post_type_supports( get_post_type(), 'comments' ) ) :
 	?>
-		<p class="no-comments"><?php _e( 'Comments are closed.', 'cwp' ); ?></p>
+		<p class="no-comments"><?php _e( 'Comments are closed.', 'music-band-pro' ); ?></p>
 	<?php endif; ?>
 	<?php
 	$comments_args = array(
@@ -38,9 +38,9 @@ if ( post_password_required() )
             'comment_field' => '<textarea id="comment" name="comment"></textarea>',
         
             'fields' => array(
-            'author' => '<div class="fields"><p>' . '<label for="author"><span>' . __( 'Name*', 'cwp' ) . '</span><input class="field" id="author" name="author" type="text" value="" /> ' . '</p>'. '</label> ',
-            'email' => '<p>'.'<label for="email"><span>' . __( 'Email*', 'cwp' ) . '</span><input class="field" id="email" name="email" type="text" value="" />' . '</p>'.'</label> ',
-            'url' => '<p>'.'<label for="url"><span>' . __( 'URL', 'cwp' ) . '</span><input class="field" id="url" name="url" type="text" value="" />'. '</p>'. '</label>'. '</div>',
+            'author' => '<div class="fields"><p>' . '<label for="author"><span>' . __( 'Name*', 'music-band-pro' ) . '</span><input class="field" id="author" name="author" type="text" value="" /> ' . '</p>'. '</label> ',
+            'email' => '<p>'.'<label for="email"><span>' . __( 'Email*', 'music-band-pro' ) . '</span><input class="field" id="email" name="email" type="text" value="" />' . '</p>'.'</label> ',
+            'url' => '<p>'.'<label for="url"><span>' . __( 'URL', 'music-band-pro' ) . '</span><input class="field" id="url" name="url" type="text" value="" />'. '</p>'. '</label>'. '</div>',
         ),
     );
  

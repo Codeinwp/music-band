@@ -30,21 +30,21 @@ function cwp_content_nav( $nav_id ) {
 
 	?>
 	<nav role="navigation" id="<?php echo esc_attr( $nav_id ); ?>" class="<?php echo $nav_class; ?>">
-		<h1 class="screen-reader-text"><?php _e( 'Post navigation', 'cwp' ); ?></h1>
+		<h1 class="screen-reader-text"><?php _e( 'Post navigation', 'music-band-pro' ); ?></h1>
 
 	<?php if ( is_single() ) : // navigation links for single posts ?>
 
-		<?php previous_post_link( '<div class="nav-previous">%link</div>', '<span class="meta-nav">' . _x( '&larr;', 'Previous post link', 'cwp' ) . '</span> %title' ); ?>
-		<?php next_post_link( '<div class="nav-next">%link</div>', '%title <span class="meta-nav">' . _x( '&rarr;', 'Next post link', 'cwp' ) . '</span>' ); ?>
+		<?php previous_post_link( '<div class="nav-previous">%link</div>', '<span class="meta-nav">' . _x( '&larr;', 'Previous post link', 'music-band-pro' ) . '</span> %title' ); ?>
+		<?php next_post_link( '<div class="nav-next">%link</div>', '%title <span class="meta-nav">' . _x( '&rarr;', 'Next post link', 'music-band-pro' ) . '</span>' ); ?>
 
 	<?php elseif ( $wp_query->max_num_pages > 1 && ( is_home() || is_archive() || is_search() ) ) : // navigation links for home, archive, and search pages ?>
 
 		<?php if ( get_next_posts_link() ) : ?>
-		<div class="nav-previous"><?php next_posts_link( __( '<span class="meta-nav">&larr;</span> Older posts', 'cwp' ) ); ?></div>
+		<div class="nav-previous"><?php next_posts_link( __( '<span class="meta-nav">&larr;</span> Older posts', 'music-band-pro' ) ); ?></div>
 		<?php endif; ?>
 
 		<?php if ( get_previous_posts_link() ) : ?>
-		<div class="nav-next"><?php previous_posts_link( __( 'Newer posts <span class="meta-nav">&rarr;</span>', 'cwp' ) ); ?></div>
+		<div class="nav-next"><?php previous_posts_link( __( 'Newer posts <span class="meta-nav">&rarr;</span>', 'music-band-pro' ) ); ?></div>
 		<?php endif; ?>
 
 	<?php endif; ?>
@@ -71,7 +71,7 @@ function cwp_comment($comment, $args, $depth) {
 		?>
 		<div class="comment" id="li-comment-<?php comment_ID() ?>">
 			
-				<?php _e( 'Pingback:', 'cwp' ); ?> <?php comment_author_link(); ?> <?php edit_comment_link( __( '(Edit)', 'cwp' ), '<span class="edit-link">', '</span>' ); ?>
+				<?php _e( 'Pingback:', 'music-band-pro' ); ?> <?php comment_author_link(); ?> <?php edit_comment_link( __( '(Edit)', 'music-band-pro' ), '<span class="edit-link">', '</span>' ); ?>
 			
 		</div>
 		<?php
@@ -86,9 +86,9 @@ function cwp_comment($comment, $args, $depth) {
 			<div class="comment_content">
 				<?php echo $comment->comment_content; ?><br />
 				<?php $cid = get_comment_ID(); ?>
-				<span><?php _e('WRITTEN BY','cwp'); ?> <a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' )); ?>"><?php comment_author($cid); ?></a>  |  <?php echo get_comment_date('F j, Y'); ?></span>
+				<span><?php _e('WRITTEN BY','music-band-pro'); ?> <a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' )); ?>"><?php comment_author($cid); ?></a>  |  <?php echo get_comment_date('F j, Y'); ?></span>
 				<?php if ($comment->comment_approved == '0') : ?>
-                        <em class="comment-awaiting-moderation"><?php _e('Your comment is awaiting moderation.','cwp') ?></em>
+                        <em class="comment-awaiting-moderation"><?php _e('Your comment is awaiting moderation.','music-band-pro') ?></em>
                         <br />
                 <?php endif; ?>
 			</div><!--/comment_content-->
@@ -166,7 +166,7 @@ function cwp_posted_on() {
 		esc_html( get_the_modified_date() )
 	);
 
-	printf( __( '<span class="posted-on">Posted on %1$s</span><span class="byline"> by %2$s</span>', 'cwp' ),
+	printf( __( '<span class="posted-on">Posted on %1$s</span><span class="byline"> by %2$s</span>', 'music-band-pro' ),
 		sprintf( '<a href="%1$s" title="%2$s" rel="bookmark">%3$s</a>',
 			esc_url( get_permalink() ),
 			esc_attr( get_the_time() ),
@@ -174,7 +174,7 @@ function cwp_posted_on() {
 		),
 		sprintf( '<span class="author vcard"><a class="url fn n" href="%1$s" title="%2$s">%3$s</a></span>',
 			esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
-			esc_attr( sprintf( __( 'View all posts by %s', 'cwp' ), get_the_author() ) ),
+			esc_attr( sprintf( __( 'View all posts by %s', 'music-band-pro' ), get_the_author() ) ),
 			esc_html( get_the_author() )
 		)
 	);

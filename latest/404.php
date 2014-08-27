@@ -8,7 +8,7 @@
 get_header(); ?>
 		<div class="pagetitle">
 			<div class="pagetitlecenter">
-				<h3><?php _e('Page not found','cwp'); ?></h3>
+				<h3><?php _e('Page not found','music-band-pro'); ?></h3>
 			</div><!--/pagetitlecenter-->
 		</div><!--/pagetitle-->
 		
@@ -17,7 +17,7 @@ get_header(); ?>
 			<section id="content">
 				<div class="post post_inside">
 					<article>
-						<?php _e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'cwp' ); ?>
+						<?php _e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'music-band-pro' ); ?>
 					</article>
 					<?php get_search_form(); ?>
 				</div><!--/post-->

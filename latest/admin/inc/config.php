@@ -76,20 +76,20 @@
 			self::$structure	= array(
 						array(
 							 "type"=>"tab",
-							 "name"=>"General options",
+							 "name"=>__("General options",'music-band-pro'),
 							 "options"=>array(
 								array(
 									
 									"type"=>"image",
-									"name"=>"logo",
-									"description"=>"Choose logo",
+									"name"=>__("Logo",'music-band-pro'),
+									"description"=>__("Choose logo",'music-band-pro'),
 									"id"=>"logoid",
 									"default"=> "/images/logo.png" 
 								),
 								array(
 									"type"=>"input_text",
-									"name"=>"Copyright",
-									"description"=>"Enter copyright text",
+									"name"=>__("Copyright",'music-band-pro'),
+									"description"=>__("Enter copyright text",'music-band-pro'),
 									"id"=>"copyright",
 									"default"=>"&copy; 2013 Violet Band. All rights reserved. "
 								),
@@ -97,28 +97,28 @@
 								array(
 									
 									"type"=>"radio",
-									"name"=>"Header button",
-									"description"=>"Show or hide button in the header of the page",
+									"name"=>__("Header button",'music-band-pro'),
+									"description"=>__("Show or hide button in the header of the page",'music-band-pro'),
 									"id"=>"header_button",
 									"options"=>array(
-												"show"=>"Show",
-												"hide"=>"Hide",
+												"show"=>__("Show",'music-band-pro'),
+												"hide"=>__("Hide",'music-band-pro'),
 									),
 									"default"=>"show"
 								),
 								
 								array(
 									"type"=>"input_text",
-									"name"=>"Header button text",
-									"description"=>"Enter the text for the header button in case you want the button to appear",
+									"name"=>__("Header button text",'music-band-pro'),
+									"description"=>__("Enter the text for the header button in case you want the button to appear",'music-band-pro'),
 									"id"=>"header_button_text",
-									"default"=>"BUY ALBUM"
+									"default"=>__("BUY ALBUM",'music-band-pro')
 								),
 								
 								array(
 									"type"=>"input_text",
-									"name"=>"Header button link",
-									"description"=>"Enter the link for the header button in case you want the button to appear",
+									"name"=>__("Header button link",'music-band-pro'),
+									"description"=>__("Enter the link for the header button in case you want the button to appear",'music-band-pro'),
 									"id"=>"header_button_link",
 									"default"=>"#"
 								),
@@ -126,13 +126,13 @@
 								array(
 									
 									"type"=>"group",
-									"name"=>"Top banner",
+									"name"=>__("Top banner",'music-band-pro'),
 									"options"=>	array(
 													array(
 														
 														"type"=>"multiselect",
-														"name"=>"Top banner",
-														"description"=>"Select the pages you want to have a top banner(Hold CTRL)",
+														"name"=>__("Top banner",'music-band-pro'),
+														"description"=>__("Select the pages you want to have a top banner(Hold CTRL)",'music-band-pro'),
 														"id"=>"top_banner",
 														"options"=>$tmp,
 														"default"=>$default
@@ -140,37 +140,37 @@
 													array(
 									
 														"type"=>"image",
-														"name"=>"Top banner image",
-														"description"=>"Choose an image for the top banner",
+														"name"=>__("Top banner image",'music-band-pro'),
+														"description"=>__("Choose an image for the top banner",'music-band-pro'),
 														"id"=>"top_banner_image",
 														"default"=> "/images/abovefooterbg.png" 
 													),
 													array(
 														"type"=>"input_text",
-														"name"=>"Top banner title",
-														"description"=>"Enter a title for the top banner",
+														"name"=>__("Top banner title",'music-band-pro'),
+														"description"=>__("Enter a title for the top banner",'music-band-pro'),
 														"id"=>"top_banner_title",
-														"default"=>"NEW ALBUM"
+														"default"=>__("NEW ALBUM",'music-band-pro')
 													),
 													array(
 														"type"=>"input_text",
-														"name"=>"Top banner text",
-														"description"=>"Enter a text for the top banner",
+														"name"=>__("Top banner text",'music-band-pro'),
+														"description"=>__("Enter a text for the top banner",'music-band-pro'),
 														"id"=>"top_banner_text",
-														"default"=>"Pre release 15th November 2013."
+														"default"=>__("Pre release 15th November 2013.",'music-band-pro')
 													),
 									)
 								),	
 								array(
 									
 									"type"=>"group",
-									"name"=>"Footer section with boxes and social icons",
+									"name"=>__("Footer section with boxes and social icons",'music-band-pro'),
 									"options"=>	array(
 													array(
 														
 														"type"=>"multiselect",
-														"name"=>"Footer section",
-														"description"=>"Select the pages you want to have the footer section(Hold CTRL)",
+														"name"=>__("Footer section",'music-band-pro'),
+														"description"=>__("Select the pages you want to have the footer section(Hold CTRL)",'music-band-pro'),
 														"id"=>"footer_section",
 														"options"=>$tmp,
 														"default"=>$default
@@ -178,71 +178,71 @@
 													array(
 									
 														"type"=>"image",
-														"name"=>"Footer section background section",
-														"description"=>"Choose an image for the footer section",
+														"name"=>__("Footer section background section",'music-band-pro'),
+														"description"=>__("Choose an image for the footer section",'music-band-pro'),
 														"id"=>"footer_section_image",
 														"default"=> "/images/abovefooterbg.png" 
 													),
 													array(
 														"type"=>"input_text",
-														"name"=>"First box title",
-														"description"=>"Enter a title for the first box",
+														"name"=>__("First box title",'music-band-pro'),
+														"description"=>__("Enter a title for the first box",'music-band-pro'),
 														"id"=>"footer_section_title1",
-														"default"=>"ON TOUR"
+														"default"=>__("ON TOUR",'music-band-pro')
 													),
 													array(
 														"type"=>"input_text",
-														"name"=>"First box text",
-														"description"=>"Enter a text for the first box",
+														"name"=>__("First box text",'music-band-pro'),
+														"description"=>__("Enter a text for the first box",'music-band-pro'),
 														"id"=>"footer_section_text1",
-														"default"=>"From 11th November"
+														"default"=>__("From 11th November",'music-band-pro')
 													),
 													array(
 														"type"=>"input_text",
-														"name"=>"Second box title",
-														"description"=>"Enter a title for the second box",
+														"name"=>__("Second box title",'music-band-pro'),
+														"description"=>__("Enter a title for the second box",'music-band-pro'),
 														"id"=>"footer_section_title2",
-														"default"=>"DARK SKY"
+														"default"=>__("DARK SKY",'music-band-pro')
 													),
 													array(
 														"type"=>"input_text",
-														"name"=>"Second box text",
-														"description"=>"Enter a text for the second box",
+														"name"=>__("Second box text",'music-band-pro'),
+														"description"=>__("Enter a text for the second box",'music-band-pro'),
 														"id"=>"footer_section_text2",
-														"default"=>"get on itunes now!"
+														"default"=>__("get on itunes now!",'music-band-pro')
 													),
 													array(
 														"type"=>"input_text",
-														"name"=>"Third box title",
-														"description"=>"Enter a title for the third box",
+														"name"=>__("Third box title",'music-band-pro'),
+														"description"=>__("Enter a title for the third box",'music-band-pro'),
 														"id"=>"footer_section_title3",
-														"default"=>"FUN ZONE"
+														"default"=>__("FUN ZONE",'music-band-pro')
 													),
 													array(
 														"type"=>"input_text",
-														"name"=>"Third box text",
-														"description"=>"Enter a text for the third box",
+														"name"=>__("Third box text",'music-band-pro'),
+														"description"=>__("Enter a text for the third box",'music-band-pro'),
 														"id"=>"footer_section_text3",
-														"default"=>"send us a message"
+														"default"=>__("send us a message",'music-band-pro')
 													),
 													array(
 														"type"=>"input_text",
-														"name"=>"Facebook link",
-														"description"=>"Enter the facebook link",
+														"name"=>__("Facebook link",'music-band-pro'),
+														"description"=>__("Enter the facebook link",'music-band-pro'),
 														"id"=>"facebook",
 														"default"=>"#"
 													),
 													array(
 														"type"=>"input_text",
-														"name"=>"Twitter link",
-														"description"=>"Enter the twitter link",
+														"name"=>__("Twitter link",'music-band-pro'),
+														"description"=>__("Enter the twitter link",'music-band-pro'),
 														"id"=>"twitter",
 														"default"=>"#"
 													),
 													array(
 														"type"=>"input_text",
-														"name"=>"Linkedin link",
-														"description"=>"Enter the linkedin link",
+														"name"=>__("Linkedin link",'music-band-pro'),
+														"description"=>__("Enter the linkedin link",'music-band-pro'),
 														"id"=>"linkedin",
 														"default"=>"#"
 													),
@@ -252,22 +252,22 @@
 						),
 						array(
 							"type"=>"tab",
-							"name"=>"Single page",
+							"name"=>__("Single page",'music-band-pro'),
 							"options"=>array(
 										array(
 									
 											"type"=>"checkbox",
-											"name"=>"Post details",
-											"description"=>"Choose what post details to show on single page",
+											"name"=>__("Post details",'music-band-pro'),
+											"description"=>__("Choose what post details to show on single page",'music-band-pro'),
 											"id"=>"details_single",
 											"options"=>array(
-												"date"=>"Date",
-												"author"=>"Author",
-												"number_of_comments"=>"Number of comments",
-												"category"=>"Category",
-												"tags"=>"Tags",
-												"number_of_views"=>"Number of views",
-												"none"=>"None"
+												"date"=>__("Date",'music-band-pro'),
+												"author"=>__("Author",'music-band-pro'),
+												"number_of_comments"=>__("Number of comments",'music-band-pro'),
+												"category"=>__("Category",'music-band-pro'),
+												"tags"=>__("Tags",'music-band-pro'),
+												"number_of_views"=>__("Number of views",'music-band-pro'),
+												"none"=>__("None",'music-band-pro')
 												
 											),
 											"default"=>array("date","number_of_comments")
@@ -275,12 +275,12 @@
 										array(
 									
 											"type"=>"radio",
-											"name"=>"Featured image on single page",
-											"description"=>"Show or hide featured image on single page",
+											"name"=>__("Featured image on single page",'music-band-pro'),
+											"description"=>__("Show or hide featured image on single page",'music-band-pro'),
 											"id"=>"fi_single",
 											"options"=>array(
-												"show"=>"Show",
-												"hide"=>"Hide",
+												"show"=>__("Show",'music-band-pro'),
+												"hide"=>__("Hide",'music-band-pro'),
 											),
 											"default"=>"show"
 										)
@@ -288,33 +288,33 @@
 						),
 						array(
 							"type"=>"tab",
-							"name"=>"First page + Archive page + Search page",
+							"name"=>__("First page + Archive page + Search page",'music-band-pro'),
 							"options"=>array(
 										array(
 									
 											"type"=>"checkbox",
-											"name"=>"Post details",
-											"description"=>"Choose what post details to show on first page, archive page and search page",
+											"name"=>__("Post details",'music-band-pro'),
+											"description"=>__("Choose what post details to show on first page, archive page and search page",'music-band-pro'),
 											"id"=>"details_index",
 											"options"=>array(
-												"date"=>"Date",
-												"author"=>"Author",
-												"number_of_comments"=>"Number of comments",
-												"category"=>"Category",
-												"tags"=>"Tags",
-												"none"=>"None"
+												"date"=>__("Date",'music-band-pro'),
+												"author"=>__("Author",'music-band-pro'),
+												"number_of_comments"=>__("Number of comments",'music-band-pro'),
+												"category"=>__("Category",'music-band-pro'),
+												"tags"=>__("Tags",'music-band-pro'),
+												"none"=>__("None",'music-band-pro')
 											),
 											"default"=>array("date","number_of_comments")
 										),
 										array(
 									
 											"type"=>"radio",
-											"name"=>"Featured image on first page",
-											"description"=>"Show or hide featured image on first page, archive page and search page",
+											"name"=>__("Featured image on first page",'music-band-pro'),
+											"description"=>__("Show or hide featured image on first page, archive page and search page",'music-band-pro'),
 											"id"=>"fi_index",
 											"options"=>array(
-												"show"=>"Show",
-												"hide"=>"Hide",
+												"show"=>__("Show",'music-band-pro'),
+												"hide"=>__("Hide",'music-band-pro'),
 											),
 											"default"=>"show"
 										)
@@ -327,46 +327,46 @@
 										array(
 									
 											"type"=>"radio",
-											"name"=>"Slider section on first page",
-											"description"=>"Show or hide slider section on first page",
+											"name"=>__("Slider section on first page",'music-band-pro'),
+											"description"=>__("Show or hide slider section on first page",'music-band-pro'),
 											"id"=>"slider_index",
 											"options"=>array(
-												"show"=>"Show",
-												"hide"=>"Hide",
+												"show"=>__("Show",'music-band-pro'),
+												"hide"=>__("Hide",'music-band-pro'),
 											),
 											"default"=>"show"
 										),
 										array(
 									
 											"type"=>"group",
-											"name"=>"First slide",
+											"name"=>__("First slide",'music-band-pro'),
 											"options"=>	array(
 															array(
 														
 																"type"=>"image",
-																"name"=>"First image for slider",
-																"description"=>"Choose first image for slider",
+																"name"=>__("First image for slider",'music-band-pro'),
+																"description"=>__("Choose first image for slider",'music-band-pro'),
 																"id"=>"slider_image1",
 																"default"=> "/images/slideone.png" 
 															),
 															array(
 																"type"=>"input_text",
-																"name"=>"First slide big title",
-																"description"=>"Enter a title to appear on the right side of the first slide",
+																"name"=>__("First slide big title",'music-band-pro'),
+																"description"=>__("Enter a title to appear on the right side of the first slide",'music-band-pro'),
 																"id"=>"slider_bigtitle1",
-																"default"=>"ASYLUM"
+																"default"=>__("ASYLUM",'music-band-pro')
 															),
 															array(
 																"type"=>"input_text",
-																"name"=>"First slide small title",
-																"description"=>"Enter a title to appear on the left side of the first slide",
+																"name"=>__("First slide small title",'music-band-pro'),
+																"description"=>__("Enter a title to appear on the left side of the first slide",'music-band-pro'),
 																"id"=>"slider_title1",
-																"default"=>"NEW album"
+																"default"=>__("NEW album",'music-band-pro')
 															),
 															array(
 																"type"=>"input_text",
-																"name"=>"First slide text",
-																"description"=>"Enter a text to appear on the left side of the first slide",
+																"name"=>__("First slide text",'music-band-pro'),
+																"description"=>__("Enter a text to appear on the left side of the first slide",'music-band-pro'),
 																"id"=>"slider_text1",
 																"default"=>"Pre release 15th November 2013.<br />Featureing greatest hit: <b>Dark Sky</b>"
 															),
@@ -375,34 +375,34 @@
 										array(
 									
 											"type"=>"group",
-											"name"=>"Second slide",
+											"name"=>__("Second slide",'music-band-pro'),
 											"options"=>	array(		
 															array(
 														
 																"type"=>"image",
-																"name"=>"Second image for slider",
-																"description"=>"Choose second image for slider",
+																"name"=>__("Second image for slider",'music-band-pro'),
+																"description"=>__("Choose second image for slider",'music-band-pro'),
 																"id"=>"slider_image2",
 																"default"=> "/images/slideone.png" 
 															),
 															array(
 																"type"=>"input_text",
-																"name"=>"Second slide big title",
-																"description"=>"Enter a title to appear on the right side of the second slide",
+																"name"=>__("Second slide big title",'music-band-pro'),
+																"description"=>__("Enter a title to appear on the right side of the second slide",'music-band-pro'),
 																"id"=>"slider_bigtitle2",
-																"default"=>"ASYLUM"
+																"default"=>__("ASYLUM",'music-band-pro')
 															),
 															array(
 																"type"=>"input_text",
-																"name"=>"Second slide small title",
-																"description"=>"Enter a title to appear on the left side of the second slide",
+																"name"=>__("Second slide small title",'music-band-pro'),
+																"description"=>__("Enter a title to appear on the left side of the second slide",'music-band-pro'),
 																"id"=>"slider_title2",
-																"default"=>"NEW album"
+																"default"=>__("NEW album",'music-band-pro')
 															),
 															array(
 																"type"=>"input_text",
-																"name"=>"Second slide text",
-																"description"=>"Enter a text to appear on the left side of the second slide",
+																"name"=>__("Second slide text",'music-band-pro'),
+																"description"=>__("Enter a text to appear on the left side of the second slide",'music-band-pro'),
 																"id"=>"slider_text2",
 																"default"=>"Pre release 15th November 2013.<br />Featureing greatest hit: <b>Dark Sky</b>"
 															),
@@ -411,34 +411,34 @@
 										array(
 									
 											"type"=>"group",
-											"name"=>"Third slide",
+											"name"=>__("Third slide",'music-band-pro'),
 											"options"=>	array(	
 															array(
 														
 																"type"=>"image",
-																"name"=>"Third image for slider",
-																"description"=>"Choose third image for slider",
+																"name"=>__("Third image for slider",'music-band-pro'),
+																"description"=>__("Choose third image for slider",'music-band-pro'),
 																"id"=>"slider_image3",
 																"default"=> "/images/slideone.png" 
 															),
 															array(
 																"type"=>"input_text",
-																"name"=>"Third slide big title",
-																"description"=>"Enter a title to appear on the right side of the third slide",
+																"name"=>__("Third slide big title",'music-band-pro'),
+																"description"=>__("Enter a title to appear on the right side of the third slide",'music-band-pro'),
 																"id"=>"slider_bigtitle3",
 																"default"=>"ASYLUM"
 															),
 															array(
 																"type"=>"input_text",
-																"name"=>"Third slide big title",
-																"description"=>"Enter a title to appear on the left side of the third slide",
+																"name"=>__("Third slide big title",'music-band-pro'),
+																"description"=>__("Enter a title to appear on the left side of the third slide",'music-band-pro'),
 																"id"=>"slider_title3",
-																"default"=>"NEW album"
+																"default"=>__("NEW album",'music-band-pro')
 															),
 															array(
 																"type"=>"input_text",
-																"name"=>"Third slide text",
-																"description"=>"Enter a text to appear on the left side of the third slide",
+																"name"=>__("Third slide text",'music-band-pro'),
+																"description"=>__("Enter a text to appear on the left side of the third slide",'music-band-pro'),
 																"id"=>"slider_text3",
 																"default"=>"Pre release 15th November 2013.<br />Featureing greatest hit: <b>Dark Sky</b>"
 															),
@@ -449,17 +449,17 @@
 						),
 						array(
 							"type"=>"tab",
-							"name"=>"Normal pages layout",
+							"name"=>__("Normal pages layout",'music-band-pro'),
 							"options"=>array(
 										array(
 									
 											"type"=>"radio",
-											"name"=>"Featured image on pages",
-											"description"=>"Show or hide featured image on pages",
+											"name"=>__("Featured image on pages",'music-band-pro'),
+											"description"=>__("Show or hide featured image on pages",'music-band-pro'),
 											"id"=>"fi_pages",
 											"options"=>array(
-												"show"=>"Show",
-												"hide"=>"Hide",
+												"show"=>__("Show",'music-band-pro'),
+												"hide"=>__("Hide",'music-band-pro'),
 											),
 											"default"=>"show"
 										)

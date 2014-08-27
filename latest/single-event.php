@@ -46,7 +46,7 @@ get_header(); ?>
 ?>
 		<div class="pagetitle">
 			<div class="pagetitlecenter">
-				<h3><?php _e('Events','cwp'); ?></h3>
+				<h3><?php _e('Events','music-band-pro'); ?></h3>
 			</div><!--/pagetitlecenter-->
 		</div><!--/pagetitle-->
 		
@@ -73,7 +73,7 @@ get_header(); ?>
 											if($ds == 'author')
 												echo '<a href="'.get_author_posts_url( get_the_author_meta( 'ID' )).'">'.get_the_author().'</a> &#8226; ';
 											if($ds == 'number_of_comments')	{
-												comments_number( __('No Comments','cwp'), __('one Comment','cwp'), '% '.__('Comments','cwp') );
+												comments_number( __('No Comments','music-band-pro'), __('one Comment','music-band-pro'), '% '.__('Comments','music-band-pro') );
 												echo ' &#8226; ';
 											}	
 											if($ds == 'category'){
