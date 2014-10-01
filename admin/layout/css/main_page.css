@@ -23,10 +23,7 @@
 }
 #cwp_container #header .logo {
 	float: left;
-	margin:20px 20px;
-	background:url(../img/logo-themeisle.png) no-repeat;
-	width:200px;
-	height:37px;
+	margin:10px 20px;
 }
 #cwp_container #js-warning {
     color: red;
@@ -524,9 +521,6 @@ background-color: #fff;
 margin:4px 0 4px;
 }
 
-#cwp_container .button_top {
-	margin-top:30px;
-}
 
 #cwp_container .button:hover,#cwp_container .button_hover {
 border-color: #bbb;
@@ -1012,4 +1006,14 @@ border-radius: 3px;
 }
 .spinner-reset{
 	float:left;
+}
+
+.adminLink {
+padding-top: 25px;
+float: left;
+margin-right: 15px;
+}
+
+.cwpred {
+color:red;
 }

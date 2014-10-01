@@ -91,7 +91,7 @@
 									"name"=>__("Copyright",'music-band-pro'),
 									"description"=>__("Enter copyright text",'music-band-pro'),
 									"id"=>"copyright",
-									"default"=>"&copy; 2013 Violet Band. All rights reserved. "
+									"default"=>"&copy; 2014 Violet Band. All rights reserved. "
 								),
 								
 								array(

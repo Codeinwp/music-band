@@ -76,7 +76,7 @@ jQuery("document").ready(function() {
 
   });
   jQuery(".tab-section:first").show();
-  jQuery("#cwp_nav li a").live("click",function(){
+  jQuery("#cwp_nav li a").on("click",function(){
 	var show = jQuery(this).attr("href");  
 	jQuery(".tab-section:visible").fadeOut(200,function(){
 		jQuery( show).fadeIn(300);
@@ -84,7 +84,7 @@ jQuery("document").ready(function() {
 	})
 	return false;
   })
-  jQuery(".group-in-tab .group-name").live("click",function(){ 
+  jQuery(".group-in-tab .group-name").on("click",function(){ 
 	jQuery(".active-tab").slideUp(200);;
 	var cnt = jQuery(this).parent().find(".group-content");
 	cnt.addClass("active-tab");
@@ -95,7 +95,7 @@ jQuery("document").ready(function() {
 		cnt.slideUp(200);
 	return false;
   })
-  jQuery(".cwp_save").live("click",function(){
+  jQuery(".cwp_save").on("click",function(){
 				var b =  jQuery("#cwp_form").serialize();
 				jQuery(".cwp_save").addClass("button-primary-disabled");
 				jQuery(".cwp_reset").addClass("button-disabled");
@@ -112,7 +112,7 @@ jQuery("document").ready(function() {
                     });
 					
   })
-  jQuery(".cwp_reset").live("click",function(){		
+  jQuery(".cwp_reset").on("click",function(){		
 				jQuery(".cwp_reset").addClass("button-disabled");
 				jQuery(".cwp_save").addClass("button-primary-disabled");
 				jQuery(".spinner ").show();

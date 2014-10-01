@@ -240,11 +240,12 @@ function cwp_check_element($field,$tab){
 }
 function cwp_check_config(){
 	$errors = array();
+	cwpConfig::init();
 	$config = cwpConfig::$structure;
 	$tab_fields  = array("type","name","options");
 	$titles = array("name","type");
 	$title = array_merge($titles,array("default"));
-	if(is_array($config)) {
+	 
 	foreach($config as $k=>$fields){
 					 $keys = array_keys($fields);
 					 $dif = array_diff($tab_fields,$keys);
@@ -299,7 +300,6 @@ function cwp_check_config(){
 					if(!empty($errors)) break;
 						
 	}
-	}
 	return $errors;
 } 
 function cwp_get_config_defaults($structure){
@@ -345,6 +345,7 @@ function cwp_admin_notice() {
 function cwp_add_options(){
  
 		$errors = cwp_check_config();
+	 
 		if(!empty($errors)) return false; 
 		$validator = new cwpOptionsValidator();
 		$option = get_option(cwp_config("menu_slug"));
@@ -384,4 +385,10 @@ function cwp($name = ''){
 		return $op[$name];
 	}
 	return null;
+}
+
+add_action( 'admin_enqueue_scripts', 'cwp_top_custom_wp_admin_script'); 
+function cwp_top_custom_wp_admin_script($hook){
+	 if($hook == "appearance_page_theme_options")
+		wp_enqueue_media();
 }
