@@ -4,7 +4,7 @@ Theme URI: http://themeisle.com/themes/music-band/
 Author: codeinwp
 Author URI: Codeinwp.com
 Description: Music Band PRO is a easily customizable WordPress Theme with an elegant design for your band.
-Version: 1.0.3
+Version: 1.0.4
 License: GNU General Public License v2
 License URI: license.txt
 Text Domain: music-band-pro
@@ -865,6 +865,7 @@ footer {
 	width: 100%;
 	height: auto;
 	background: #c46e67;
+	min-height: 100px;
 }
 
 .footercenter {
@@ -877,9 +878,11 @@ footer {
 }
 
 .footercenter .copyright {
-	width: 400px;
 	float: left;
-	margin-left: 43px;
+	color: #fff;
+	font-size: 15px;
+	line-height: 20px;
+	margin-top: 25px;
 }
 
 .footercenter .fnav {
@@ -887,6 +890,38 @@ footer {
 	margin-right: 43px;
 	float: right;
 }
+
+#footer_nav {
+
+	float: right;
+	margin-top: 25px;
+}
+
+#footer_nav ul li {
+	float:left;
+	list-style:none;
+	line-height:25px;
+}
+
+#footer_nav ul li a {
+
+	line-height: 5px;
+
+	font-size: 15px;
+
+	color: #fff;
+
+	border-right: 1px solid #fff;
+
+	margin-top: 25px;
+
+	padding: 0px 10px;
+
+}
+
+
+
+#footer_nav ul li a:hover { color: #2a2443; }
 
 .footercenter .fnav a {
 	height: 12px;

@@ -1,0 +1,1120 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Music band pro\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-07-24 16:22+0200\n"
+"PO-Revision-Date: 2014-07-24 16:22+0200\n"
+"Last-Translator: \n"
+"Language-Team: codeinwp <support@codeinwp.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop;__;_e;_nx;_ex\n"
+"X-Poedit-Basepath: ../\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPath-1: admin\n"
+
+#: 404.php:11
+msgid "Page not found"
+msgstr ""
+
+#: 404.php:20
+msgid "It looks like nothing was found at this location. Maybe try one of the links below or a search?"
+msgstr ""
+
+#: archive.php:23
+#, php-format
+msgid "Author: %s"
+msgstr ""
+
+#: archive.php:27
+#, php-format
+msgid "Day: %s"
+msgstr ""
+
+#: archive.php:30
+#, php-format
+msgid "Month: %s"
+msgstr ""
+
+#: archive.php:33
+#, php-format
+msgid "Year: %s"
+msgstr ""
+
+#: archive.php:36
+msgid "Asides"
+msgstr ""
+
+#: archive.php:39
+msgid "Images"
+msgstr ""
+
+#: archive.php:42
+msgid "Videos"
+msgstr ""
+
+#: archive.php:45
+msgid "Quotes"
+msgstr ""
+
+#: archive.php:48
+msgid "Links"
+msgstr ""
+
+#: archive.php:51
+msgid "Archives"
+msgstr ""
+
+#: archive.php:82
+#: comments.php:14
+#: front-page.php:51
+#: index.php:51
+#: search.php:40
+msgid "No Comments"
+msgstr ""
+
+#: archive.php:82
+#: front-page.php:51
+#: index.php:51
+#: search.php:40
+msgid "one Comment"
+msgstr ""
+
+#: archive.php:82
+#: front-page.php:51
+#: index.php:51
+#: search.php:40
+msgid "Comments"
+msgstr ""
+
+#: archive.php:103
+#: front-page.php:72
+#: index.php:72
+#: search.php:61
+msgid "Read More"
+msgstr ""
+
+#: archive.php:119
+#: front-page.php:89
+#: index.php:89
+#: search.php:77
+msgid "Prev"
+msgstr ""
+
+#: archive.php:120
+#: front-page.php:90
+#: index.php:90
+#: search.php:78
+msgid "Next"
+msgstr ""
+
+#: comments.php:14
+msgid "Comments (1)"
+msgstr ""
+
+#: comments.php:14
+msgid "Comments(%)"
+msgstr ""
+
+#: comments.php:28
+msgid "Comments are closed."
+msgstr ""
+
+#: comments.php:41
+msgid "Name*"
+msgstr ""
+
+#: comments.php:42
+msgid "Email*"
+msgstr ""
+
+#: comments.php:43
+msgid "URL"
+msgstr ""
+
+#: front-page.php:24
+#: index.php:24
+#: page-music.php:51
+msgid "Latest News"
+msgstr ""
+
+#: functions.php:26
+msgid "Primary Menu"
+msgstr ""
+
+#: functions.php:27
+msgid "Footer Menu"
+msgstr ""
+
+#: functions.php:48
+msgid "Sidebar"
+msgstr ""
+
+#: functions.php:128
+msgid "Default title"
+msgstr ""
+
+#: functions.php:138
+msgid "Albums"
+msgstr ""
+
+#: functions.php:139
+msgid "Album"
+msgstr ""
+
+#: functions.php:153
+msgid "Events"
+msgstr ""
+
+#: functions.php:154
+msgid "Event"
+msgstr ""
+
+#: functions.php:168
+#: functions.php:169
+msgid "Media"
+msgstr ""
+
+#: functions.php:183
+msgid "Band members"
+msgstr ""
+
+#: functions.php:184
+msgid "Band member"
+msgstr ""
+
+#: functions.php:230
+msgid "Views"
+msgstr ""
+
+#: functions.php:254
+msgid "Band member career:"
+msgstr ""
+
+#: functions.php:268
+msgid "Caption image text:"
+msgstr ""
+
+#: functions.php:282
+msgid "Price:"
+msgstr ""
+
+#: functions.php:286
+msgid "Buy album link(for sidebar):"
+msgstr ""
+
+#: functions.php:290
+msgid "Get on itunes(for sidebar):"
+msgstr ""
+
+#: functions.php:294
+msgid "Song no1 title:"
+msgstr ""
+
+#: functions.php:298
+msgid "Song no1 duration:"
+msgstr ""
+
+#: functions.php:302
+msgid "Song no1 lyrics link:"
+msgstr ""
+
+#: functions.php:306
+msgid "Song no2 title"
+msgstr ""
+
+#: functions.php:310
+msgid "Song no2 duration:"
+msgstr ""
+
+#: functions.php:314
+msgid "Song no2 lyrics link:"
+msgstr ""
+
+#: functions.php:318
+msgid "Song no3 title:"
+msgstr ""
+
+#: functions.php:322
+msgid "Song no3 duration:"
+msgstr ""
+
+#: functions.php:326
+msgid "Song no3 lyrics link:"
+msgstr ""
+
+#: functions.php:330
+msgid "Song no4 title:"
+msgstr ""
+
+#: functions.php:334
+msgid "Song no4 duration:"
+msgstr ""
+
+#: functions.php:338
+msgid "Song no4 lyrics link:"
+msgstr ""
+
+#: functions.php:342
+msgid "Song no5 title:"
+msgstr ""
+
+#: functions.php:346
+msgid "Song no5 duration:"
+msgstr ""
+
+#: functions.php:350
+msgid "Song no5 lyrics link:"
+msgstr ""
+
+#: functions.php:354
+msgid "Song no6 title:"
+msgstr ""
+
+#: functions.php:358
+msgid "Song no6 duration:"
+msgstr ""
+
+#: functions.php:362
+msgid "Song no6 lyrics link:"
+msgstr ""
+
+#: functions.php:366
+msgid "Song no7 title:"
+msgstr ""
+
+#: functions.php:370
+msgid "Song no7 duration:"
+msgstr ""
+
+#: functions.php:374
+msgid "Song no7 lyrics link:"
+msgstr ""
+
+#: functions.php:378
+msgid "Song no8 title:"
+msgstr ""
+
+#: functions.php:382
+msgid "Song no8 duration:"
+msgstr ""
+
+#: functions.php:386
+msgid "Song no8 lyrics link:"
+msgstr ""
+
+#: functions.php:390
+msgid "Song no9 title:"
+msgstr ""
+
+#: functions.php:394
+msgid "Song no9 duration:"
+msgstr ""
+
+#: functions.php:398
+msgid "Song no9 lyrics link:"
+msgstr ""
+
+#: functions.php:402
+msgid "Song no10 title:"
+msgstr ""
+
+#: functions.php:406
+msgid "Song no10 duration:"
+msgstr ""
+
+#: functions.php:410
+msgid "Song no10 lyrics link:"
+msgstr ""
+
+#: functions.php:414
+msgid "Song no11 title:"
+msgstr ""
+
+#: functions.php:418
+msgid "Song no11 duration:"
+msgstr ""
+
+#: functions.php:422
+msgid "Song no11 lyrics link:"
+msgstr ""
+
+#: functions.php:426
+msgid "Song no12 title:"
+msgstr ""
+
+#: functions.php:430
+msgid "Song no12 duration:"
+msgstr ""
+
+#: functions.php:434
+msgid "Song no12 lyrics link:"
+msgstr ""
+
+#: functions.php:438
+#: functions.php:442
+msgid "Song no13 duration:"
+msgstr ""
+
+#: functions.php:446
+msgid "Song no13 lyrics link:"
+msgstr ""
+
+#: functions.php:450
+msgid "Song no14 title:"
+msgstr ""
+
+#: functions.php:454
+msgid "Song no14 duration:"
+msgstr ""
+
+#: functions.php:458
+msgid "Song no14 lyrics link:"
+msgstr ""
+
+#: functions.php:462
+msgid "Song no15 title:"
+msgstr ""
+
+#: functions.php:466
+msgid "Song no15 duration:"
+msgstr ""
+
+#: functions.php:470
+msgid "Song no15 lyrics link:"
+msgstr ""
+
+#: functions.php:474
+msgid "Song no16 title:"
+msgstr ""
+
+#: functions.php:478
+msgid "Song no16 duration:"
+msgstr ""
+
+#: functions.php:482
+msgid "Song no16 lyrics link:"
+msgstr ""
+
+#: functions.php:486
+msgid "Song no17 title:"
+msgstr ""
+
+#: functions.php:490
+msgid "Song no17 duration:"
+msgstr ""
+
+#: functions.php:494
+msgid "Song no17 lyrics link:"
+msgstr ""
+
+#: functions.php:498
+msgid "Song no18 title:"
+msgstr ""
+
+#: functions.php:502
+msgid "Song no18 duration:"
+msgstr ""
+
+#: functions.php:506
+msgid "Song no18 lyrics link:"
+msgstr ""
+
+#: functions.php:510
+msgid "Song no19 title:"
+msgstr ""
+
+#: functions.php:514
+msgid "Song no19 duration:"
+msgstr ""
+
+#: functions.php:518
+msgid "Song no19 lyrics link:"
+msgstr ""
+
+#: functions.php:522
+msgid "Song no20 title:"
+msgstr ""
+
+#: functions.php:526
+msgid "Song no20 duration:"
+msgstr ""
+
+#: functions.php:530
+msgid "Song no20 lyrics link:"
+msgstr ""
+
+#: functions.php:545
+msgid "Day:"
+msgstr ""
+
+#: functions.php:548
+msgid "Month:"
+msgstr ""
+
+#: functions.php:551
+msgid "Get tickets link:"
+msgstr ""
+
+#: functions.php:832
+msgid "Related News"
+msgstr ""
+
+#: header.php:41
+msgid "Music Band"
+msgstr ""
+
+#: page-about.php:99
+msgid "Band MEMBERS"
+msgstr ""
+
+#: page-media.php:49
+msgid "PICTURES & VIDEO"
+msgstr ""
+
+#: page-media.php:69
+msgid "Added "
+msgstr ""
+
+#: page-music.php:83
+msgid "TRACK LIST"
+msgstr ""
+
+#: page-music.php:160
+#: page-music.php:175
+#: page-music.php:190
+#: page-music.php:205
+#: page-music.php:220
+#: page-music.php:235
+#: page-music.php:250
+#: page-music.php:265
+#: page-music.php:280
+#: page-music.php:295
+#: page-music.php:310
+#: page-music.php:325
+#: page-music.php:340
+#: page-music.php:355
+#: page-music.php:370
+#: page-music.php:385
+#: page-music.php:400
+#: page-music.php:415
+#: page-music.php:430
+#: page-music.php:445
+msgid "Lyrics"
+msgstr ""
+
+#: page-tour.php:51
+msgid "upcoming events"
+msgstr ""
+
+#: page-tour.php:92
+msgid "Get tickets"
+msgstr ""
+
+#: search.php:12
+#, php-format
+msgid "Search Results for: %s"
+msgstr ""
+
+#: searchform.php:9
+msgid "Search"
+msgstr ""
+
+#: sidebar.php:15
+msgid "Latest Album:"
+msgstr ""
+
+#: sidebar.php:24
+msgid "Tracklisting"
+msgstr ""
+
+#: sidebar.php:336
+msgid "BUY album"
+msgstr ""
+
+#: sidebar.php:338
+msgid "GET on itunes"
+msgstr ""
+
+#: sidebar.php:352
+msgid "Next Event"
+msgstr ""
+
+#: sidebar.php:400
+msgid "Latest video"
+msgstr ""
+
+#: admin/inc/config.php:79
+msgid "General options"
+msgstr ""
+
+#: admin/inc/config.php:84
+msgid "Logo"
+msgstr ""
+
+#: admin/inc/config.php:85
+msgid "Choose logo"
+msgstr ""
+
+#: admin/inc/config.php:91
+msgid "Copyright"
+msgstr ""
+
+#: admin/inc/config.php:92
+msgid "Enter copyright text"
+msgstr ""
+
+#: admin/inc/config.php:100
+msgid "Header button"
+msgstr ""
+
+#: admin/inc/config.php:101
+msgid "Show or hide button in the header of the page"
+msgstr ""
+
+#: admin/inc/config.php:104
+#: admin/inc/config.php:282
+#: admin/inc/config.php:316
+#: admin/inc/config.php:334
+#: admin/inc/config.php:461
+msgid "Show"
+msgstr ""
+
+#: admin/inc/config.php:105
+#: admin/inc/config.php:283
+#: admin/inc/config.php:317
+#: admin/inc/config.php:335
+#: admin/inc/config.php:462
+msgid "Hide"
+msgstr ""
+
+#: admin/inc/config.php:112
+msgid "Header button text"
+msgstr ""
+
+#: admin/inc/config.php:113
+msgid "Enter the text for the header button in case you want the button to appear"
+msgstr ""
+
+#: admin/inc/config.php:115
+msgid "BUY ALBUM"
+msgstr ""
+
+#: admin/inc/config.php:120
+msgid "Header button link"
+msgstr ""
+
+#: admin/inc/config.php:121
+msgid "Enter the link for the header button in case you want the button to appear"
+msgstr ""
+
+#: admin/inc/config.php:129
+#: admin/inc/config.php:134
+msgid "Top banner"
+msgstr ""
+
+#: admin/inc/config.php:135
+msgid "Select the pages you want to have a top banner(Hold CTRL)"
+msgstr ""
+
+#: admin/inc/config.php:143
+msgid "Top banner image"
+msgstr ""
+
+#: admin/inc/config.php:144
+msgid "Choose an image for the top banner"
+msgstr ""
+
+#: admin/inc/config.php:150
+msgid "Top banner title"
+msgstr ""
+
+#: admin/inc/config.php:151
+msgid "Enter a title for the top banner"
+msgstr ""
+
+#: admin/inc/config.php:153
+msgid "NEW ALBUM"
+msgstr ""
+
+#: admin/inc/config.php:157
+msgid "Top banner text"
+msgstr ""
+
+#: admin/inc/config.php:158
+msgid "Enter a text for the top banner"
+msgstr ""
+
+#: admin/inc/config.php:160
+msgid "Pre release 15th November 2013."
+msgstr ""
+
+#: admin/inc/config.php:167
+msgid "Footer section with boxes and social icons"
+msgstr ""
+
+#: admin/inc/config.php:172
+msgid "Footer section"
+msgstr ""
+
+#: admin/inc/config.php:173
+msgid "Select the pages you want to have the footer section(Hold CTRL)"
+msgstr ""
+
+#: admin/inc/config.php:181
+msgid "Footer section background section"
+msgstr ""
+
+#: admin/inc/config.php:182
+msgid "Choose an image for the footer section"
+msgstr ""
+
+#: admin/inc/config.php:188
+msgid "First box title"
+msgstr ""
+
+#: admin/inc/config.php:189
+msgid "Enter a title for the first box"
+msgstr ""
+
+#: admin/inc/config.php:191
+msgid "ON TOUR"
+msgstr ""
+
+#: admin/inc/config.php:195
+msgid "First box text"
+msgstr ""
+
+#: admin/inc/config.php:196
+msgid "Enter a text for the first box"
+msgstr ""
+
+#: admin/inc/config.php:198
+msgid "From 11th November"
+msgstr ""
+
+#: admin/inc/config.php:202
+msgid "Second box title"
+msgstr ""
+
+#: admin/inc/config.php:203
+msgid "Enter a title for the second box"
+msgstr ""
+
+#: admin/inc/config.php:205
+msgid "DARK SKY"
+msgstr ""
+
+#: admin/inc/config.php:209
+msgid "Second box text"
+msgstr ""
+
+#: admin/inc/config.php:210
+msgid "Enter a text for the second box"
+msgstr ""
+
+#: admin/inc/config.php:212
+msgid "get on itunes now!"
+msgstr ""
+
+#: admin/inc/config.php:216
+msgid "Third box title"
+msgstr ""
+
+#: admin/inc/config.php:217
+msgid "Enter a title for the third box"
+msgstr ""
+
+#: admin/inc/config.php:219
+msgid "FUN ZONE"
+msgstr ""
+
+#: admin/inc/config.php:223
+msgid "Third box text"
+msgstr ""
+
+#: admin/inc/config.php:224
+msgid "Enter a text for the third box"
+msgstr ""
+
+#: admin/inc/config.php:226
+msgid "send us a message"
+msgstr ""
+
+#: admin/inc/config.php:230
+msgid "Facebook link"
+msgstr ""
+
+#: admin/inc/config.php:231
+msgid "Enter the facebook link"
+msgstr ""
+
+#: admin/inc/config.php:237
+msgid "Twitter link"
+msgstr ""
+
+#: admin/inc/config.php:238
+msgid "Enter the twitter link"
+msgstr ""
+
+#: admin/inc/config.php:244
+msgid "Linkedin link"
+msgstr ""
+
+#: admin/inc/config.php:245
+msgid "Enter the linkedin link"
+msgstr ""
+
+#: admin/inc/config.php:255
+msgid "Single page"
+msgstr ""
+
+#: admin/inc/config.php:260
+#: admin/inc/config.php:296
+msgid "Post details"
+msgstr ""
+
+#: admin/inc/config.php:261
+msgid "Choose what post details to show on single page"
+msgstr ""
+
+#: admin/inc/config.php:264
+#: admin/inc/config.php:300
+msgid "Date"
+msgstr ""
+
+#: admin/inc/config.php:265
+#: admin/inc/config.php:301
+msgid "Author"
+msgstr ""
+
+#: admin/inc/config.php:266
+#: admin/inc/config.php:302
+msgid "Number of comments"
+msgstr ""
+
+#: admin/inc/config.php:267
+#: admin/inc/config.php:303
+msgid "Category"
+msgstr ""
+
+#: admin/inc/config.php:268
+#: admin/inc/config.php:304
+msgid "Tags"
+msgstr ""
+
+#: admin/inc/config.php:269
+msgid "Number of views"
+msgstr ""
+
+#: admin/inc/config.php:270
+#: admin/inc/config.php:305
+msgid "None"
+msgstr ""
+
+#: admin/inc/config.php:278
+msgid "Featured image on single page"
+msgstr ""
+
+#: admin/inc/config.php:279
+msgid "Show or hide featured image on single page"
+msgstr ""
+
+#: admin/inc/config.php:291
+msgid "First page + Archive page + Search page"
+msgstr ""
+
+#: admin/inc/config.php:297
+msgid "Choose what post details to show on first page, archive page and search page"
+msgstr ""
+
+#: admin/inc/config.php:312
+msgid "Featured image on first page"
+msgstr ""
+
+#: admin/inc/config.php:313
+msgid "Show or hide featured image on first page, archive page and search page"
+msgstr ""
+
+#: admin/inc/config.php:330
+msgid "Slider section on first page"
+msgstr ""
+
+#: admin/inc/config.php:331
+msgid "Show or hide slider section on first page"
+msgstr ""
+
+#: admin/inc/config.php:342
+msgid "First slide"
+msgstr ""
+
+#: admin/inc/config.php:347
+msgid "First image for slider"
+msgstr ""
+
+#: admin/inc/config.php:348
+msgid "Choose first image for slider"
+msgstr ""
+
+#: admin/inc/config.php:354
+msgid "First slide big title"
+msgstr ""
+
+#: admin/inc/config.php:355
+msgid "Enter a title to appear on the right side of the first slide"
+msgstr ""
+
+#: admin/inc/config.php:357
+#: admin/inc/config.php:393
+msgid "ASYLUM"
+msgstr ""
+
+#: admin/inc/config.php:361
+msgid "First slide small title"
+msgstr ""
+
+#: admin/inc/config.php:362
+msgid "Enter a title to appear on the left side of the first slide"
+msgstr ""
+
+#: admin/inc/config.php:364
+#: admin/inc/config.php:400
+#: admin/inc/config.php:436
+msgid "NEW album"
+msgstr ""
+
+#: admin/inc/config.php:368
+msgid "First slide text"
+msgstr ""
+
+#: admin/inc/config.php:369
+msgid "Enter a text to appear on the left side of the first slide"
+msgstr ""
+
+#: admin/inc/config.php:378
+msgid "Second slide"
+msgstr ""
+
+#: admin/inc/config.php:383
+msgid "Second image for slider"
+msgstr ""
+
+#: admin/inc/config.php:384
+msgid "Choose second image for slider"
+msgstr ""
+
+#: admin/inc/config.php:390
+msgid "Second slide big title"
+msgstr ""
+
+#: admin/inc/config.php:391
+msgid "Enter a title to appear on the right side of the second slide"
+msgstr ""
+
+#: admin/inc/config.php:397
+msgid "Second slide small title"
+msgstr ""
+
+#: admin/inc/config.php:398
+msgid "Enter a title to appear on the left side of the second slide"
+msgstr ""
+
+#: admin/inc/config.php:404
+msgid "Second slide text"
+msgstr ""
+
+#: admin/inc/config.php:405
+msgid "Enter a text to appear on the left side of the second slide"
+msgstr ""
+
+#: admin/inc/config.php:414
+msgid "Third slide"
+msgstr ""
+
+#: admin/inc/config.php:419
+msgid "Third image for slider"
+msgstr ""
+
+#: admin/inc/config.php:420
+msgid "Choose third image for slider"
+msgstr ""
+
+#: admin/inc/config.php:426
+#: admin/inc/config.php:433
+msgid "Third slide big title"
+msgstr ""
+
+#: admin/inc/config.php:427
+msgid "Enter a title to appear on the right side of the third slide"
+msgstr ""
+
+#: admin/inc/config.php:434
+msgid "Enter a title to appear on the left side of the third slide"
+msgstr ""
+
+#: admin/inc/config.php:440
+msgid "Third slide text"
+msgstr ""
+
+#: admin/inc/config.php:441
+msgid "Enter a text to appear on the left side of the third slide"
+msgstr ""
+
+#: admin/inc/config.php:452
+msgid "Normal pages layout"
+msgstr ""
+
+#: admin/inc/config.php:457
+msgid "Featured image on pages"
+msgstr ""
+
+#: admin/inc/config.php:458
+msgid "Show or hide featured image on pages"
+msgstr ""
+
+#: admin/inc/render.php:211
+msgid "Normal"
+msgstr ""
+
+#: admin/inc/render.php:212
+msgid "Italic"
+msgstr ""
+
+#: admin/inc/render.php:213
+msgid "Bold"
+msgstr ""
+
+#: admin/inc/render.php:214
+msgid "Bold Italic"
+msgstr ""
+
+#: admin/inc/render.php:266
+msgid "No Repeat"
+msgstr ""
+
+#: admin/inc/render.php:267
+msgid "Repeat Horizontally"
+msgstr ""
+
+#: admin/inc/render.php:268
+msgid "Repeat Vertically"
+msgstr ""
+
+#: admin/inc/render.php:269
+msgid "Repeat All"
+msgstr ""
+
+#: admin/inc/render.php:274
+msgid "Top Left"
+msgstr ""
+
+#: admin/inc/render.php:275
+msgid "Top Center"
+msgstr ""
+
+#: admin/inc/render.php:276
+msgid "Top Right"
+msgstr ""
+
+#: admin/inc/render.php:277
+msgid "Middle Left"
+msgstr ""
+
+#: admin/inc/render.php:278
+msgid "Middle Center"
+msgstr ""
+
+#: admin/inc/render.php:279
+msgid "Middle Right"
+msgstr ""
+
+#: admin/inc/render.php:280
+msgid "Bottom Left"
+msgstr ""
+
+#: admin/inc/render.php:281
+msgid "Bottom Center"
+msgstr ""
+
+#: admin/inc/render.php:282
+msgid "Bottom Right"
+msgstr ""
+
+#: admin/inc/render.php:287
+msgid "Scroll Normally"
+msgstr ""
+
+#: admin/inc/render.php:288
+msgid "Fixed in Place"
+msgstr ""
+
+#: admin/layout/main_page.php:9
+msgid "Contact us"
+msgstr ""
+
+#: admin/layout/main_page.php:10
+msgid "About us"
+msgstr ""
+
+#: admin/layout/main_page.php:11
+msgid "Forum"
+msgstr ""
+
+#: admin/layout/main_page.php:12
+msgid "Documentation"
+msgstr ""
+
+#: admin/layout/main_page.php:21
+#: admin/layout/main_page.php:61
+msgid "Save All Changes"
+msgstr ""
+
+#: admin/layout/main_page.php:24
+#: admin/layout/main_page.php:64
+msgid "Options Reset"
+msgstr ""
+
+#: inc/extras.php:66
+#, php-format
+msgid "Page %s"
+msgstr ""
+
+#: inc/template-tags.php:33
+msgid "Post navigation"
+msgstr ""
+
+#: inc/template-tags.php:43
+msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
+msgstr ""
+
+#: inc/template-tags.php:47
+msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
+msgstr ""
+
+#: inc/template-tags.php:74
+msgid "Pingback:"
+msgstr ""
+
+#: inc/template-tags.php:74
+msgid "(Edit)"
+msgstr ""
+
+#: inc/template-tags.php:89
+msgid "WRITTEN BY"
+msgstr ""
+
+#: inc/template-tags.php:91
+msgid "Your comment is awaiting moderation."
+msgstr ""
+
+#: inc/template-tags.php:169
+#, php-format
+msgid "<span class=\"posted-on\">Posted on %1$s</span><span class=\"byline\"> by %2$s</span>"
+msgstr ""
+
+#: inc/template-tags.php:177
+#, php-format
+msgid "View all posts by %s"
+msgstr ""
+

@@ -5,10 +5,11 @@
  * @package cwp
  */
 ?>
-				<div class="widget latest_album">
+				
 					<?php
 					$queryObject = new WP_Query( 'post_type=album&posts_per_page=1' );
 					if ($queryObject->have_posts()) {
+						echo '<div class="widget latest_album">';
 						while ($queryObject->have_posts()) {
 							$queryObject->the_post();
 							?>
@@ -336,17 +337,19 @@
 										echo '<div class="button"><a href="'.$cpi_buyalbum_option[0].'">'.__('BUY album','music-band-pro').'</a></div>';
 									if(isset($cpi_itunes_option[0]) && $cpi_itunes_option[0] != '')
 										echo '<div class="button"><a href="'.$cpi_itunes_option[0].'">'.__('GET on itunes','music-band-pro').'</a></div>';
-						}	
+						}
+						echo '</div>';
 					}
 					wp_reset_postdata();
 					?>
-				</div>	
 				
-				<div class="widget next_event">
+				
+				
 				
 					<?php
 					$count_posts = wp_count_posts('event');
 					if($count_posts->publish >= 3):
+						echo '<div class="widget next_event">';
 						?>
 						<div class="title dark">
 							<?php _e('Next Event','music-band-pro'); ?>
@@ -387,9 +390,9 @@
 						wp_reset_postdata();
 						?>
 						</div>
-						
+						</div>
 						<?php endif; ?>
-				</div><!--/widget-->
+				
 				<?php
 					$queryObject = new WP_Query( 'post_type=media&posts_per_page=1' );
 					if ($queryObject->have_posts()) {

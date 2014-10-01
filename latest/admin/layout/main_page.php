@@ -1,17 +1,30 @@
 <div id="cwp_container" style="display:none">
 
+
+ 
+	  
+
 	<form id="cwp_form" method="post" action="#" enctype="multipart/form-data">
 	<?php settings_fields( cwp_config("menu_slug")); ?>
  
 		<div id="header">
+		
 			<div class="logo ">
+				<h2>
+
+			    <img class="theme_options_logo" src="<?php echo get_stylesheet_directory_uri() . "/admin/layout/img/logo.png"; ?>" alt="<?php echo cwp_config('admin_page_header'); ?>"> 
+				
+				<a href="http://www.readythemes.com/ready-review-tutorials/?r=wporg" class="read_docs button" target="_blank" style="text-decoration: none;"><?php _e("Read online documentation", "cwp"); ?></a>
+				
+				<a href="http://www.readythemes.com/affiliate-review-plus/?r=wporg"  class="read_docs button" target="_blank" style="color:red; text-decoration: none; "><?php _e("Buy PRO Version", "cwp"); ?></a>
+				
+				
+				</h2>
 			</div>
-			<a href="http://themeisle.com/contact/" class="button button_top" target="_blank"><?php _e('Contact us','cwp'); ?></a>
-			<a href="http://themeisle.com/about-us/" class="button button_top" target="_blank"><?php _e('About us','cwp'); ?></a>
-			<a href="http://themeisle.com/forums/forum/music-band" class="button button_top" target="_blank"><?php _e('Forum','cwp'); ?></a>
-			<a href="http://themeisle.com/documentation-music-band" class="button button_top" target="_blank"><?php _e('Documentation','cwp'); ?></a>
+		  
 			<div class="clear"></div>
-    	</div>
+		
+    		</div>
 
 		<div id="info_bar">
 		 
