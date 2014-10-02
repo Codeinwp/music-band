@@ -7,50 +7,14 @@
  * and that other 'pages' on your WordPress site will use a
  * different template.
  *
- * @package cwp
+ * @package music-band-pro
  */
 
-get_header(); ?>
-<?php 
+get_header();
+ 
 	while ( have_posts() ) : the_post();
-		$id = get_the_ID();
-		
-		$top_banner = cwp('top_banner');
-			if(isset($top_banner) && !empty($top_banner)):
-				foreach($top_banner as $p):		
-					if($id == $p):
-						$top_banner_image = cwp('top_banner_image');
-						$top_banner_title = cwp('top_banner_title');
-						$top_banner_text = cwp('top_banner_text');
-						if(isset($top_banner_image) && $top_banner_image == '/images/abovefooterbg.png'):
-						?>
-							<section id="subheader" class="subheader_news" style="background-image: url(<?php echo get_template_directory_uri(); ?>/images/abovefooterbg.png);">
-								<?php 
-									if(isset($top_banner_title) && $top_banner_title != '')
-										echo '<div class="album_title">'.$top_banner_title.'</div>';
-									if(isset($top_banner_text) && $top_banner_text != '')	
-										echo '<p>'.$top_banner_text.'</p>';
-								?>
-							</section><!--/subheader-->
-						<?php
-						elseif(isset($top_banner_image) && $top_banner_image != ''):
-						?>
-							<section id="subheader" class="subheader_news" style="<?php echo $top_banner_image; ?>">
-								<?php 
-									if(isset($top_banner_title) && $top_banner_title != '')
-										echo '<div class="album_title">'.$top_banner_text.'</div>';
-									if(isset($top_banner_text) && $top_banner_text != '')	
-										echo '<p>'.$top_banner_text.'</p>';
-								?>
-							</section><!--/subheader-->
-						<?php
-						endif;
-					endif;
-				endforeach;
-			endif;
- ?>
-		<div class="headerborder"></div>
-		
+		$id = get_the_ID();	
+?>
 		<!--Content Start-->
 		<div id="wraper">
 			<section id="content">
@@ -66,8 +30,9 @@ get_header(); ?>
 							
 							<?php 
 								$caption = get_post_meta($id, 'cpi_caption_option');
-								if(isset($caption[0]) && $caption[0] != '')	
+								if( !empty($caption[0]) ):
 									echo '<div class="year">'.$caption[0].'</div>';
+								endif;	
 							?>
 						</div>
 					<?php

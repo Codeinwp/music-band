@@ -2,11 +2,11 @@
 /*
  * The template for displaying Search Results pages.
  *
- * @package cwp
+ * @package music-band-pro
  */
 
 get_header(); ?>
-<div class="pagetitle">
+		<div class="pagetitle">
 			<div class="pagetitlecenter">
 				<h3>
 					<?php printf( __( 'Search Results for: %s', 'music-band-pro' ), '<span>' . get_search_query() . '</span>' ); ?>
@@ -58,7 +58,7 @@ get_header(); ?>
 							?>
 						</div>
 					</div><!--/topdetails-->
-					<div class="readmore"><a href="<?php the_permalink(); ?>"><?php _e('Read More','music-band-pro'); ?></a></div>
+					
 					<div class="clearfix"></div>
 					<?php 
 						$fi_index = cwp('fi_index');
@@ -71,6 +71,8 @@ get_header(); ?>
 					<article>
 						<?php the_excerpt(); ?>
 					</article>
+					<div class="readmore"><a href="<?php the_permalink(); ?>"><?php _e('Read More','music-band-pro'); ?></a></div>
+					<div class="clearfix"></div>
 				</div><!--/post-->
 				<?php endwhile; ?>
 				<div class="pagination">

@@ -128,15 +128,7 @@
 									"type"=>"group",
 									"name"=>__("Top banner",'music-band-pro'),
 									"options"=>	array(
-													array(
-														
-														"type"=>"multiselect",
-														"name"=>__("Top banner",'music-band-pro'),
-														"description"=>__("Select the pages you want to have a top banner(Hold CTRL)",'music-band-pro'),
-														"id"=>"top_banner",
-														"options"=>$tmp,
-														"default"=>$default
-													),
+													
 													array(
 									
 														"type"=>"image",
@@ -166,15 +158,7 @@
 									"type"=>"group",
 									"name"=>__("Footer section with boxes and social icons",'music-band-pro'),
 									"options"=>	array(
-													array(
-														
-														"type"=>"multiselect",
-														"name"=>__("Footer section",'music-band-pro'),
-														"description"=>__("Select the pages you want to have the footer section(Hold CTRL)",'music-band-pro'),
-														"id"=>"footer_section",
-														"options"=>$tmp,
-														"default"=>$default
-													),
+													
 													array(
 									
 														"type"=>"image",
@@ -464,7 +448,257 @@
 											"default"=>"show"
 										)
 									)
-						),						
+						),	
+						array(
+							"type"=>"tab",
+							"name"=>__("Site colors",'music-band-pro'),
+							"options"=>array(
+										array(
+											"type"=>"color",
+											"name"=>"Buttons background",
+											"description"=>"",
+											"id"=>"buttons_background",
+											"default"=>"#c46e67"
+										),
+										array(
+											"type"=>"color",
+											"name"=>"Buttons text color",
+											"description"=>"",
+											"id"=>"buttons_color",
+											"default"=>"#fff"
+										),
+										array(
+											"type"=>"color",
+											"name"=>"Buttons background - hover",
+											"description"=>"",
+											"id"=>"buttons_background_hover",
+											"default"=>"#97534e"
+										),
+										array(
+											"type"=>"color",
+											"name"=>"Buttons text color - hover",
+											"description"=>"",
+											"id"=>"buttons_color_hover",
+											"default"=>"#fff"
+										),
+										array(
+											"type"=>"color",
+											"name"=>"Post title",
+											"description"=>"",
+											"id"=>"post_title",
+											"default"=>"#bb6053"
+										),
+										array(
+											"type"=>"color",
+											"name"=>"Page title",
+											"description"=>"",
+											"id"=>"page_title",
+											"default"=>"#bb6053"
+										),
+										array(
+											"type"=>"color",
+											"name"=>"Sidebar background",
+											"description"=>"",
+											"id"=>"sidebar_background",
+											"default"=>"#2a2443"
+										),
+										array(
+											"type"=>"color",
+											"name"=>"Sidebar widget title color",
+											"description"=>"",
+											"id"=>"sidebar_widget_title",
+											"default"=>"#9080c9"
+										),
+										
+										array(
+											"type"=>"color",
+											"name"=>"Sidebar widget text color",
+											"description"=>"",
+											"id"=>"sidebar_widget_text",
+											"default"=>"#fff"
+										),
+										
+										
+										array(
+											"type"=>"color",
+											"name"=>"Slider details background",
+											"description"=>"",
+											"id"=>"slider_details_background",
+											"default"=>""
+										),
+										array(
+											"type"=>"color",
+											"name"=>"Slider details big title color",
+											"description"=>"",
+											"id"=>"slider_details_big_title_color",
+											"default"=>"#fff"
+										),
+										array(
+											"type"=>"color",
+											"name"=>"Slider details small title color",
+											"description"=>"",
+											"id"=>"slider_details_small_title_color",
+											"default"=>"#433d63"
+										),
+										array(
+											"type"=>"color",
+											"name"=>"Slider details text color",
+											"description"=>"",
+											"id"=>"slider_details_text_color",
+											"default"=>"#fff"
+										),
+										array(
+											"type"=>"color",
+											"name"=>"Footer background",
+											"description"=>"",
+											"id"=>"footer_background",
+											"default"=>"#c46e67"
+										),
+										array(
+											"type"=>"color",
+											"name"=>"Footer color",
+											"description"=>"",
+											"id"=>"footer_text",
+											"default"=>"#fff"
+										),
+										array(
+											"type"=>"color",
+											"name"=>"Footer boxes - title color",
+											"description"=>"",
+											"id"=>"footer_boxes_title",
+											"default"=>"#fff"
+										),
+										array(
+											"type"=>"color",
+											"name"=>"Footer boxes - border color",
+											"description"=>"",
+											"id"=>"footer_boxes_border",
+											"default"=>"#fff"
+										),
+										array(
+											"type"=>"color",
+											"name"=>"Footer boxes - text color",
+											"description"=>"",
+											"id"=>"footer_boxes_text",
+											"default"=>"#9b3226"
+										),
+										array(
+											"type"=>"color",
+											"name"=>"Search form background",
+											"description"=>"",
+											"id"=>"search_form_background",
+											"default"=>"#7e70af"
+										),
+										array(
+											"type"=>"color",
+											"name"=>"Search form color",
+											"description"=>"",
+											"id"=>"search_form_color",
+											"default"=>"#fff"
+										),
+										array(
+											"type"=>"color",
+											"name"=>"Lates video widget background",
+											"description"=>"",
+											"id"=>"latest_video_background",
+											"default"=>"#c46e67"
+										),
+										array(
+											"type"=>"color",
+											"name"=>"Lates video widget text color",
+											"description"=>"",
+											"id"=>"latest_video_text",
+											"default"=>"#2a2443"
+										),
+										array(
+											"type"=>"color",
+											"name"=>"Lates video widget title color",
+											"description"=>"",
+											"id"=>"latest_video_title",
+											"default"=>"#fff"
+										),
+										array(
+											"type"=>"color",
+											"name"=>"Related news widget titles color",
+											"description"=>"",
+											"id"=>"related_news_title",
+											"default"=>"#c46e67"
+										),
+										array(
+											"type"=>"color",
+											"name"=>"Related news widget titles color - hover",
+											"description"=>"",
+											"id"=>"related_news_title_hover",
+											"default"=>"#c46e67"
+										),
+										array(
+											"type"=>"color",
+											"name"=>"Related news widget date color",
+											"description"=>"",
+											"id"=>"related_news_date",
+											"default"=>"#7e70af"
+										),
+										array(
+											"type"=>"color",
+											"name"=>"Related news widget date color - hover",
+											"description"=>"",
+											"id"=>"related_news_date_hover",
+											"default"=>"#9586ca"
+										),
+										array(
+											"type"=>"color",
+											"name"=>"Latest album widget - album name color",
+											"description"=>"",
+											"id"=>"latest_album_title",
+											"default"=>"#be7d7f"
+										),
+										array(
+											"type"=>"color",
+											"name"=>"Latest album widget - tracklist title color",
+											"description"=>"",
+											"id"=>"latest_album_tracklist",
+											"default"=>"#c46e67"
+										),
+										array(
+											"type"=>"color",
+											"name"=>"Latest album widget - song title color",
+											"description"=>"",
+											"id"=>"latest_album_song",
+											"default"=>"#fff"
+										),
+										array(
+											"type"=>"color",
+											"name"=>"Latest album widget - song title color - hover",
+											"description"=>"",
+											"id"=>"latest_album_song_hover",
+											"default"=>"#7e70af"
+										),
+										array(
+											"type"=>"color",
+											"name"=>"Latest album widget - button background",
+											"description"=>"",
+											"id"=>"latest_album_button_background",
+											"default"=>"#c46e67"
+										),
+										array(
+											"type"=>"color",
+											"name"=>"Latest album widget - button background - hover",
+											"description"=>"",
+											"id"=>"latest_album_button_background_hover",
+											"default"=>"#c46e67"
+										),
+										array(
+											"type"=>"color",
+											"name"=>"Latest album widget - button color",
+											"description"=>"",
+											"id"=>"latest_album_button_color",
+											"default"=>"#fff"
+										)
+										
+										
+
+									)
+						),							
 					); 
 			 
 		}	 

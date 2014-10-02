@@ -27,136 +27,121 @@
 								/*
 								* FIRST SLIDE
 								*/
-								if(isset($slider_image1) && $slider_image1 == '/images/slideone.png') {
-								?>
-									<div class="slide" style="background-image: url(<?php echo get_template_directory_uri(); ?>/images/slideone.png);">
-										<div class="slide_details">
-											<div class="album_details">
-												<?php 
-												if(isset($slider_title1) && $slider_title1 != '')
+								if( !empty($slider_image1) ):
+								
+									/* image */
+								
+									if( $slider_image1 == '/images/slideone.png' ):
+										echo '<div class="slide" style="background-image: url('.get_template_directory_uri().'/images/slideone.png);">';
+									else:
+										echo '<div class="slide" style="background-image: url('.$slider_image1.');">';
+									endif;
+
+									/* details */
+
+									if ( !empty($slider_title1) || !empty($slider_text1) || !empty($slider_bigtitle1) ):	
+										echo '<div class="slide_details">';
+											echo '<div class="album_details">';
+											
+												if( !empty($slider_title1) ):
 													echo '<h3>'.$slider_title1.'</h3>';
-												if(isset($slider_text1) && $slider_text1 != '')	
+												endif;	
+												if( !empty($slider_text1) ):
 													echo '<p>'.$slider_text1.'</p>';
-												?>
-											</div>
-											<?php 
-												if(isset($slider_bigtitle1) && $slider_bigtitle1 != '') 
-													echo '<div class="album_title">'.$slider_bigtitle1.'</div>'; 
-											?>
-										</div>
-									</div>
-								<?php
-								}
-								else if(isset($slider_image1) && $slider_image1 != '/images/slideone.png'){
-								?>
-									<div class="slide" style="background-image: url(<?php echo $slider_image1; ?>);">
-										<div class="slide_details">
-											<div class="album_details">
-												<?php 
-												if(isset($slider_title1) && $slider_title1 != '')
-													echo '<h3>'.$slider_title1.'</h3>';
-												if(isset($slider_text1) && $slider_text1 != '')	
-													echo '<p>'.$slider_text1.'</p>';	
-												?>
-											</div>
-											<?php 
-												if(isset($slider_bigtitle1) && $slider_bigtitle1 != '') 
-													echo '<div class="album_title">'.$slider_bigtitle1.'</div>'; 
-											?>
-										</div>
-									</div>
-								<?php
-								}
+												endif;	
+											
+											echo '</div>';
+											
+											if( !empty($slider_bigtitle1) ):
+												echo '<div class="album_title">'.$slider_bigtitle1.'</div>'; 
+											endif;	
+											
+											
+										echo '</div>';
+									echo '</div>';
+									endif;
+								
+								endif;
 								
 								/*
 								* SECOND SLIDE
 								*/
 								
-								if(isset($slider_image2) && $slider_image2 == '/images/slideone.png') {
-								?>
-									<div class="slide" style="background-image: url(<?php echo get_template_directory_uri(); ?>/images/slideone.png);">
-										<div class="slide_details">
-											<div class="album_details">
-												<?php 
-												if(isset($slider_title2) && $slider_title2 != '')
+								if( !empty($slider_image2) ):
+								
+									/* image */
+								
+									if( $slider_image2 == '/images/slideone.png' ):
+										echo '<div class="slide" style="background-image: url('.get_template_directory_uri().'/images/slideone.png);">';
+									else:
+										echo '<div class="slide" style="background-image: url('.$slider_image2.');">';
+									endif;
+
+									/* details */
+
+									if ( !empty($slider_title2) || !empty($slider_text2) || !empty($slider_bigtitle2) ):	
+										echo '<div class="slide_details">';
+											echo '<div class="album_details">';
+											
+												if( !empty($slider_title2) ):
 													echo '<h3>'.$slider_title2.'</h3>';
-												if(isset($slider_text2) && $slider_text2 != '')	
+												endif;	
+												if( !empty($slider_text2) ):
 													echo '<p>'.$slider_text2.'</p>';
-												?>
-											</div>
-											<?php 
-												if(isset($slider_bigtitle2) && $slider_bigtitle2 != '') 
-													echo '<div class="album_title">'.$slider_bigtitle2.'</div>'; 
-											?>
-										</div>
-									</div>
-								<?php
-								}
-								else if(isset($slider_image2) && $slider_image2 != '/images/slideone.png'){
-								?>
-									<div class="slide" style="background-image: url(<?php echo $slider_image2; ?>);">
-										<div class="slide_details">
-											<div class="album_details">
-												<?php 
-												if(isset($slider_title2) && $slider_title2 != '')
-													echo '<h3>'.$slider_title2.'</h3>';
-												if(isset($slider_text2) && $slider_text2 != '')	
-													echo '<p>'.$slider_text2.'</p>';
-												?>
-											</div>
-											<?php 
-												if(isset($slider_bigtitle2) && $slider_bigtitle2 != '') 
-													echo '<div class="album_title">'.$slider_bigtitle2.'</div>'; 
-											?>
-										</div>
-									</div>
-								<?php
-								}
+												endif;	
+											
+											echo '</div>';
+											
+											if( !empty($slider_bigtitle2) ):
+												echo '<div class="album_title">'.$slider_bigtitle2.'</div>'; 
+											endif;	
+											
+											
+										echo '</div>';
+									echo '</div>';
+									endif;
+								
+								endif;
 								
 								/*
 								* THIRD SLIDE
 								*/
 								
-								if(isset($slider_image3) && $slider_image3 == '/images/slideone.png') {
-								?>
-									<div class="slide" style="background-image: url(<?php echo get_template_directory_uri(); ?>/images/slideone.png);">
-										<div class="slide_details">
-											<div class="album_details">
-												<?php 
-												if(isset($slider_title3) && $slider_title3 != '')
+								if( !empty($slider_image3) ):
+								
+									/* image */
+								
+									if( $slider_image3 == '/images/slideone.png' ):
+										echo '<div class="slide" style="background-image: url('.get_template_directory_uri().'/images/slideone.png);">';
+									else:
+										echo '<div class="slide" style="background-image: url('.$slider_image3.');">';
+									endif;
+
+									/* details */
+
+									if ( !empty($slider_title3) || !empty($slider_text3) || !empty($slider_bigtitle3) ):	
+										echo '<div class="slide_details">';
+											echo '<div class="album_details">';
+											
+												if( !empty($slider_title3) ):
 													echo '<h3>'.$slider_title3.'</h3>';
-												if(isset($slider_text3) && $slider_text3 != '')	
+												endif;	
+												if( !empty($slider_text3) ):
 													echo '<p>'.$slider_text3.'</p>';
-												?>
-											</div>
-											<?php 
-												if(isset($slider_bigtitle3) && $slider_bigtitle3 != '') 
-													echo '<div class="album_title">'.$slider_bigtitle3.'</div>'; 
-											?>
-										</div>
-									</div>
-								<?php
-								}
-								else if(isset($slider_image3) && $slider_image3 != '/images/slideone.png'){
-								?>
-									<div class="slide" style="background-image: url(<?php echo $slider_image3; ?>);">
-										<div class="slide_details">
-											<div class="album_details">
-												<?php 
-												if(isset($slider_title3) && $slider_title3 != '')
-													echo '<h3>'.$slider_title3.'</h3>';
-												if(isset($slider_text3) && $slider_text3 != '')	
-													echo '<p>'.$slider_text3.'</p>';
-												?>
-											</div>
-											<?php 
-												if(isset($slider_bigtitle3) && $slider_bigtitle3 != '') 
-													echo '<div class="album_title">'.$slider_bigtitle3.'</div>'; 
-											?>
-										</div>
-									</div>
-								<?php
-								}
+												endif;	
+											
+											echo '</div>';
+											
+											if( !empty($slider_bigtitle3) ):
+												echo '<div class="album_title">'.$slider_bigtitle3.'</div>'; 
+											endif;	
+											
+											
+										echo '</div>';
+									echo '</div>';
+									endif;
+								
+								endif;
 							?>
 						</div><!-- end .slider-wrapper -->
 						</div>

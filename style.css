@@ -136,13 +136,11 @@ h6 {
 }
 
 .pagetitlecenter h3 {
-	width: 645px;
 	height: 83px;
 	line-height: 83px;
 	color: #7e70af;
 	font-family: "Nyala", sans-serif;
 	font-size: 35px;
-	margin-left: 43px;
 	text-transform: uppercase;
 }
 
@@ -235,7 +233,7 @@ header .buyalbum {
 	font-family: "Nyala", sans-serif;
 	background-color: #c46e67;
 	text-transform: uppercase;
-	margin: 24px 0px 0px 48px;
+	margin: 24px 0px 0px 0px;
 }
 
 header .buyalbum:hover { background-color: #97534e; }
@@ -366,56 +364,93 @@ header .buyalbum a { display: block; }
 
 /* 2 - News Stlye */
 .post {
-	width: 620px;
 	height: auto;
 	padding-bottom: 25px;
-	margin: 17px 0px 17px 40px;
 	border-bottom: 1px dotted #a0a0a0;
 }
 
 .post:last-of-type { border-bottom: none; }
 
 .post .topdetails {
-	width: 517px;
+
 	min-height: 38px;
+
 	float: left;
+
 }
 
+
+
 .post .topdetails a {
+
 	width: 100%;
+
 	font-size: 21px;
+
 	font-weight: 700;
+
 	color: #bb6053;
+
 	text-transform: uppercase;
+
 }
+
+
 
 .post .topdetails a:hover { color: #97534e; }
 
+
+
 .topdetails .details, .topdetails .details a {
+
 	font-size: 12px;
+
 	color: #a0a0a0;
+
 	font-style: italic;
-	margin-top: 3px;
+
+	margin-top: 15px;
+
 }
 
+
+
 .post .readmore {
+
 	width: 95px;
+
 	height: 40px;
+
 	float: right;
+
 	background: #c46e67;
+	margin: 10px 0px 10px 10px;
 }
+
+
 
 .post .readmore:hover { background-color: #97534e; }
 
+
+
 .post .readmore a {
+
 	width: 100%;
+
 	height: 40px;
+
 	display: block;
+
 	text-align: center;
+
 	line-height: 40px;
+
 	color: #fff;
+
 	font-size: 13px;
+
 }
+
 
 .post figure {
 	width: 100%;
@@ -610,7 +645,7 @@ header .buyalbum a { display: block; }
 
 .latest_album .album_cover {
 	width: 100%;
-	height: 253px;
+	height: auto;
 	margin-bottom: 20px;
 	overflow: hidden;
 }
@@ -802,7 +837,6 @@ header .buyalbum a { display: block; }
 #abovefooter {
 	width: 100%;
 	height: 331px;
-	background-image: url(images/abovefooterbg.png);
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	background-size: cover;
@@ -846,7 +880,7 @@ header .buyalbum a { display: block; }
 }
 
 .abovefooter_center .box.center .title { text-shadow: 0px -1px 0px #121230; }
-.abovefooter_center .box.center .subtitle { color: #141434; }
+
 
 #footersocialmedia {
 	width: 190px;
@@ -1146,9 +1180,9 @@ footer {
 /* * 5 - Tour Style & */
 .event {
 	width: 292px;
-	height: 395px;
+	height: auto;
 	float: left;
-	margin: 15px;
+	margin: 15px 15px 15px 0px;
 	background: #19142d;
 }
 
@@ -1210,6 +1244,9 @@ footer {
 	color:#fff;
 }
 
+.single-event .event {
+	width:100% !Important;
+}
 
 /* 6 - About Style */
 
@@ -1501,22 +1538,40 @@ pre {
 }
 
 .pagination {
+
 	padding-bottom: 25px;
-	margin: 17px 0px 17px 40px;
+
+	margin: 17px 0px 17px 0px;
+
 }
 
 .next, .prev {
+
 	color:#bb6053;
+
 	text-transform: uppercase;
+	
+	font-weight: bold;
+	font-size: 15px;
+
 }
+
+
 
 .next {
+
 	float:right;
+
 }
 
+
+
 .prev {
+
 	float:left;
+
 }
+
 
 .fields span {
 	width:115px;
@@ -1623,6 +1678,11 @@ aside#sidebar .widget_calendar table tbody tr td:first-of-type { border-left: no
 .widget_calendar {float: left; }
 
 /* Sidebar Calendar Widget End */
+
+.home #content article p{
+	padding-top:10px;
+	color:#5e5e5e;
+}
 
 /* Footer Menu */
 footer .menu { float: right;}
@@ -2189,13 +2249,18 @@ footer .menu ul li { list-style: none; }
 }	
 
 #no-logo {
-	width: 140px;
-	height: 40px;
 	float: left;
-	margin-top: 27px;
-	color:#9793b1;
+	font-family: "Nyala", sans-serif;
+	color: #9793b1;
+	padding:15px;
 }
 
+.site-title {
+	font-size:35px;
+}
+.site-description {
+	font-size:20px;
+}
 table {
 	border-collapse:collapse;
 	width:100%;
