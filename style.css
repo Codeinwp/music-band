@@ -110,29 +110,29 @@ h6 {
 /* 1 - General Style */
 .pagetitle {
 	width: 100%;
-	height: 91px;
-	background: url(images/pagetitle.png) repeat-x top;
-	overflow: hidden;
+	height: 83px;
 	margin-top: 10px;
+	background: #41335d;
 }
 
 .pagetitlecenter {
 	width: 1024px;
 	height: 83px;
 	margin: 0px auto;
-	background: url(images/pagetitleshade.png) no-repeat top right;
 	position: relative;
 	margin-top: 2px;
 }
 
 .pagetitlecenter:after {
 	content: " ";
-	display: block;
-	width: 12px;
-	height: 6px;
-	background: url(images/pagetitlearrow.png);
-	margin: 0px 0px 0px 61px;
+	width: 0;
+	height: 0;
+	border-left: 6px solid transparent;
+	border-right: 6px solid transparent;
+	border-top: 8px solid #2E274C;
 	position:absolute;
+	margin-left:15px;
+	z-index:999;
 }
 
 .pagetitlecenter h3 {
@@ -144,10 +144,19 @@ h6 {
 	text-transform: uppercase;
 }
 
+.page-template-page-about-php .pagetitlecenter h3 {
+	height: 78px;
+	line-height: 83px;
+	color: #7e70af;
+	font-family: "Nyala", sans-serif;
+	font-size: 35px;
+	text-transform: uppercase;
+}
+
 #wraper {
 	width: 1024px;
 	height: auto;
-	margin: 0px auto;
+	margin: 15px auto;
 }
 
 #content {
@@ -262,7 +271,6 @@ header .buyalbum a { display: block; }
 }
 
 .subheader_center {
-	/*width: 1024px;*/
 	width:100%;
 	height: 458px;
 	margin: 0px auto;
@@ -282,6 +290,8 @@ header .buyalbum a { display: block; }
 	display: block !important;
 }
 
+
+
 .subheader_center .slidesjs-navigation{
 	width: 37px;
 	height: 140px;
@@ -296,12 +306,14 @@ header .buyalbum a { display: block; }
 
 .subheader_center .slidesjs-navigation.left {
 	float: left;
-	background: url(images/slider_left.png);
+	background: url(images/arrow-left.png) no-repeat center center;
+	opacity: 0.8;
 }
 
 .subheader_center .slidesjs-navigation.right {
 	float: right;
-	background: url(images/slider_right.png);
+	background: url(images/arrow-right.png) no-repeat center center;
+	opacity: 0.8;
 }
 
 .subheader_center .slide {
@@ -410,6 +422,8 @@ header .buyalbum a { display: block; }
 	font-style: italic;
 
 	margin-top: 15px;
+	
+	margin-bottom: 15px;
 
 }
 
@@ -454,7 +468,6 @@ header .buyalbum a { display: block; }
 
 .post figure {
 	width: 100%;
-	height: 210px;
 	overflow: hidden;
 	margin: 20px 0px;
 }
@@ -726,6 +739,25 @@ header .buyalbum a { display: block; }
 
 /* Next event widget */
 
+.widget.next_event .slidernav {
+	height: 10px;
+	float: right;
+	margin-top: 6px;
+}
+.widget.next_event .slidernav a {
+	float: left;
+	margin-left: 5px;
+	width: 10px;
+	height: 10px;
+	border-radius: 10px;
+	display: block;
+	background: #6d6199;
+	color:transparent;
+}
+.widget.next_event .slidernav a.current {
+	background:#c46e67;
+}
+
 .widget.next_event { background: #19142d; }
 
 .widget.next_event .slide {
@@ -735,7 +767,6 @@ header .buyalbum a { display: block; }
 }
 
 #sidebar .next_event .day, .event .day {
-	width: 116px;
 	height: auto;
 	font-size: 90px;
 	color: #fff;
@@ -978,16 +1009,6 @@ footer {
 
 /* 3 - Media Style */
 
-.media_bg {
-	width: 100%;
-	height: auto;
-	margin-top: -5px;
-	background-image: url(images/mediabg.png);
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	background-size: cover;
-	padding-bottom: 20px;
-}
 
 .media_bg .video_media {
 	width: 280px;
@@ -1094,13 +1115,11 @@ footer {
 
 .music_item .left_side {
 	width: 259px;
-	height: 445px;
 	float: left;
 }
 
 .music_item .left_side .img {
 	width: 100%;
-	height: 259px;
 	overflow: hidden;
 }
 
@@ -1306,9 +1325,9 @@ footer {
 
 #bandmembers {
 	width: 100%;
-	height: 530px;
+	height: 520px;
 	display: block;
-	background: url(images/membersbg.png) repeat-x top;
+	background:#c46e67;
 	margin-top: -5px;
 }
 
@@ -1466,12 +1485,6 @@ pre {
 .sticky article {
 	padding: 10px;
 	width: 95%;
-}
-
-.sticky .readmore {
-	margin-top: 10px;
-	margin-right: 10px;
-	width: 85px;
 }
 
 /* =Media

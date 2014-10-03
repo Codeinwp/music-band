@@ -153,6 +153,7 @@
 													),
 									)
 								),	
+								
 								array(
 									
 									"type"=>"group",
@@ -454,247 +455,486 @@
 							"name"=>__("Site colors",'music-band-pro'),
 							"options"=>array(
 										array(
-											"type"=>"color",
-											"name"=>"Buttons background",
-											"description"=>"",
-											"id"=>"buttons_background",
-											"default"=>"#c46e67"
+									
+											"type"=>"group",
+											"name"=>__("General",'music-band-pro'),
+											"options"=>	array(		
+													array(
+														"type"=>"color",
+														"name"=>__("Post title",'music-band-pro'),
+														"description"=>"",
+														"id"=>"post_title",
+														"default"=>"#bb6053"
+													),
+													array(
+														"type"=>"color",
+														"name"=>__("Page title",'music-band-pro'),
+														"description"=>"",
+														"id"=>"page_title",
+														"default"=>"#bb6053"
+													),
+													array(
+														"type"=>"color",
+														"name"=>__("Menu items color",'music-band-pro'),
+														"description"=>"",
+														"id"=>"menu_color",
+														"default"=>"#9793b1"
+													),
+													array(
+														"type"=>"color",
+														"name"=>__("Menu items color - hover",'music-band-pro'),
+														"description"=>"",
+														"id"=>"menu_color_hover",
+														"default"=>"#c46e67"
+													),
+													array(
+														"type"=>"color",
+														"name"=>__("Blockquote color",'music-band-pro'),
+														"description"=>"",
+														"id"=>"blockquote_color",
+														"default"=>"#fff"
+													),
+													array(
+														"type"=>"color",
+														"name"=>__("Blockquote background",'music-band-pro'),
+														"description"=>"",
+														"id"=>"blockquote_background",
+														"default"=>"#2d2747"
+													),
+											)
+										),		
+										array(
+											 "type"=>"group",
+											 "name"=>__("Header",'music-band-pro'),
+											 "options"=>array(
+															array(
+																"type"=>"color",
+																"name"=>__("Header background",'music-band-pro'),
+																"description"=>"",
+																"id"=>"header_background",
+																"default"=>"#41335d"
+															),
+															array(
+																"type"=>"color",
+																"name"=>__("Header text color",'music-band-pro'),
+																"description"=>"",
+																"id"=>"header_color",
+																"default"=>"#7e70af"
+															),
+															array(
+																"type"=>"color",
+																"name"=>__("Inner page header text color",'music-band-pro'),
+																"description"=>"",
+																"id"=>"inner_page_header_text_color",
+																"default"=>"#fff"
+															),
+															array(
+																"type"=>"color",
+																"name"=>__("Inner page header title color",'music-band-pro'),
+																"description"=>"",
+																"id"=>"inner_page_header_title_color",
+																"default"=>"#dda7a7"
+															)
+											 )
 										),
 										array(
-											"type"=>"color",
-											"name"=>"Buttons text color",
-											"description"=>"",
-											"id"=>"buttons_color",
-											"default"=>"#fff"
-										),
+									
+											"type"=>"group",
+											"name"=>__("Buttons",'music-band-pro'),
+											"options"=>	array(
+										
+															array(
+																"type"=>"color",
+																"name"=>__("Buttons background",'music-band-pro'),
+																"description"=>"",
+																"id"=>"buttons_background",
+																"default"=>"#c46e67"
+															),
+															array(
+																"type"=>"color",
+																"name"=>__("Buttons text color",'music-band-pro'),
+																"description"=>"",
+																"id"=>"buttons_color",
+																"default"=>"#fff"
+															),
+															array(
+																"type"=>"color",
+																"name"=>__("Buttons background - hover",'music-band-pro'),
+																"description"=>"",
+																"id"=>"buttons_background_hover",
+																"default"=>"#97534e"
+															),
+															array(
+																"type"=>"color",
+																"name"=>__("Buttons text color - hover",'music-band-pro'),
+																"description"=>"",
+																"id"=>"buttons_color_hover",
+																"default"=>"#fff"
+															),
+											)
+										),		
+										
+										
 										array(
-											"type"=>"color",
-											"name"=>"Buttons background - hover",
-											"description"=>"",
-											"id"=>"buttons_background_hover",
-											"default"=>"#97534e"
-										),
+									
+											"type"=>"group",
+											"name"=>__("Sidebar",'music-band-pro'),
+											"options"=>	array(
+										
+													array(
+														"type"=>"color",
+														"name"=>__("Sidebar background",'music-band-pro'),
+														"description"=>"",
+														"id"=>"sidebar_background",
+														"default"=>"#2a2443"
+													),
+													array(
+														"type"=>"color",
+														"name"=>__("Sidebar widget title color",'music-band-pro'),
+														"description"=>"",
+														"id"=>"sidebar_widget_title",
+														"default"=>"#9080c9"
+													),
+													
+													array(
+														"type"=>"color",
+														"name"=>__("Sidebar widget text color",'music-band-pro'),
+														"description"=>"",
+														"id"=>"sidebar_widget_text",
+														"default"=>"#fff"
+													),
+											)
+										),	
+										
 										array(
-											"type"=>"color",
-											"name"=>"Buttons text color - hover",
-											"description"=>"",
-											"id"=>"buttons_color_hover",
-											"default"=>"#fff"
-										),
-										array(
-											"type"=>"color",
-											"name"=>"Post title",
-											"description"=>"",
-											"id"=>"post_title",
-											"default"=>"#bb6053"
-										),
-										array(
-											"type"=>"color",
-											"name"=>"Page title",
-											"description"=>"",
-											"id"=>"page_title",
-											"default"=>"#bb6053"
-										),
-										array(
-											"type"=>"color",
-											"name"=>"Sidebar background",
-											"description"=>"",
-											"id"=>"sidebar_background",
-											"default"=>"#2a2443"
-										),
-										array(
-											"type"=>"color",
-											"name"=>"Sidebar widget title color",
-											"description"=>"",
-											"id"=>"sidebar_widget_title",
-											"default"=>"#9080c9"
+									
+											"type"=>"group",
+											"name"=>__("Slider",'music-band-pro'),
+											"options"=>	array(
+										
+													array(
+														"type"=>"color",
+														"name"=>__("Slider details background",'music-band-pro'),
+														"description"=>"",
+														"id"=>"slider_details_background",
+														"default"=>""
+													),
+													array(
+														"type"=>"color",
+														"name"=>__("Slider details big title color",'music-band-pro'),
+														"description"=>"",
+														"id"=>"slider_details_big_title_color",
+														"default"=>"#fff"
+													),
+													array(
+														"type"=>"color",
+														"name"=>__("Slider details small title color",'music-band-pro'),
+														"description"=>"",
+														"id"=>"slider_details_small_title_color",
+														"default"=>"#433d63"
+													),
+													array(
+														"type"=>"color",
+														"name"=>__("Slider details text color",'music-band-pro'),
+														"description"=>"",
+														"id"=>"slider_details_text_color",
+														"default"=>"#fff"
+													),
+													array(
+														"type"=>"color",
+														"name"=>__("Slider navigation buttons background",'music-band-pro'),
+														"description"=>"",
+														"id"=>"slider_navigation_background",
+														"default"=>"#2a2443"
+													),
+											)
 										),
 										
 										array(
-											"type"=>"color",
-											"name"=>"Sidebar widget text color",
-											"description"=>"",
-											"id"=>"sidebar_widget_text",
-											"default"=>"#fff"
+									
+											"type"=>"group",
+											"name"=>__("Footer",'music-band-pro'),
+											"options"=>	array(
+										
+													array(
+														"type"=>"color",
+														"name"=>__("Footer background",'music-band-pro'),
+														"description"=>"",
+														"id"=>"footer_background",
+														"default"=>"#c46e67"
+													),
+													array(
+														"type"=>"color",
+														"name"=>__("Footer color",'music-band-pro'),
+														"description"=>"",
+														"id"=>"footer_text",
+														"default"=>"#fff"
+													),
+													array(
+														"type"=>"color",
+														"name"=>__("Footer boxes - title color",'music-band-pro'),
+														"description"=>"",
+														"id"=>"footer_boxes_title",
+														"default"=>"#fff"
+													),
+													array(
+														"type"=>"color",
+														"name"=>__("Footer boxes - border color",'music-band-pro'),
+														"description"=>"",
+														"id"=>"footer_boxes_border",
+														"default"=>"#fff"
+													),
+													array(
+														"type"=>"color",
+														"name"=>__("Footer boxes - text color",'music-band-pro'),
+														"description"=>"",
+														"id"=>"footer_boxes_text",
+														"default"=>"#9b3226"
+													),
+											)
 										),
 										
+										array(
+									
+											"type"=>"group",
+											"name"=>__("Search form",'music-band-pro'),
+											"options"=>	array(
+										
+													array(
+														"type"=>"color",
+														"name"=>__("Search form background",'music-band-pro'),
+														"description"=>"",
+														"id"=>"search_form_background",
+														"default"=>"#7e70af"
+													),
+													array(
+														"type"=>"color",
+														"name"=>__("Search form color",'music-band-pro'),
+														"description"=>"",
+														"id"=>"search_form_color",
+														"default"=>"#fff"
+													),
+											)
+										),		
 										
 										array(
-											"type"=>"color",
-											"name"=>"Slider details background",
-											"description"=>"",
-											"id"=>"slider_details_background",
-											"default"=>""
-										),
+									
+											"type"=>"group",
+											"name"=>__("Latest video widget",'music-band-pro'),
+											"options"=>	array(
+											
+													array(
+														"type"=>"color",
+														"name"=>__("Latest video widget background",'music-band-pro'),
+														"description"=>"",
+														"id"=>"latest_video_background",
+														"default"=>"#c46e67"
+													),
+													array(
+														"type"=>"color",
+														"name"=>__("Latest video widget text color",'music-band-pro'),
+														"description"=>"",
+														"id"=>"latest_video_text",
+														"default"=>"#2a2443"
+													),
+													array(
+														"type"=>"color",
+														"name"=>__("Latest video widget title color",'music-band-pro'),
+														"description"=>"",
+														"id"=>"latest_video_title",
+														"default"=>"#fff"
+													),
+													
+											)
+										),	
+
 										array(
-											"type"=>"color",
-											"name"=>"Slider details big title color",
-											"description"=>"",
-											"id"=>"slider_details_big_title_color",
-											"default"=>"#fff"
-										),
+									
+											"type"=>"group",
+											"name"=>__("Related news widget",'music-band-pro'),
+											"options"=>	array(	
+											
+													array(
+														"type"=>"color",
+														"name"=>__("Related news widget titles color",'music-band-pro'),
+														"description"=>"",
+														"id"=>"related_news_title",
+														"default"=>"#c46e67"
+													),
+													array(
+														"type"=>"color",
+														"name"=>__("Related news widget titles color - hover",'music-band-pro'),
+														"description"=>"",
+														"id"=>"related_news_title_hover",
+														"default"=>"#c46e67"
+													),
+													array(
+														"type"=>"color",
+														"name"=>__("Related news widget date color",'music-band-pro'),
+														"description"=>"",
+														"id"=>"related_news_date",
+														"default"=>"#7e70af"
+													),
+													array(
+														"type"=>"color",
+														"name"=>__("Related news widget date color - hover",'music-band-pro'),
+														"description"=>"",
+														"id"=>"related_news_date_hover",
+														"default"=>"#9586ca"
+													),
+												)
+										),	
+
 										array(
-											"type"=>"color",
-											"name"=>"Slider details small title color",
-											"description"=>"",
-											"id"=>"slider_details_small_title_color",
-											"default"=>"#433d63"
-										),
-										array(
-											"type"=>"color",
-											"name"=>"Slider details text color",
-											"description"=>"",
-											"id"=>"slider_details_text_color",
-											"default"=>"#fff"
-										),
-										array(
-											"type"=>"color",
-											"name"=>"Footer background",
-											"description"=>"",
-											"id"=>"footer_background",
-											"default"=>"#c46e67"
-										),
-										array(
-											"type"=>"color",
-											"name"=>"Footer color",
-											"description"=>"",
-											"id"=>"footer_text",
-											"default"=>"#fff"
-										),
-										array(
-											"type"=>"color",
-											"name"=>"Footer boxes - title color",
-											"description"=>"",
-											"id"=>"footer_boxes_title",
-											"default"=>"#fff"
-										),
-										array(
-											"type"=>"color",
-											"name"=>"Footer boxes - border color",
-											"description"=>"",
-											"id"=>"footer_boxes_border",
-											"default"=>"#fff"
-										),
-										array(
-											"type"=>"color",
-											"name"=>"Footer boxes - text color",
-											"description"=>"",
-											"id"=>"footer_boxes_text",
-											"default"=>"#9b3226"
-										),
-										array(
-											"type"=>"color",
-											"name"=>"Search form background",
-											"description"=>"",
-											"id"=>"search_form_background",
-											"default"=>"#7e70af"
-										),
-										array(
-											"type"=>"color",
-											"name"=>"Search form color",
-											"description"=>"",
-											"id"=>"search_form_color",
-											"default"=>"#fff"
-										),
-										array(
-											"type"=>"color",
-											"name"=>"Lates video widget background",
-											"description"=>"",
-											"id"=>"latest_video_background",
-											"default"=>"#c46e67"
-										),
-										array(
-											"type"=>"color",
-											"name"=>"Lates video widget text color",
-											"description"=>"",
-											"id"=>"latest_video_text",
-											"default"=>"#2a2443"
-										),
-										array(
-											"type"=>"color",
-											"name"=>"Lates video widget title color",
-											"description"=>"",
-											"id"=>"latest_video_title",
-											"default"=>"#fff"
-										),
-										array(
-											"type"=>"color",
-											"name"=>"Related news widget titles color",
-											"description"=>"",
-											"id"=>"related_news_title",
-											"default"=>"#c46e67"
-										),
-										array(
-											"type"=>"color",
-											"name"=>"Related news widget titles color - hover",
-											"description"=>"",
-											"id"=>"related_news_title_hover",
-											"default"=>"#c46e67"
-										),
-										array(
-											"type"=>"color",
-											"name"=>"Related news widget date color",
-											"description"=>"",
-											"id"=>"related_news_date",
-											"default"=>"#7e70af"
-										),
-										array(
-											"type"=>"color",
-											"name"=>"Related news widget date color - hover",
-											"description"=>"",
-											"id"=>"related_news_date_hover",
-											"default"=>"#9586ca"
-										),
-										array(
-											"type"=>"color",
-											"name"=>"Latest album widget - album name color",
-											"description"=>"",
-											"id"=>"latest_album_title",
-											"default"=>"#be7d7f"
-										),
-										array(
-											"type"=>"color",
-											"name"=>"Latest album widget - tracklist title color",
-											"description"=>"",
-											"id"=>"latest_album_tracklist",
-											"default"=>"#c46e67"
-										),
-										array(
-											"type"=>"color",
-											"name"=>"Latest album widget - song title color",
-											"description"=>"",
-											"id"=>"latest_album_song",
-											"default"=>"#fff"
-										),
-										array(
-											"type"=>"color",
-											"name"=>"Latest album widget - song title color - hover",
-											"description"=>"",
-											"id"=>"latest_album_song_hover",
-											"default"=>"#7e70af"
-										),
-										array(
-											"type"=>"color",
-											"name"=>"Latest album widget - button background",
-											"description"=>"",
-											"id"=>"latest_album_button_background",
-											"default"=>"#c46e67"
-										),
-										array(
-											"type"=>"color",
-											"name"=>"Latest album widget - button background - hover",
-											"description"=>"",
-											"id"=>"latest_album_button_background_hover",
-											"default"=>"#c46e67"
-										),
-										array(
-											"type"=>"color",
-											"name"=>"Latest album widget - button color",
-											"description"=>"",
-											"id"=>"latest_album_button_color",
-											"default"=>"#fff"
-										)
+									
+											"type"=>"group",
+											"name"=>__("Latest album widget",'music-band-pro'),
+											"options"=>	array(	
 										
+													array(
+														"type"=>"color",
+														"name"=>__("Latest album widget - album name color",'music-band-pro'),
+														"description"=>"",
+														"id"=>"latest_album_title",
+														"default"=>"#be7d7f"
+													),
+													array(
+														"type"=>"color",
+														"name"=>__("Latest album widget - tracklist title color",'music-band-pro'),
+														"description"=>"",
+														"id"=>"latest_album_tracklist",
+														"default"=>"#c46e67"
+													),
+													array(
+														"type"=>"color",
+														"name"=>__("Latest album widget - song title color",'music-band-pro'),
+														"description"=>"",
+														"id"=>"latest_album_song",
+														"default"=>"#fff"
+													),
+													array(
+														"type"=>"color",
+														"name"=>__("Latest album widget - song title color - hover",'music-band-pro'),
+														"description"=>"",
+														"id"=>"latest_album_song_hover",
+														"default"=>"#7e70af"
+													),
+													array(
+														"type"=>"color",
+														"name"=>__("Latest album widget - button background",'music-band-pro'),
+														"description"=>"",
+														"id"=>"latest_album_button_background",
+														"default"=>"#c46e67"
+													),
+													array(
+														"type"=>"color",
+														"name"=>__("Latest album widget - button background - hover",'music-band-pro'),
+														"description"=>"",
+														"id"=>"latest_album_button_background_hover",
+														"default"=>"#c46e67"
+													),
+													array(
+														"type"=>"color",
+														"name"=>__("Latest album widget - button color",'music-band-pro'),
+														"description"=>"",
+														"id"=>"latest_album_button_color",
+														"default"=>"#fff"
+													)
+												)	
+										),
+										array(
+									
+											"type"=>"group",
+											"name"=>__("About us page",'music-band-pro'),
+											"options"=>	array(	
+										
+													array(
+														"type"=>"color",
+														"name"=>__("Band members background",'music-band-pro'),
+														"description"=>"",
+														"id"=>"band_members_background",
+														"default"=>"#c46e67"
+													),
+													array(
+														"type"=>"color",
+														"name"=>__("Band members background - hover",'music-band-pro'),
+														"description"=>"",
+														"id"=>"band_members_background_hover",
+														"default"=>"#ce766f"
+													),
+											)
+										),	
+										array(
+									
+											"type"=>"group",
+											"name"=>__("Events",'music-band-pro'),
+											"options"=>	array(	
+										
+													array(
+														"type"=>"color",
+														"name"=>__("Events - background",'music-band-pro'),
+														"description"=>"",
+														"id"=>"next_events_background",
+														"default"=>"#19142d"
+													),
+													array(
+														"type"=>"color",
+														"name"=>__("Events - day color",'music-band-pro'),
+														"description"=>"",
+														"id"=>"next_events_date_color",
+														"default"=>"#fff"
+													),
+													array(
+														"type"=>"color",
+														"name"=>__("Events - month color",'music-band-pro'),
+														"description"=>"",
+														"id"=>"next_events_month_color",
+														"default"=>"#fff"
+													),
+													array(
+														"type"=>"color",
+														"name"=>__("Events - text color",'music-band-pro'),
+														"description"=>"",
+														"id"=>"next_events_text_color",
+														"default"=>"#c46e67"
+													),
+													array(
+														"type"=>"color",
+														"name"=>__("Events - bullets color",'music-band-pro'),
+														"description"=>"",
+														"id"=>"next_events_bullets_color",
+														"default"=>"#6d6199"
+													),
+													array(
+														"type"=>"color",
+														"name"=>__("Events - current bullet color",'music-band-pro'),
+														"description"=>"",
+														"id"=>"next_events_current_bullet_color",
+														"default"=>"#c46e67"
+													),
+													array(
+														"type"=>"color",
+														"name"=>__("Get tickets link background",'music-band-pro'),
+														"description"=>"",
+														"id"=>"get_tickets_link_background",
+														"default"=>"#c46e67"
+													),
+													array(
+														"type"=>"color",
+														"name"=>__("Get tickets link color",'music-band-pro'),
+														"description"=>"",
+														"id"=>"get_tickets_link_color",
+														"default"=>"#fff"
+													),
+													array(
+														"type"=>"color",
+														"name"=>__("Get tickets link color - hover",'music-band-pro'),
+														"description"=>"",
+														"id"=>"get_tickets_link_color_hover",
+														"default"=>"#6e3632"
+													),
+											)
+									   )		
 										
 
 									)

@@ -115,14 +115,14 @@ require get_template_directory() . '/inc/customizer.php';
  */
 require get_template_directory() . '/inc/jetpack.php';
 
-function cwp_add_editor_styles() {
+function music_band_pro_add_editor_styles() {
     add_editor_style( '/css/custom-editor-style.css' );
 }
-add_action( 'init', 'cwp_add_editor_styles' );
+add_action( 'init', 'music_band_pro_add_editor_styles' );
 
-add_filter( 'the_title', 'cwp_default_title' );
+add_filter( 'the_title', 'music_band_pro_default_title' );
 
-function cwp_default_title( $title ) {
+function music_band_pro_default_title( $title ) {
 
 	if($title == '')
 		$title = __("Default title",'music-band-pro');
@@ -842,21 +842,31 @@ function music_band_pro_style_from_admin() {
 	$buttons_background = cwp('buttons_background');
 	if( !empty($buttons_background) ):
 		echo '	.post .readmore  {background-color:'. $buttons_background .'}';
+		echo '	header .buyalbum  {background-color:'. $buttons_background .'}';
+		echo '	.form-submit #submit, #content input[type="submit"]  {background-color:'. $buttons_background .'; border-color:'. $buttons_background .'}';		
+		echo '	.music_item .left_side .price  {background-color:'. $buttons_background .'}';
 	endif;	
 	
 	$buttons_color = cwp('buttons_color');
 	if( !empty($buttons_color) ):
 		echo '	.post .readmore a {color:'. $buttons_color .'}';
+		echo '	header .buyalbum  {color:'. $buttons_color .'}';
+		echo '	.form-submit #submit, #content input[type="submit"]  {color:'. $buttons_color .'}';
+		echo '	.music_item .left_side .price {color:'. $buttons_color .'}';
 	endif;
 	
 	$buttons_background_hover = cwp('buttons_background_hover');
 	if( !empty($buttons_background_hover) ):
 		echo '	.post .readmore:hover  {background-color:'. $buttons_background_hover .'}';
+		echo '	header .buyalbum:hover  {background-color:'. $buttons_background_hover .'}';
+		echo '	.form-submit #submit, #content input[type="submit"]:hover  {background-color:'. $buttons_background_hover .'; border-color:'. $buttons_background_hover .'}';
 	endif;	
 	
 	$buttons_color_hover = cwp('buttons_color_hover');
 	if( !empty($buttons_color_hover) ):
 		echo '	.post .readmore a:hover {color:'. $buttons_color_hover .'}';
+		echo '	header .buyalbum:hover {color:'. $buttons_color_hover .'}';
+		echo '	.form-submit #submit, #content input[type="submit"]:hover {color:'. $buttons_color_hover .'}';
 	endif;
 	
 	$post_title = cwp('post_title');
@@ -1009,6 +1019,108 @@ function music_band_pro_style_from_admin() {
 	if( !empty($latest_album_button_color) ):
 		echo '	.latest_album .button {color:'. $latest_album_button_color .'}';
 	endif;
+	
+	$slider_navigation_background = cwp('slider_navigation_background');
+	if( !empty($slider_navigation_background) ):
+		echo '	.subheader_center .slidesjs-navigation.right, .subheader_center .slidesjs-navigation.left {background-color:'. $slider_navigation_background .'}';
+	endif;
+	
+	$header_background = cwp('header_background');
+	if( !empty($header_background) ):
+		echo '	.pagetitle {background:'. $header_background .'}';
+		echo '	.pagetitlecenter:after {border-top: 8px solid'. $header_background .'}';
+	endif;
+	
+	$header_color = cwp('header_color');
+	if( !empty($header_color) ):
+		echo '	.pagetitlecenter h3 {color:'. $header_color .'}';
+	endif;
+	
+	$menu_color = cwp('menu_color');
+	if( !empty($menu_color) ):
+		echo '	#header_nav ul li a {color:'. $menu_color .'}';
+	endif;
+	
+	$menu_color_hover = cwp('menu_color_hover');
+	if( !empty($menu_color_hover) ):
+		echo '	#header_nav ul li a:hover {color:'. $menu_color_hover .'}';
+	endif;
+	
+	$blockquote_color = cwp('blockquote_color');
+	if( !empty($blockquote_color) ):
+		echo '	.post_inside blockquote {color:'. $blockquote_color .'}';
+	endif;
+	
+	$blockquote_background = cwp('blockquote_background');
+	if( !empty($blockquote_background) ):
+		echo '	.post_inside blockquote {background:'. $blockquote_background .'}';
+	endif;
+	
+	$next_events_background = cwp('next_events_background');
+	if( !empty($next_events_background) ):
+		echo '	.widget.next_event, .event {background:'. $next_events_background .'}';
+	endif;
+	
+	$next_events_date_color = cwp('next_events_date_color');
+	if( !empty($next_events_date_color) ):
+		echo '	#sidebar .next_event .day, .event .day {color:'. $next_events_date_color .'}';
+	endif;
+	
+	$next_events_text_color = cwp('next_events_text_color');
+	if( !empty($next_events_text_color) ):
+		echo '	#sidebar .next_event .eventcontent, .event .eventcontent {color:'. $next_events_text_color .'}';
+	endif;
+	
+	$next_events_bullets_color = cwp('next_events_bullets_color');
+	if( !empty($next_events_bullets_color) ):
+		echo '	.widget.next_event .slidernav a {background:'. $next_events_bullets_color .'}';
+	endif;
+	
+	$next_events_current_bullet_color = cwp('next_events_current_bullet_color');
+	if( !empty($next_events_current_bullet_color) ):
+		echo '	.widget.next_event .slidernav a.current {background:'. $next_events_current_bullet_color .'}';
+	endif;
+	
+	$inner_page_header_title_color = cwp('inner_page_header_title_color');
+	if( !empty($inner_page_header_title_color) ):
+		echo '	.subheader_news .album_title {color:'. $inner_page_header_title_color .'}';
+	endif;
+	
+	$inner_page_header_text_color = cwp('inner_page_header_text_color');
+	if( !empty($inner_page_header_text_color) ):
+		echo '	.subheader_news p {color:'. $inner_page_header_text_color .'}';
+	endif;
+	
+	$next_events_month_color = cwp('next_events_month_color');
+	if( !empty($next_events_month_color) ):
+		echo '	#sidebar .next_event .eventcontent span, .event .eventcontent span{color:'. $next_events_month_color .'}';
+	endif;
+	
+	$get_tickets_link_background = cwp('get_tickets_link_background');
+	if( !empty($get_tickets_link_background) ):
+		echo '	.event .getticket {background:'. $get_tickets_link_background .'}';
+	endif;
+	
+	$get_tickets_link_color = cwp('get_tickets_link_color');
+	if( !empty($get_tickets_link_color) ):
+		echo '	.event .getticket a {color:'. $get_tickets_link_color .'}';
+	endif;
+	
+	$get_tickets_link_color_hover = cwp('get_tickets_link_color_hover');
+	if( !empty($get_tickets_link_color_hover) ):
+		echo '	.event .getticket a:hover {color:'. $get_tickets_link_color_hover .'}';
+	endif;
+	
+	$band_members_background = cwp('band_members_background');
+	if( !empty($band_members_background) ):
+		echo '	#bandmembers {background:'. $band_members_background .'}';
+	endif;
+	
+	$band_members_background_hover = cwp('band_members_background_hover');
+	if( !empty($band_members_background_hover) ):
+		echo '	.bandmembers_center .member:hover {background:'. $band_members_background_hover .'}';
+	endif;
+	
 	
 	echo '</style>';
 

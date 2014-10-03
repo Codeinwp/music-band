@@ -3,50 +3,15 @@
 Template Name: Media
 */
 get_header();
-?>
-		<!--Subheader Start-->
-		<?php
+
 			while ( have_posts() ) : the_post(); 
 				$id = get_the_ID();
 			endwhile;
-			$top_banner = cwp('top_banner');
-			if(isset($top_banner) && !empty($top_banner)):
-				foreach($top_banner as $p):		
-					if($id == $p):
-						$top_banner_image = cwp('top_banner_image');
-						$top_banner_title = cwp('top_banner_title');
-						$top_banner_text = cwp('top_banner_text');
-						if(isset($top_banner_image) && $top_banner_image == '/images/abovefooterbg.png'):
-						?>
-							<section id="subheader" class="subheader_news" style="background-image: url(<?php echo get_template_directory_uri(); ?>/images/abovefooterbg.png);">
-								<?php 
-									if(isset($top_banner_title) && $top_banner_title != '')
-										echo '<div class="album_title">'.$top_banner_title.'</div>';
-									if(isset($top_banner_text) && $top_banner_text != '')	
-										echo '<p>'.$top_banner_text.'</p>';
-								?>
-							</section><!--/subheader-->
-						<?php
-						elseif(isset($top_banner_image) && $top_banner_image != ''):
-						?>
-							<section id="subheader" class="subheader_news" style="<?php echo $top_banner_image; ?>">
-								<?php 
-									if(isset($top_banner_title) && $top_banner_title != '')
-										echo '<div class="album_title">'.$top_banner_text.'</div>';
-									if(isset($top_banner_text) && $top_banner_text != '')	
-										echo '<p>'.$top_banner_text.'</p>';
-								?>
-							</section><!--/subheader-->
-						<?php
-						endif;
-					endif;
-				endforeach;
-			endif;
 		?>
 
 		<div class="pagetitle">
 			<div class="pagetitlecenter">
-				<h3><?php _e('PICTURES & VIDEO','music-band-pro'); ?></h3>
+				<h3><?php the_title(); ?></h3>
 			</div><!--/pagetitlecenter-->
 		</div><!--/pagetitle-->
 		
