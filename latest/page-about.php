@@ -1,51 +1,12 @@
 <?php 
 /*
-Template Name: About
+Template Name: About us template
 */
 get_header();
-?>
-<?php 
+
 	while ( have_posts() ) : the_post();
 		$id = get_the_ID();
-		
-		$top_banner = cwp('top_banner');
-			if(isset($top_banner) && !empty($top_banner)):
-				foreach($top_banner as $p):		
-					if($id == $p):
-						$top_banner_image = cwp('top_banner_image');
-						$top_banner_title = cwp('top_banner_title');
-						$top_banner_text = cwp('top_banner_text');
-						if(isset($top_banner_image) && $top_banner_image == '/images/abovefooterbg.png'):
-						?>
-							<section id="subheader" class="subheader_news" style="background-image: url(<?php echo get_template_directory_uri(); ?>/images/abovefooterbg.png);">
-								<?php 
-									if(isset($top_banner_title) && $top_banner_title != '')
-										echo '<div class="album_title">'.$top_banner_title.'</div>';
-									if(isset($top_banner_text) && $top_banner_text != '')	
-										echo '<p>'.$top_banner_text.'</p>';
-								?>
-							</section><!--/subheader-->
-						<?php
-						elseif(isset($top_banner_image) && $top_banner_image != ''):
-						?>
-							<section id="subheader" class="subheader_news" style="<?php echo $top_banner_image; ?>">
-								<?php 
-									if(isset($top_banner_title) && $top_banner_title != '')
-										echo '<div class="album_title">'.$top_banner_text.'</div>';
-									if(isset($top_banner_text) && $top_banner_text != '')	
-										echo '<p>'.$top_banner_text.'</p>';
-								?>
-							</section><!--/subheader-->
-						<?php
-						endif;
-					endif;
-				endforeach;
-			endif;
  ?>
-		
-		
-		<div class="headerborder"></div>
-		
 		<!--Content Start-->
 		<div id="wraper">
 			<section id="content">
@@ -94,7 +55,7 @@ get_header();
 		$queryObject = new WP_Query( 'post_type=band_member' );
 		if ($queryObject->have_posts()) {
 		?>
-			<div class="pagetitle pagetitlemobile" style="margin-top: -55px;">
+			<div class="pagetitle pagetitlemobile">
 				<div class="pagetitlecenter">
 					<h3><?php _e('Band MEMBERS','music-band-pro'); ?></h3>
 				</div>
@@ -108,7 +69,7 @@ get_header();
 							$career = get_post_meta($id, 'cpi_career_option');
 					?>
 							<div class="member">
-								<div class="name"><?php the_title(); ?></div>
+								<div class="name"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></div>
 								<?php 
 									if(isset($career[0]) && $career[0] != '')
 										echo '<div class="position">'.$career[0].'</div>'; 

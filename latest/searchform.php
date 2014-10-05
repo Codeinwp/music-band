@@ -1,8 +1,8 @@
 <?php
 /*
- * The template for displaying search forms in cwp
+ * The template for displaying search forms in music-band-pro
  *
- * @package cwp
+ * @package music-band-pro
  */
 ?>
 <form method="get" id="search" action="<?php echo esc_url( home_url( '/' ) ); ?>" >

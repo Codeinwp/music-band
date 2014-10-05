@@ -2,10 +2,11 @@
 /*
  * The template for displaying 404 pages (Not Found).
  *
- * @package cwp
+ * @package music-band-pro
  */
 
-get_header(); ?>
+get_header(); 
+?>
 		<div class="pagetitle">
 			<div class="pagetitlecenter">
 				<h3><?php _e('Page not found','music-band-pro'); ?></h3>

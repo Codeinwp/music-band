@@ -4,12 +4,12 @@ Theme URI: http://themeisle.com/themes/music-band/
 Author: codeinwp
 Author URI: Codeinwp.com
 Description: Music Band PRO is a easily customizable WordPress Theme with an elegant design for your band.
-Version: 1.0.4
+Version: 1.0.5
 License: GNU General Public License v2
 License URI: license.txt
 Text Domain: music-band-pro
 Domain Path: /languages/
-Tags: purple, pink, gray, white, two-columns, custom-background, custom-header, right-sidebar, responsive-layout, custom-menu, editor-style, featured-images, sticky-post, theme-options, threaded-comments, translation-ready
+Tags: black, blue, brown, gray, green, orange, pink, purple, red, white, yellow, two-columns, custom-background, custom-header, right-sidebar, responsive-layout, custom-menu, editor-style, featured-images, sticky-post, theme-options, threaded-comments, translation-ready
 
 */
 /* Reset */html, body, body div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, figure, footer, header, hgroup, menu, nav, section, time, mark, audio, video {margin: 0;padding: 0;border: 0;outline: 0;font-size: 100%;vertical-align: baseline;background: transparent;} input, textarea, img { outline: none; border:none;-webkit-appearance: none;border-radius: 0; }article, aside, figure, footer, header, hgroup, nav, section, time {display: block;}a {text-decoration: none;color: inherit;}.clearfix { clear: both; }
@@ -110,46 +110,53 @@ h6 {
 /* 1 - General Style */
 .pagetitle {
 	width: 100%;
-	height: 91px;
-	background: url(images/pagetitle.png) repeat-x top;
-	overflow: hidden;
+	height: 83px;
 	margin-top: 10px;
+	background: #41335d;
 }
 
 .pagetitlecenter {
 	width: 1024px;
 	height: 83px;
 	margin: 0px auto;
-	background: url(images/pagetitleshade.png) no-repeat top right;
 	position: relative;
 	margin-top: 2px;
 }
 
 .pagetitlecenter:after {
 	content: " ";
-	display: block;
-	width: 12px;
-	height: 6px;
-	background: url(images/pagetitlearrow.png);
-	margin: 0px 0px 0px 61px;
+	width: 0;
+	height: 0;
+	border-left: 6px solid transparent;
+	border-right: 6px solid transparent;
+	border-top: 8px solid #2E274C;
 	position:absolute;
+	margin-left:15px;
+	z-index:999;
 }
 
 .pagetitlecenter h3 {
-	width: 645px;
 	height: 83px;
 	line-height: 83px;
 	color: #7e70af;
 	font-family: "Nyala", sans-serif;
 	font-size: 35px;
-	margin-left: 43px;
+	text-transform: uppercase;
+}
+
+.page-template-page-about-php .pagetitlecenter h3 {
+	height: 78px;
+	line-height: 83px;
+	color: #7e70af;
+	font-family: "Nyala", sans-serif;
+	font-size: 35px;
 	text-transform: uppercase;
 }
 
 #wraper {
 	width: 1024px;
 	height: auto;
-	margin: 0px auto;
+	margin: 15px auto;
 }
 
 #content {
@@ -235,7 +242,7 @@ header .buyalbum {
 	font-family: "Nyala", sans-serif;
 	background-color: #c46e67;
 	text-transform: uppercase;
-	margin: 24px 0px 0px 48px;
+	margin: 24px 0px 0px 0px;
 }
 
 header .buyalbum:hover { background-color: #97534e; }
@@ -264,7 +271,6 @@ header .buyalbum a { display: block; }
 }
 
 .subheader_center {
-	/*width: 1024px;*/
 	width:100%;
 	height: 458px;
 	margin: 0px auto;
@@ -284,6 +290,8 @@ header .buyalbum a { display: block; }
 	display: block !important;
 }
 
+
+
 .subheader_center .slidesjs-navigation{
 	width: 37px;
 	height: 140px;
@@ -298,12 +306,14 @@ header .buyalbum a { display: block; }
 
 .subheader_center .slidesjs-navigation.left {
 	float: left;
-	background: url(images/slider_left.png);
+	background: url(images/arrow-left.png) no-repeat center center;
+	opacity: 0.8;
 }
 
 .subheader_center .slidesjs-navigation.right {
 	float: right;
-	background: url(images/slider_right.png);
+	background: url(images/arrow-right.png) no-repeat center center;
+	opacity: 0.8;
 }
 
 .subheader_center .slide {
@@ -366,60 +376,98 @@ header .buyalbum a { display: block; }
 
 /* 2 - News Stlye */
 .post {
-	width: 620px;
 	height: auto;
 	padding-bottom: 25px;
-	margin: 17px 0px 17px 40px;
 	border-bottom: 1px dotted #a0a0a0;
 }
 
 .post:last-of-type { border-bottom: none; }
 
 .post .topdetails {
-	width: 517px;
+
 	min-height: 38px;
+
 	float: left;
+
 }
 
+
+
 .post .topdetails a {
+
 	width: 100%;
+
 	font-size: 21px;
+
 	font-weight: 700;
+
 	color: #bb6053;
+
 	text-transform: uppercase;
+
 }
+
+
 
 .post .topdetails a:hover { color: #97534e; }
 
+
+
 .topdetails .details, .topdetails .details a {
+
 	font-size: 12px;
+
 	color: #a0a0a0;
+
 	font-style: italic;
-	margin-top: 3px;
+
+	margin-top: 15px;
+	
+	margin-bottom: 15px;
+
 }
 
+
+
 .post .readmore {
+
 	width: 95px;
+
 	height: 40px;
+
 	float: right;
+
 	background: #c46e67;
+	margin: 10px 0px 10px 10px;
 }
+
+
 
 .post .readmore:hover { background-color: #97534e; }
 
+
+
 .post .readmore a {
+
 	width: 100%;
+
 	height: 40px;
+
 	display: block;
+
 	text-align: center;
+
 	line-height: 40px;
+
 	color: #fff;
+
 	font-size: 13px;
+
 }
+
 
 .post figure {
 	width: 100%;
-	height: 210px;
 	overflow: hidden;
 	margin: 20px 0px;
 }
@@ -610,7 +658,7 @@ header .buyalbum a { display: block; }
 
 .latest_album .album_cover {
 	width: 100%;
-	height: 253px;
+	height: auto;
 	margin-bottom: 20px;
 	overflow: hidden;
 }
@@ -691,6 +739,25 @@ header .buyalbum a { display: block; }
 
 /* Next event widget */
 
+.widget.next_event .slidernav {
+	height: 10px;
+	float: right;
+	margin-top: 6px;
+}
+.widget.next_event .slidernav a {
+	float: left;
+	margin-left: 5px;
+	width: 10px;
+	height: 10px;
+	border-radius: 10px;
+	display: block;
+	background: #6d6199;
+	color:transparent;
+}
+.widget.next_event .slidernav a.current {
+	background:#c46e67;
+}
+
 .widget.next_event { background: #19142d; }
 
 .widget.next_event .slide {
@@ -700,7 +767,6 @@ header .buyalbum a { display: block; }
 }
 
 #sidebar .next_event .day, .event .day {
-	width: 116px;
 	height: auto;
 	font-size: 90px;
 	color: #fff;
@@ -802,7 +868,6 @@ header .buyalbum a { display: block; }
 #abovefooter {
 	width: 100%;
 	height: 331px;
-	background-image: url(images/abovefooterbg.png);
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	background-size: cover;
@@ -846,7 +911,7 @@ header .buyalbum a { display: block; }
 }
 
 .abovefooter_center .box.center .title { text-shadow: 0px -1px 0px #121230; }
-.abovefooter_center .box.center .subtitle { color: #141434; }
+
 
 #footersocialmedia {
 	width: 190px;
@@ -944,16 +1009,6 @@ footer {
 
 /* 3 - Media Style */
 
-.media_bg {
-	width: 100%;
-	height: auto;
-	margin-top: -5px;
-	background-image: url(images/mediabg.png);
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	background-size: cover;
-	padding-bottom: 20px;
-}
 
 .media_bg .video_media {
 	width: 280px;
@@ -1060,13 +1115,11 @@ footer {
 
 .music_item .left_side {
 	width: 259px;
-	height: 445px;
 	float: left;
 }
 
 .music_item .left_side .img {
 	width: 100%;
-	height: 259px;
 	overflow: hidden;
 }
 
@@ -1146,9 +1199,9 @@ footer {
 /* * 5 - Tour Style & */
 .event {
 	width: 292px;
-	height: 395px;
+	height: auto;
 	float: left;
-	margin: 15px;
+	margin: 15px 15px 15px 0px;
 	background: #19142d;
 }
 
@@ -1210,6 +1263,9 @@ footer {
 	color:#fff;
 }
 
+.single-event .event {
+	width:100% !Important;
+}
 
 /* 6 - About Style */
 
@@ -1269,9 +1325,9 @@ footer {
 
 #bandmembers {
 	width: 100%;
-	height: 530px;
+	height: 520px;
 	display: block;
-	background: url(images/membersbg.png) repeat-x top;
+	background:#c46e67;
 	margin-top: -5px;
 }
 
@@ -1431,12 +1487,6 @@ pre {
 	width: 95%;
 }
 
-.sticky .readmore {
-	margin-top: 10px;
-	margin-right: 10px;
-	width: 85px;
-}
-
 /* =Media
 ----------------------------------------------- */
 
@@ -1501,22 +1551,40 @@ pre {
 }
 
 .pagination {
+
 	padding-bottom: 25px;
-	margin: 17px 0px 17px 40px;
+
+	margin: 17px 0px 17px 0px;
+
 }
 
 .next, .prev {
+
 	color:#bb6053;
+
 	text-transform: uppercase;
+	
+	font-weight: bold;
+	font-size: 15px;
+
 }
+
+
 
 .next {
+
 	float:right;
+
 }
 
+
+
 .prev {
+
 	float:left;
+
 }
+
 
 .fields span {
 	width:115px;
@@ -1623,6 +1691,11 @@ aside#sidebar .widget_calendar table tbody tr td:first-of-type { border-left: no
 .widget_calendar {float: left; }
 
 /* Sidebar Calendar Widget End */
+
+.home #content article p{
+	padding-top:10px;
+	color:#5e5e5e;
+}
 
 /* Footer Menu */
 footer .menu { float: right;}
@@ -2189,13 +2262,18 @@ footer .menu ul li { list-style: none; }
 }	
 
 #no-logo {
-	width: 140px;
-	height: 40px;
 	float: left;
-	margin-top: 27px;
-	color:#9793b1;
+	font-family: "Nyala", sans-serif;
+	color: #9793b1;
+	padding:15px;
 }
 
+.site-title {
+	font-size:35px;
+}
+.site-description {
+	font-size:20px;
+}
 table {
 	border-collapse:collapse;
 	width:100%;

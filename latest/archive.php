@@ -4,7 +4,7 @@
  *
  * Learn more: http://codex.wordpress.org/Template_Hierarchy
  *
- * @package cwp
+ * @package music-band-pro
  */
 
 get_header(); ?>
@@ -100,7 +100,7 @@ get_header(); ?>
 							?>
 						</div>
 					</div><!--/topdetails-->
-					<div class="readmore"><a href="<?php the_permalink(); ?>"><?php _e('Read More','music-band-pro'); ?></a></div>
+
 					<div class="clearfix"></div>
 					<?php 
 						$fi_index = cwp('fi_index');
@@ -113,6 +113,8 @@ get_header(); ?>
 					<article>
 						<?php the_excerpt(); ?>
 					</article>
+					<div class="readmore"><a href="<?php the_permalink(); ?>"><?php _e('Read More','music-band-pro'); ?></a></div>
+					<div class="clearfix"></div>
 				</div><!--/post-->
 				<?php endwhile; ?>
 				<div class="pagination">

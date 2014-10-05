@@ -1,15 +1,15 @@
 <?php
 /*
- * cwp functions and definitions
+ * music-band-pro functions and definitions
  *
- * @package cwp
+ * @package music-band-pro
  *
  * Set the content width based on the theme's design and stylesheet.
  */
 if ( ! isset( $content_width ) )
 	$content_width = 640; /* pixels */
 	
-function cwp_setup() {
+function music_band_pro_setup() {
 
 	load_theme_textdomain( 'music-band-pro', FALSE, basename( dirname( __FILE__ ) ) . '/languages/' );
 	
@@ -38,12 +38,12 @@ function cwp_setup() {
 	require( get_template_directory() . '/admin/functions.php' );
 }
 
-add_action( 'after_setup_theme', 'cwp_setup' );
+add_action( 'after_setup_theme', 'music_band_pro_setup' );
 
 /*
  * Register widgetized area and update sidebar with default widgets
  */
-function cwp_widgets_init() {
+function music_band_pro_widgets_init() {
 	register_sidebar( array(
 		'name'          => __( 'Sidebar', 'music-band-pro' ),
 		'id'            => 'sidebar-1',
@@ -53,12 +53,12 @@ function cwp_widgets_init() {
 		'after_title'   => '</h1>',
 	) );
 }
-add_action( 'widgets_init', 'cwp_widgets_init' );
+add_action( 'widgets_init', 'music_band_pro_widgets_init' );
 
 /*
  * Enqueue scripts and styles
  */
-function cwp_scripts() {
+function music_band_pro_scripts() {
 
 	wp_enqueue_style( 'cwp-style', get_stylesheet_uri() );
 	
@@ -82,7 +82,7 @@ function cwp_scripts() {
 		wp_enqueue_script( 'cwp-keyboard-image-navigation', get_template_directory_uri() . '/js/keyboard-image-navigation.js', array( 'jquery' ), '20120202' );
 	}
 }
-add_action( 'wp_enqueue_scripts', 'cwp_scripts' );
+add_action( 'wp_enqueue_scripts', 'music_band_pro_scripts' );
 
 /*
  * Implement the Custom Header feature.
@@ -115,14 +115,14 @@ require get_template_directory() . '/inc/customizer.php';
  */
 require get_template_directory() . '/inc/jetpack.php';
 
-function cwp_add_editor_styles() {
+function music_band_pro_add_editor_styles() {
     add_editor_style( '/css/custom-editor-style.css' );
 }
-add_action( 'init', 'cwp_add_editor_styles' );
+add_action( 'init', 'music_band_pro_add_editor_styles' );
 
-add_filter( 'the_title', 'cwp_default_title' );
+add_filter( 'the_title', 'music_band_pro_default_title' );
 
-function cwp_default_title( $title ) {
+function music_band_pro_default_title( $title ) {
 
 	if($title == '')
 		$title = __("Default title",'music-band-pro');
@@ -130,74 +130,66 @@ function cwp_default_title( $title ) {
 	return $title;
 }
 
-add_action( 'init', 'cwp_create_post_type' );
-function cwp_create_post_type() {
+add_action( 'init', 'music_band_pro_create_post_type' );
+
+function music_band_pro_create_post_type() {
+
 	register_post_type( 'album',
-							array(
-								'labels' => array(
-									'name' => __( 'Albums','music-band-pro' ),
-									'singular_name' => __( 'Album','music-band-pro' )
-								),
-							'public' => true,
-							'has_archive' => true,
-							//for tags
-							'taxonomies' => array('post_tag'),
-							//for the featured image
-							'supports' => array( 'title', 'editor', 'thumbnail', 'revisions' ),
-								'show_ui' => true,
-							)
+		array(
+			'labels' => array(
+				'name' => __( 'Albums','music-band-pro' ),
+				'singular_name' => __( 'Album','music-band-pro' )
+			),
+			'public' => true,
+			'has_archive' => true,
+			'taxonomies' => array('post_tag'),
+			'supports' => array( 'title', 'editor', 'thumbnail', 'revisions','comments' ),
+			'show_ui' => true,
+		)
 	);
 	register_post_type( 'event',
-							array(
-								'labels' => array(
-									'name' => __( 'Events','music-band-pro' ),
-									'singular_name' => __( 'Event','music-band-pro' )
-								),
-							'public' => true,
-							'has_archive' => true,
-							//for tags
-							'taxonomies' => array('post_tag'),
-							//for the featured image
-							'supports' => array( 'title', 'editor', 'thumbnail', 'revisions' ),
-								'show_ui' => true,
-							)
+		array(
+			'labels' => array(
+				'name' => __( 'Events','music-band-pro' ),
+				'singular_name' => __( 'Event','music-band-pro' )
+			),
+			'public' => true,
+			'has_archive' => true,
+			'taxonomies' => array('post_tag'),
+			'supports' => array( 'title', 'editor', 'thumbnail', 'revisions','comments' ),
+			'show_ui' => true,
+		)
 	);
 	register_post_type( 'media',
-							array(
-								'labels' => array(
-									'name' => __( 'Media','music-band-pro' ),
-									'singular_name' => __( 'Media','music-band-pro' )
-								),
-							'public' => true,
-							'has_archive' => true,
-							//for tags
-							'taxonomies' => array('post_tag'),
-							//for the featured image
-							'supports' => array( 'title', 'editor', 'thumbnail', 'revisions' ),
-								'show_ui' => true,
-							)
+		array(
+			'labels' => array(
+				'name' => __( 'Videos','music-band-pro' ),
+				'singular_name' => __( 'Video','music-band-pro' )
+			),
+			'public' => true,
+			'has_archive' => true,
+			'taxonomies' => array('post_tag'),
+			'supports' => array( 'title', 'editor', 'thumbnail', 'revisions' ),
+			'show_ui' => true,
+		)
 	);
 	register_post_type( 'band_member',
-							array(
-								'labels' => array(
-									'name' => __( 'Band members','music-band-pro' ),
-									'singular_name' => __( 'Band member','music-band-pro' )
-								),
-							'public' => true,
-							'has_archive' => true,
-							//for tags
-							'taxonomies' => array('post_tag'),
-							//for the featured image
-							'supports' => array( 'title', 'editor', 'thumbnail', 'revisions' ),
-								'show_ui' => true,
-							)
+		array(
+			'labels' => array(
+				'name' => __( 'Band members','music-band-pro' ),
+				'singular_name' => __( 'Band member','music-band-pro' )
+			),
+			'public' => true,
+			'has_archive' => true,
+			'taxonomies' => array('post_tag'),
+			'supports' => array( 'title', 'editor', 'thumbnail', 'revisions' ),
+			'show_ui' => true,
+		)
 	);
 	flush_rewrite_rules();
 }
 
-add_filter( 'wp_nav_menu_objects', create_function( '$menu', 'return array_reverse( $menu );' ) );
-
-// function to display number of posts.
+/* function to display number of posts. */
 function cwp_getPostViews($postID){
     $count_key = 'post_views_count';
     $count = get_post_meta($postID, $count_key, true);
@@ -833,7 +825,7 @@ function cwp_related_posts() {
 	while ( $the_query->have_posts() ) : $the_query->the_post();
 		?> 
 			<div class="news">
-				<a href=""><?php the_title(); ?></a>
+				<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
 				<p><?php echo get_the_date('F d, Y'); ?></p>
 			</div>
 		<?php	
@@ -841,4 +833,295 @@ function cwp_related_posts() {
 	echo '</div>';
 	wp_reset_postdata();
  
+}
+
+function music_band_pro_style_from_admin() {
+
+	echo ' <style type="text/css">';
+
+	$buttons_background = cwp('buttons_background');
+	if( !empty($buttons_background) ):
+		echo '	.post .readmore  {background-color:'. $buttons_background .'}';
+		echo '	header .buyalbum  {background-color:'. $buttons_background .'}';
+		echo '	.form-submit #submit, #content input[type="submit"]  {background-color:'. $buttons_background .'; border-color:'. $buttons_background .'}';		
+		echo '	.music_item .left_side .price  {background-color:'. $buttons_background .'}';
+	endif;	
+	
+	$buttons_color = cwp('buttons_color');
+	if( !empty($buttons_color) ):
+		echo '	.post .readmore a {color:'. $buttons_color .'}';
+		echo '	header .buyalbum  {color:'. $buttons_color .'}';
+		echo '	.form-submit #submit, #content input[type="submit"]  {color:'. $buttons_color .'}';
+		echo '	.music_item .left_side .price {color:'. $buttons_color .'}';
+	endif;
+	
+	$buttons_background_hover = cwp('buttons_background_hover');
+	if( !empty($buttons_background_hover) ):
+		echo '	.post .readmore:hover  {background-color:'. $buttons_background_hover .'}';
+		echo '	header .buyalbum:hover  {background-color:'. $buttons_background_hover .'}';
+		echo '	.form-submit #submit, #content input[type="submit"]:hover  {background-color:'. $buttons_background_hover .'; border-color:'. $buttons_background_hover .'}';
+	endif;	
+	
+	$buttons_color_hover = cwp('buttons_color_hover');
+	if( !empty($buttons_color_hover) ):
+		echo '	.post .readmore a:hover {color:'. $buttons_color_hover .'}';
+		echo '	header .buyalbum:hover {color:'. $buttons_color_hover .'}';
+		echo '	.form-submit #submit, #content input[type="submit"]:hover {color:'. $buttons_color_hover .'}';
+	endif;
+	
+	$post_title = cwp('post_title');
+	if( !empty($post_title) ):
+		echo '	.post .topdetails a {color:'. $post_title .'}';
+	endif;
+	
+	$page_title = cwp('page_title');
+	if( !empty($page_title) ):
+		echo '	.about_content_title {color:'. $page_title .'}';
+	endif;
+	
+	$sidebar_background = cwp('sidebar_background');
+	if( !empty($sidebar_background) ):
+		echo '	#sidebar {background:'. $sidebar_background .'}';
+	endif;
+	
+	$slider_details_background = cwp('slider_details_background');
+	if( !empty($slider_details_background) ):
+		echo '	.subheader_center .slide .slide_details {background-color:'. $slider_details_background .'; background-image:none !important}';
+	endif;
+	
+	$slider_details_big_title_color = cwp('slider_details_big_title_color');
+	if( !empty($slider_details_big_title_color) ):
+		echo '	.subheader_center .album_title {color:'. $slider_details_big_title_color .'; }';
+	endif;
+	
+	$slider_details_small_title_color = cwp('slider_details_small_title_color');
+	if( !empty($slider_details_small_title_color) ):
+		echo '	.subheader_center .album_details h3 {color:'. $slider_details_small_title_color .'; }';
+	endif;
+	
+	$slider_details_text_color = cwp('slider_details_text_color');
+	if( !empty($slider_details_text_color) ):
+		echo '	.subheader_center .album_details p {color:'. $slider_details_text_color .'; }';
+	endif;
+
+	$footer_background = cwp('footer_background');
+	if( !empty($footer_background) ):
+		echo '	footer {background:'. $footer_background .'; }';
+	endif;
+	
+	$footer_text = cwp('footer_text');
+	if( !empty($footer_text) ):
+		echo '	#footer_nav ul li a, .footercenter .copyright {color:'. $footer_text .' !important; }';
+		echo '	#footer_nav ul li a {border-color:'. $footer_text .' !important; }';
+	endif;
+	
+	$footer_boxes_title = cwp('footer_boxes_title');
+	if( !empty($footer_boxes_title) ):
+		echo '	.abovefooter_center .box .title {color:'. $footer_boxes_title .'; }';
+	endif;
+	
+	$footer_boxes_border = cwp('footer_boxes_border');
+	if( !empty($footer_boxes_border) ):
+		echo '	.abovefooter_center .box {border-color:'. $footer_boxes_border .'; }';
+	endif;
+	
+	$footer_boxes_text = cwp('footer_boxes_text');
+	if( !empty($footer_boxes_text) ):
+		echo '	.abovefooter_center .box .subtitle {color:'. $footer_boxes_text .'; }';
+	endif;
+	
+	$sidebar_widget_title = cwp('sidebar_widget_title');
+	if( !empty($sidebar_widget_title) ):
+		echo '	#sidebar .widget .title.dark, #sidebar .widget-title {color:'. $sidebar_widget_title .'}';
+	endif;
+	
+	$sidebar_widget_text = cwp('sidebar_widget_text');
+	if( !empty($sidebar_widget_text) ):
+		echo '	#sidebar .widget ul {color:'. $sidebar_widget_text .'}';
+	endif;
+	
+	$search_form_background = cwp('search_form_background');
+	if( !empty($search_form_background) ):
+		echo '	#search input[type="text"] {background-color:'. $search_form_background .'}';
+	endif;
+	
+	$search_form_color = cwp('search_form_color');
+	if( !empty($search_form_color) ):
+		echo '	#search input[type="text"] {color:'. $search_form_color .'}';
+	endif;
+	
+	$latest_video_background = cwp('latest_video_background');
+	if( !empty($latest_video_background) ):
+		echo '	#sidebar .latest_video {background:'. $latest_video_background .'}';
+	endif;
+	
+	$latest_video_text = cwp('latest_video_text');
+	if( !empty($latest_video_text) ):
+		echo '	#sidebar .latest_video {color:'. $latest_video_text .'}';
+	endif;
+	
+	$latest_video_title = cwp('latest_video_title');
+	if( !empty($latest_video_title) ):
+		echo '	#sidebar .widget .title {color:'. $latest_video_title .'}';
+	endif;
+	
+	$related_news_title = cwp('related_news_title');
+	if( !empty($related_news_title) ):
+		echo '	.related_news .news a {color:'. $related_news_title .'}';
+	endif;
+	
+	$related_news_title_hover = cwp('related_news_title_hover');
+	if( !empty($related_news_title_hover) ):
+		echo '	.related_news .news a:hover {color:'. $related_news_title_hover .'}';
+	endif;
+	
+	$related_news_date = cwp('related_news_date');
+	if( !empty($related_news_date) ):
+		echo '	.related_news .news p {color:'. $related_news_date .'}';
+	endif;
+	
+	$related_news_date_hover = cwp('related_news_date_hover');
+	if( !empty($related_news_date_hover) ):
+		echo '	.related_news .news p:hover {color:'. $related_news_date_hover .'}';
+	endif;
+	
+	$latest_album_title = cwp('latest_album_title');
+	if( !empty($latest_album_title) ):
+		echo '	#sidebar .latest_album .title span {color:'. $latest_album_title .'}';
+	endif;
+	
+	$latest_album_tracklist = cwp('latest_album_tracklist');
+	if( !empty($latest_album_tracklist) ):
+		echo '	.latest_album .tracklist h4 {color:'. $latest_album_tracklist .'}';
+	endif;
+	
+	$latest_album_song = cwp('latest_album_song');
+	if( !empty($latest_album_song) ):
+		echo '	.latest_album .tracklist .track {color:'. $latest_album_song .'}';
+	endif;
+	
+	$latest_album_song_hover = cwp('latest_album_song_hover');
+	if( !empty($latest_album_song_hover) ):
+		echo '	.latest_album .tracklist .track:hover {color:'. $latest_album_song_hover .'}';
+	endif;
+	
+	$latest_album_button_background = cwp('latest_album_button_background');
+	if( !empty($latest_album_button_background) ):
+		echo '	.latest_album .button {background:'. $latest_album_button_background .'}';
+	endif;
+	
+	$latest_album_button_background_hover = cwp('latest_album_button_background_hover');
+	if( !empty($latest_album_button_background_hover) ):
+		echo '	.latest_album .button:hover {background:'. $latest_album_button_background_hover .'; background-image:none !Important}';
+	endif;
+	
+	$latest_album_button_color = cwp('latest_album_button_color');
+	if( !empty($latest_album_button_color) ):
+		echo '	.latest_album .button {color:'. $latest_album_button_color .'}';
+	endif;
+	
+	$slider_navigation_background = cwp('slider_navigation_background');
+	if( !empty($slider_navigation_background) ):
+		echo '	.subheader_center .slidesjs-navigation.right, .subheader_center .slidesjs-navigation.left {background-color:'. $slider_navigation_background .'}';
+	endif;
+	
+	$header_background = cwp('header_background');
+	if( !empty($header_background) ):
+		echo '	.pagetitle {background:'. $header_background .'}';
+		echo '	.pagetitlecenter:after {border-top: 8px solid'. $header_background .'}';
+	endif;
+	
+	$header_color = cwp('header_color');
+	if( !empty($header_color) ):
+		echo '	.pagetitlecenter h3 {color:'. $header_color .'}';
+	endif;
+	
+	$menu_color = cwp('menu_color');
+	if( !empty($menu_color) ):
+		echo '	#header_nav ul li a {color:'. $menu_color .'}';
+	endif;
+	
+	$menu_color_hover = cwp('menu_color_hover');
+	if( !empty($menu_color_hover) ):
+		echo '	#header_nav ul li a:hover {color:'. $menu_color_hover .'}';
+	endif;
+	
+	$blockquote_color = cwp('blockquote_color');
+	if( !empty($blockquote_color) ):
+		echo '	.post_inside blockquote {color:'. $blockquote_color .'}';
+	endif;
+	
+	$blockquote_background = cwp('blockquote_background');
+	if( !empty($blockquote_background) ):
+		echo '	.post_inside blockquote {background:'. $blockquote_background .'}';
+	endif;
+	
+	$next_events_background = cwp('next_events_background');
+	if( !empty($next_events_background) ):
+		echo '	.widget.next_event, .event {background:'. $next_events_background .'}';
+	endif;
+	
+	$next_events_date_color = cwp('next_events_date_color');
+	if( !empty($next_events_date_color) ):
+		echo '	#sidebar .next_event .day, .event .day {color:'. $next_events_date_color .'}';
+	endif;
+	
+	$next_events_text_color = cwp('next_events_text_color');
+	if( !empty($next_events_text_color) ):
+		echo '	#sidebar .next_event .eventcontent, .event .eventcontent {color:'. $next_events_text_color .'}';
+	endif;
+	
+	$next_events_bullets_color = cwp('next_events_bullets_color');
+	if( !empty($next_events_bullets_color) ):
+		echo '	.widget.next_event .slidernav a {background:'. $next_events_bullets_color .'}';
+	endif;
+	
+	$next_events_current_bullet_color = cwp('next_events_current_bullet_color');
+	if( !empty($next_events_current_bullet_color) ):
+		echo '	.widget.next_event .slidernav a.current {background:'. $next_events_current_bullet_color .'}';
+	endif;
+	
+	$inner_page_header_title_color = cwp('inner_page_header_title_color');
+	if( !empty($inner_page_header_title_color) ):
+		echo '	.subheader_news .album_title {color:'. $inner_page_header_title_color .'}';
+	endif;
+	
+	$inner_page_header_text_color = cwp('inner_page_header_text_color');
+	if( !empty($inner_page_header_text_color) ):
+		echo '	.subheader_news p {color:'. $inner_page_header_text_color .'}';
+	endif;
+	
+	$next_events_month_color = cwp('next_events_month_color');
+	if( !empty($next_events_month_color) ):
+		echo '	#sidebar .next_event .eventcontent span, .event .eventcontent span{color:'. $next_events_month_color .'}';
+	endif;
+	
+	$get_tickets_link_background = cwp('get_tickets_link_background');
+	if( !empty($get_tickets_link_background) ):
+		echo '	.event .getticket {background:'. $get_tickets_link_background .'}';
+	endif;
+	
+	$get_tickets_link_color = cwp('get_tickets_link_color');
+	if( !empty($get_tickets_link_color) ):
+		echo '	.event .getticket a {color:'. $get_tickets_link_color .'}';
+	endif;
+	
+	$get_tickets_link_color_hover = cwp('get_tickets_link_color_hover');
+	if( !empty($get_tickets_link_color_hover) ):
+		echo '	.event .getticket a:hover {color:'. $get_tickets_link_color_hover .'}';
+	endif;
+	
+	$band_members_background = cwp('band_members_background');
+	if( !empty($band_members_background) ):
+		echo '	#bandmembers {background:'. $band_members_background .'}';
+	endif;
+	
+	$band_members_background_hover = cwp('band_members_background_hover');
+	if( !empty($band_members_background_hover) ):
+		echo '	.bandmembers_center .member:hover {background:'. $band_members_background_hover .'}';
+	endif;
+	
+	
+	echo '</style>';
+
 }

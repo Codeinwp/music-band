@@ -1,8 +1,8 @@
 = Music Band PRO =
 Author: codeinwp
-Tags: purple, pink, gray, white, two-columns, custom-background, custom-header, right-sidebar, responsive-layout, custom-menu, editor-style, featured-images, sticky-post, theme-options, threaded-comments, translation-ready
+Tags: black, blue, brown, gray, green, orange, pink, purple, red, white, yellow, two-columns, custom-background, custom-header, right-sidebar, responsive-layout, custom-menu, editor-style, featured-images, sticky-post, theme-options, threaded-comments, translation-ready
 Requires at least:	3.3.0
-Tested up to:		3.6
+Tested up to:		4.0
 Music Band PRO
 == Description ==
 Music Band PRO is a easily customizable WordPress Theme with an elegant design for your band.  

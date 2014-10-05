@@ -2,51 +2,18 @@
 /*
  * The Template for displaying all single events posts.
  *
- * @package cwp
+ * @package music-band-pro
  */
 
-get_header(); ?>
-<?php while ( have_posts() ) : the_post(); 
+get_header(); 
+
+	while ( have_posts() ) : 
+		the_post(); 
 		cwp_setPostViews(get_the_ID());
-		$id = get_the_ID();
-		
-		$top_banner = cwp('top_banner');
-			if(isset($top_banner) && !empty($top_banner)):
-				foreach($top_banner as $p):		
-					if($id == $p):
-						$top_banner_image = cwp('top_banner_image');
-						$top_banner_title = cwp('top_banner_title');
-						$top_banner_text = cwp('top_banner_text');
-						if(isset($top_banner_image) && $top_banner_image == '/images/abovefooterbg.png'):
-						?>
-							<section id="subheader" class="subheader_news" style="background-image: url(<?php echo get_template_directory_uri(); ?>/images/abovefooterbg.png);">
-								<?php 
-									if(isset($top_banner_title) && $top_banner_title != '')
-										echo '<div class="album_title">'.$top_banner_title.'</div>';
-									if(isset($top_banner_text) && $top_banner_text != '')	
-										echo '<p>'.$top_banner_text.'</p>';
-								?>
-							</section><!--/subheader-->
-						<?php
-						elseif(isset($top_banner_image) && $top_banner_image != ''):
-						?>
-							<section id="subheader" class="subheader_news" style="<?php echo $top_banner_image; ?>">
-								<?php 
-									if(isset($top_banner_title) && $top_banner_title != '')
-										echo '<div class="album_title">'.$top_banner_text.'</div>';
-									if(isset($top_banner_text) && $top_banner_text != '')	
-										echo '<p>'.$top_banner_text.'</p>';
-								?>
-							</section><!--/subheader-->
-						<?php
-						endif;
-					endif;
-				endforeach;
-			endif;
 ?>
 		<div class="pagetitle">
 			<div class="pagetitlecenter">
-				<h3><?php _e('Events','music-band-pro'); ?></h3>
+				<h3><?php the_title(); ?></h3>
 			</div><!--/pagetitlecenter-->
 		</div><!--/pagetitle-->
 		
@@ -56,7 +23,6 @@ get_header(); ?>
 
 				<div <?php post_class('post_inside'); ?>>
 					<div class="topdetails">
-						<h2><a href=""><?php the_title(); ?></a></h2>
 						<div class="details">
 							<?php 
 								$details_single = cwp('details_single');
@@ -108,11 +74,14 @@ get_header(); ?>
 						}						
 					?>
 					<article>
-						<?php the_content(); ?>
-						<?php wp_link_pages(); ?>
+						<?php 
+							the_content(); 
+							wp_link_pages();
+							comments_template(); 
+						?>
 					</article>
 					
-					<?php comments_template(); ?>
+					
 				</div><!--/post-->
 
 			</section><!--/content-->
@@ -122,6 +91,10 @@ get_header(); ?>
 			<div class="clearfix"></div>
 		</div><!--/wraper-->
 
-<?php endwhile; // end of the loop. ?>
-<?php get_template_part('/inc/footer-section'); ?>
-<?php get_footer(); ?>
+<?php endwhile; 
+
+get_template_part('/inc/footer-section');  
+
+get_footer(); 
+
+?>

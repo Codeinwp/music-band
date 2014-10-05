@@ -13,125 +13,86 @@
 			$twitter = cwp('twitter');
 			$linkedin = cwp('linkedin');
 			
-			if(isset($footer_section_image) && $footer_section_image == '/images/abovefooterbg.png'):
-			?>
-				<div id="abovefooter">
-					<div class="abovefooter_center">
-						<?php 
-							if((isset($footer_section_title1) && $footer_section_title1 != '') || (isset($footer_section_text1) && $footer_section_text1 != '')):
-						?>
-								<div class="box" style="background: url(images/afbox1.png);">
-									<?php 
-										if(isset($footer_section_title1) && $footer_section_title1 != '')
-											echo '<div class="title">'.$footer_section_title1.'</div>';
-										if(isset($footer_section_text1) && $footer_section_text1 != '')
-											echo '<div class="subtitle">'.$footer_section_text1.'</div>';
-									?>
-								</div><!--/box-->
-						<?php
-							endif; 
-							if((isset($footer_section_title2) && $footer_section_title2 != '') || (isset($footer_section_text2) && $footer_section_text2 != '')):
-						?>
-								<div class="box center" style="background: url(images/afbox2.png);">
-									<?php 
-										if(isset($footer_section_title2) && $footer_section_title2 != '')
-											echo '<div class="title">'.$footer_section_title2.'</div>';
-										if(isset($footer_section_text2) && $footer_section_text2 != '')
-											echo '<div class="subtitle">'.$footer_section_text2.'</div>';
-									?>
-								</div><!--/box-->
-						<?php
+			
+			if( !empty($footer_section_image) ):
+			
+				if( $footer_section_image == '/images/abovefooterbg.png' ):
+					echo '<div id="abovefooter" style="background: url('.get_template_directory_uri().'/images/abovefooterbg.png);">';
+				else:
+					echo '<div id="abovefooter" style="background: url('.$footer_section_image.');">';
+				endif;
+				
+				echo '<div class="abovefooter_center">';
+							
+					/* first section */		
+					if( !empty($footer_section_title1) || !empty($footer_section_text1) ):
+						
+						echo '<div class="box">';
+							 
+							if( !empty($footer_section_title1) ):
+								echo '<div class="title">'.$footer_section_title1.'</div>';
+							endif;	
+							if( !empty($footer_section_text1) ):
+								echo '<div class="subtitle">'.$footer_section_text1.'</div>';
 							endif;
-							if((isset($footer_section_title3) && $footer_section_title3 != '') || (isset($footer_section_text3) && $footer_section_text3 != '')):
-						?>
-								<div class="box" style="background: url(images/afbox3.png);">
-									<?php 
-										if(isset($footer_section_title3) && $footer_section_title3 != '')
-											echo '<div class="title">'.$footer_section_title3.'</div>';
-										if(isset($footer_section_text3) && $footer_section_text3 != '')
-											echo '<div class="subtitle">'.$footer_section_text3.'</div>';
-									?>
-								</div><!--/box-->
-						<?php
-							endif;
-						?>
-						<div class="clearfix"></div>
-						<?php 
-							if((isset($facebook) && $facebook != '') || (isset($twitter) && $twitter != '') || (isset($linkedin) && $linkedin != '')):
+								
+						echo '</div>';
+						
+					endif; 
+					
+					/* second section */
+					if( !empty($footer_section_title2) || !empty($footer_section_text2) ):
+						
+						echo '<div class="box center">';
+									 
+							if( !empty($footer_section_title2) ):
+								echo '<div class="title">'.$footer_section_title2.'</div>';
+							endif;	
+							if( !empty($footer_section_text2) ):
+								echo '<div class="subtitle">'.$footer_section_text2.'</div>';
+							endif;	
+						
+						echo '</div>';
+						
+					endif;
+					
+					/* third section */
+					if( !empty($footer_section_title3) || !empty($footer_section_text3)):
+						
+						echo '<div class="box">';
+							
+							if( !empty($footer_section_title3) ):
+								echo '<div class="title">'.$footer_section_title3.'</div>';
+							endif;	
+							if( !empty($footer_section_text3) ):
+								echo '<div class="subtitle">'.$footer_section_text3.'</div>';
+							endif;	
+						
+						echo '</div>';
+					
+					endif;
+					?>
+					<div class="clearfix"></div>
+					
+					<?php 
+						if( !empty($facebook) || !empty($twitter) || !empty($linkedin)):
 						?>
 								<div id="footersocialmedia">
 									<?php
-										if(isset($facebook) && $facebook != '')
+										if( !empty($facebook) ):
 											echo '<div class="social"><a href="'.$facebook.'"><img src="'.get_template_directory_uri().'/images/facebook.png" alt="Facebook"></a></div>';
-										if(isset($twitter) && $twitter != '')
+										endif;	
+										if( !empty($twitter) ):
 											echo '<div class="social"><a href="'.$twitter.'"><img src="'.get_template_directory_uri().'/images/twitter.png" alt="Twitter"></a></div>';	
-										if(isset($linkedin) && $linkedin != '')
+										endif;	
+										if( !empty($linkedin) ):
 											echo '<div class="social"><a href="'.$linkedin.'"><img src="'.get_template_directory_uri().'/images/linkedin.png" alt="Linkedin"></a></div>';	
+										endif;	
 									?>
 								</div><!--/footersocialmedia-->
 						<?php endif; ?>		
 					</div><!--/abovefooter_center-->
 				</div><!--/abovefooter-->
 			<?php
-			elseif(isset($footer_section_image) && $footer_section_image != ''):
-			?>
-				<div id="abovefooter">
-					<div class="abovefooter_center">
-						<?php 
-							if((isset($footer_section_title1) && $footer_section_title1 != '') || (isset($footer_section_text1) && $footer_section_text1 != '')):
-						?>
-								<div class="box" style="background: url(images/afbox1.png);">
-									<?php 
-										if(isset($footer_section_title1) && $footer_section_title1 != '')
-											echo '<div class="title">'.$footer_section_title1.'</div>';
-										if(isset($footer_section_text1) && $footer_section_text1 != '')
-											echo '<div class="subtitle">'.$footer_section_text1.'</div>';
-									?>
-								</div><!--/box-->
-						<?php
-							endif; 
-							if((isset($footer_section_title2) && $footer_section_title2 != '') || (isset($footer_section_text2) && $footer_section_text2 != '')):
-						?>
-								<div class="box center" style="background: url(images/afbox2.png);">
-									<?php 
-										if(isset($footer_section_title2) && $footer_section_title2 != '')
-											echo '<div class="title">'.$footer_section_title2.'</div>';
-										if(isset($footer_section_text2) && $footer_section_text2 != '')
-											echo '<div class="subtitle">'.$footer_section_text2.'</div>';
-									?>
-								</div><!--/box-->
-						<?php
-							endif;
-							if((isset($footer_section_title3) && $footer_section_title3 != '') || (isset($footer_section_text3) && $footer_section_text3 != '')):
-						?>
-								<div class="box" style="background: url(images/afbox3.png);">
-									<?php 
-										if(isset($footer_section_title3) && $footer_section_title3 != '')
-											echo '<div class="title">'.$footer_section_title3.'</div>';
-										if(isset($footer_section_text3) && $footer_section_text3 != '')
-											echo '<div class="subtitle">'.$footer_section_text3.'</div>';
-									?>
-								</div><!--/box-->
-						<?php
-							endif;
-						?>
-						<div class="clearfix"></div>
-						<?php 
-							if((isset($facebook) && $facebook != '') || (isset($twitter) && $twitter != '') || (isset($linkedin) && $linkedin != '')):
-						?>
-								<div id="footersocialmedia">
-									<?php
-										if(isset($facebook) && $facebook != '')
-											echo '<div class="social"><a href="'.$facebook.'"><img src="'.get_template_directory_uri().'/images/facebook.png" alt="Facebook"></a></div>';
-										if(isset($twitter) && $twitter != '')
-											echo '<div class="social"><a href="'.$twitter.'"><img src="'.get_template_directory_uri().'/images/twitter.png" alt="Twitter"></a></div>';	
-										if(isset($linkedin) && $linkedin != '')
-											echo '<div class="social"><a href="'.$linkedin.'"><img src="'.get_template_directory_uri().'/images/linkedin.png" alt="Linkedin"></a></div>';	
-									?>
-								</div><!--/footersocialmedia-->
-						<?php endif; ?>
-					</div><!--/abovefooter_center-->
-				</div><!--/abovefooter-->
-			<?php
-			endif;
+		endif;	
 ?>		

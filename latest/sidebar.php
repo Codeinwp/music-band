@@ -2,11 +2,14 @@
 /*
  * The Sidebar containing the main widget areas.
  *
- * @package cwp
+ * @package music-band-pro
  */
-?>
-				
-					<?php
+
+					/*************************************/
+					/******** LATEST ALBUM ***************/
+					/*************************************/
+					
+ 
 					$queryObject = new WP_Query( 'post_type=album&posts_per_page=1' );
 					if ($queryObject->have_posts()) {
 						echo '<div class="widget latest_album">';
@@ -70,283 +73,360 @@
 										$cpi_buyalbum_option = get_post_meta($id, 'cpi_buyalbum_option');
 										$cpi_itunes_option = get_post_meta($id, 'cpi_itunes_option');
 									
-									if(isset($song_title1[0]) && $song_title1[0] != ''){
+									/* song no1 */
+									
+									if( !empty($song_title1[0]) ):
 									?>
 										<div class="track">
 											<div class="nr"><?php echo $song_counter; ?></div>
 											<div class="name"><?php echo $song_title1[0]; ?></div>
 											<?php
-												if(isset($song_time1[0]) && $song_time1[0] != '')
+												if( !empty($song_time1[0]) ):
 													echo '<div class="time">'.$song_time1[0].'</div>';
+												endif;	
 											?>
 										</div>
 									<?php
 										$song_counter++;
-									}
-									if(isset($song_title2[0]) && $song_title2[0] != ''){
+									endif;
+									
+									/* song no2 */
+									
+									if( !empty($song_title2[0]) ):
 									?>
 										<div class="track">
 											<div class="nr"><?php echo $song_counter; ?></div>
 											<div class="name"><?php echo $song_title2[0]; ?></div>
 											<?php
-												if(isset($song_time2[0]) && $song_time2[0] != '')
+												if( !empty($song_time2[0]) ):
 													echo '<div class="time">'.$song_time2[0].'</div>';
+												endif;	
 											?>
 										</div>
 									<?php
 										$song_counter++;
-									}
-									if(isset($song_title3[0]) && $song_title3[0] != ''){
+									endif;
+									
+									/* song no3 */
+									
+									if( !empty($song_title3[0]) ):
 									?>
 										<div class="track">
 											<div class="nr"><?php echo $song_counter; ?></div>
 											<div class="name"><?php echo $song_title3[0]; ?></div>
 											<?php
-												if(isset($song_time3[0]) && $song_time3[0] != '')
+												if( !empty($song_time3[0]) ):
 													echo '<div class="time">'.$song_time3[0].'</div>';
+												endif;	
 											?>
 										</div>
 									<?php
 										$song_counter++;
-									}
-									if(isset($song_title4[0]) && $song_title4[0] != ''){
+									endif;
+									
+									/* song no4 */
+									
+									if( !empty($song_title4[0]) ):
 									?>
 										<div class="track">
 											<div class="nr"><?php echo $song_counter; ?></div>
 											<div class="name"><?php echo $song_title4[0]; ?></div>
 											<?php
-												if(isset($song_time4[0]) && $song_time4[0] != '')
+												if( !empty($song_time4[0]) ):
 													echo '<div class="time">'.$song_time4[0].'</div>';
+												endif;	
 											?>
 										</div>
 									<?php
 										$song_counter++;
-									}
-									if(isset($song_title5[0]) && $song_title5[0] != ''){
+									endif;
+									
+									/* song no5 */
+									
+									if( !empty($song_title5[0]) ):
 									?>
 										<div class="track">
 											<div class="nr"><?php echo $song_counter; ?></div>
 											<div class="name"><?php echo $song_title5[0]; ?></div>
 											<?php
-												if(isset($song_time5[0]) && $song_time5[0] != '')
+												if( !empty($song_time5[0]) ):
 													echo '<div class="time">'.$song_time5[0].'</div>';
+												endif;	
 											?>
 										</div>
 									<?php
 										$song_counter++;
-									}
-									if(isset($song_title6[0]) && $song_title6[0] != ''){
+									endif;
+									
+									/* song no6 */
+									
+									if( !empty($song_title6[0]) ):
 									?>
 										<div class="track">
 											<div class="nr"><?php echo $song_counter; ?></div>
 											<div class="name"><?php echo $song_title6[0]; ?></div>
 											<?php
-												if(isset($song_time6[0]) && $song_time6[0] != '')
+												if( !empty($song_time6[0]) ):
 													echo '<div class="time">'.$song_time6[0].'</div>';
+												endif;	
 											?>
 										</div>
 									<?php
 										$song_counter++;
-									}
-									if(isset($song_title7[0]) && $song_title7[0] != ''){
+									endif;
+									
+									/* song no7 */
+									
+									if( !empty($song_title7[0]) ):
 									?>
 										<div class="track">
 											<div class="nr"><?php echo $song_counter; ?></div>
 											<div class="name"><?php echo $song_title7[0]; ?></div>
 											<?php
-												if(isset($song_time7[0]) && $song_time7[0] != '')
+												if( !empty($song_time7[0]) ):
 													echo '<div class="time">'.$song_time7[0].'</div>';
+												endif;	
 											?>
 										</div>
 									<?php
 										$song_counter++;
-									}
-									if(isset($song_title8[0]) && $song_title8[0] != ''){
+									endif;
+									
+									/* song no8 */
+									
+									if( !empty($song_title8[0]) ):
 									?>
 										<div class="track">
 											<div class="nr"><?php echo $song_counter; ?></div>
 											<div class="name"><?php echo $song_title8[0]; ?></div>
 											<?php
-												if(isset($song_time8[0]) && $song_time8[0] != '')
+												if( !empty($song_time8[0]) ):
 													echo '<div class="time">'.$song_time8[0].'</div>';
+												endif;	
 											?>
 										</div>
 									<?php
 										$song_counter++;
-									}
-									if(isset($song_title9[0]) && $song_title9[0] != ''){
+									endif;
+									
+									/* song no9 */
+									
+									if( !empty($song_title9[0]) ):
 									?>
 										<div class="track">
 											<div class="nr"><?php echo $song_counter; ?></div>
 											<div class="name"><?php echo $song_title9[0]; ?></div>
 											<?php
-												if(isset($song_time9[0]) && $song_time9[0] != '')
+												if( !empty($song_time9[0]) ):
 													echo '<div class="time">'.$song_time9[0].'</div>';
+												endif;	
 											?>
 										</div>
 									<?php
 										$song_counter++;
-									}
-									if(isset($song_title10[0]) && $song_title10[0] != ''){
+									endif;
+									
+									/* song no10 */
+									
+									if( !empty($song_title10[0]) ):
 									?>
 										<div class="track">
 											<div class="nr"><?php echo $song_counter; ?></div>
 											<div class="name"><?php echo $song_title10[0]; ?></div>
 											<?php
-												if(isset($song_time10[0]) && $song_time10[0] != '')
+												if( !empty($song_time10[0]) ):
 													echo '<div class="time">'.$song_time10[0].'</div>';
+												endif;	
 											?>
 										</div>
 									<?php
 										$song_counter++;
-									}
-									if(isset($song_title11[0]) && $song_title11[0] != ''){
+									endif;
+									
+									/* song no11 */
+									
+									if( !empty($song_title11[0]) ):
 									?>
 										<div class="track">
 											<div class="nr"><?php echo $song_counter; ?></div>
 											<div class="name"><?php echo $song_title11[0]; ?></div>
 											<?php
-												if(isset($song_time11[0]) && $song_time11[0] != '')
+												if( !empty($song_time11[0]) ):
 													echo '<div class="time">'.$song_time11[0].'</div>';
+												endif;	
 											?>
 										</div>
 									<?php
 										$song_counter++;
-									}
-									if(isset($song_title12[0]) && $song_title12[0] != ''){
+									endif;
+									
+									/* song no12 */
+									
+									if( !empty($song_title12[0]) ):
 									?>
 										<div class="track">
 											<div class="nr"><?php echo $song_counter; ?></div>
 											<div class="name"><?php echo $song_title12[0]; ?></div>
 											<?php
-												if(isset($song_time12[0]) && $song_time12[0] != '')
+												if( !empty($song_time12[0]) ):
 													echo '<div class="time">'.$song_time12[0].'</div>';
+												endif;	
 											?>
 										</div>
 									<?php
 										$song_counter++;
-									}
-									if(isset($song_title13[0]) && $song_title13[0] != ''){
+									endif;
+									
+									/* song no13 */
+									
+									if( !empty($song_title13[0]) ):
 									?>
 										<div class="track">
 											<div class="nr"><?php echo $song_counter; ?></div>
 											<div class="name"><?php echo $song_title13[0]; ?></div>
 											<?php
-												if(isset($song_time13[0]) && $song_time13[0] != '')
+												if( !empty($song_time13[0]) ):
 													echo '<div class="time">'.$song_time13[0].'</div>';
+												endif;	
 											?>
 										</div>
 									<?php
 										$song_counter++;
-									}
-									if(isset($song_title14[0]) && $song_title14[0] != ''){
+									endif;
+									
+									/* song no14 */
+									
+									if( !empty($song_title14[0]) ):
 									?>
 										<div class="track">
 											<div class="nr"><?php echo $song_counter; ?></div>
 											<div class="name"><?php echo $song_title14[0]; ?></div>
 											<?php
-												if(isset($song_time14[0]) && $song_time14[0] != '')
+												if( !empty($song_time14[0]) ):
 													echo '<div class="time">'.$song_time14[0].'</div>';
+												endif;	
 											?>
 										</div>
 									<?php
 										$song_counter++;
-									}
-									if(isset($song_title15[0]) && $song_title15[0] != ''){
+									endif;
+									
+									/* song no15 */
+									
+									if( !empty($song_title15[0]) ):
 									?>
 										<div class="track">
 											<div class="nr"><?php echo $song_counter; ?></div>
 											<div class="name"><?php echo $song_title15[0]; ?></div>
 											<?php
-												if(isset($song_time15[0]) && $song_time15[0] != '')
+												if( !empty($song_time15[0]) ):
 													echo '<div class="time">'.$song_time15[0].'</div>';
+												endif;	
 											?>
 										</div>
 									<?php
 										$song_counter++;
-									}
-									if(isset($song_title16[0]) && $song_title16[0] != ''){
+									endif;
+									
+									/* song no16 */
+									
+									if( !empty($song_title16[0]) ):
 									?>
 										<div class="track">
 											<div class="nr"><?php echo $song_counter; ?></div>
 											<div class="name"><?php echo $song_title16[0]; ?></div>
 											<?php
-												if(isset($song_time16[0]) && $song_time16[0] != '')
+												if( !empty($song_time16[0]) ):
 													echo '<div class="time">'.$song_time16[0].'</div>';
+												endif;	
 											?>
 										</div>
 									<?php
 										$song_counter++;
-									}
-									if(isset($song_title17[0]) && $song_title17[0] != ''){
+									endif;
+									
+									/* song no17 */
+									
+									if( !empty($song_title17[0]) ):
 									?>
 										<div class="track">
 											<div class="nr"><?php echo $song_counter; ?></div>
 											<div class="name"><?php echo $song_title17[0]; ?></div>
 											<?php
-												if(isset($song_time17[0]) && $song_time17[0] != '')
+												if( !empty($song_time17[0]) ):
 													echo '<div class="time">'.$song_time17[0].'</div>';
+												endif;	
 											?>
 										</div>
 									<?php
 										$song_counter++;
-									}
-									if(isset($song_title18[0]) && $song_title18[0] != ''){
+									endif;
+									
+									/* song no18 */
+									
+									if( !empty($song_title18[0]) ):
 									?>
 										<div class="track">
 											<div class="nr"><?php echo $song_counter; ?></div>
 											<div class="name"><?php echo $song_title18[0]; ?></div>
 											<?php
-												if(isset($song_time18[0]) && $song_time18[0] != '')
+												if( !empty($song_time18[0]) ):
 													echo '<div class="time">'.$song_time18[0].'</div>';
+												endif;	
 											?>
 										</div>
 									<?php
 										$song_counter++;
-									}
-									if(isset($song_title19[0]) && $song_title19[0] != ''){
+									endif;
+									
+									/* song no19 */
+									
+									if( !empty($song_title19[0]) ):
 									?>
 										<div class="track">
 											<div class="nr"><?php echo $song_counter; ?></div>
 											<div class="name"><?php echo $song_title19[0]; ?></div>
 											<?php
-												if(isset($song_time19[0]) && $song_time19[0] != '')
+												if( !empty($song_time19[0]) ):
 													echo '<div class="time">'.$song_time19[0].'</div>';
+												endif;	
 											?>
 										</div>
 									<?php
 										$song_counter++;
-									}
-									if(isset($song_title20[0]) && $song_title20[0] != ''){
+									endif;
+									
+									/* song no20 */
+									
+									if( !empty($song_title20[0]) ):
 									?>
 										<div class="track">
 											<div class="nr"><?php echo $song_counter; ?></div>
 											<div class="name"><?php echo $song_title20[0]; ?></div>
 											<?php
-												if(isset($song_time20[0]) && $song_time20[0] != '')
+												if( !empty($song_time20[0]) ):
 													echo '<div class="time">'.$song_time20[0].'</div>';
+												endif;	
 											?>
 										</div>
 									<?php
 										$song_counter++;
-									}
+									endif;
 									?>
 								</div>
 								<?php 
-									if(isset($cpi_buyalbum_option[0]) && $cpi_buyalbum_option[0] != '')
+									if( !empty($cpi_buyalbum_option[0]) ):
 										echo '<div class="button"><a href="'.$cpi_buyalbum_option[0].'">'.__('BUY album','music-band-pro').'</a></div>';
-									if(isset($cpi_itunes_option[0]) && $cpi_itunes_option[0] != '')
+									endif;
+									
+									if( !empty($cpi_itunes_option[0]) ):
 										echo '<div class="button"><a href="'.$cpi_itunes_option[0].'">'.__('GET on itunes','music-band-pro').'</a></div>';
+									endif;	
 						}
 						echo '</div>';
 					}
 					wp_reset_postdata();
-					?>
-				
-				
-				
-				
-					<?php
+					
 					$count_posts = wp_count_posts('event');
 					if($count_posts->publish >= 3):
 						echo '<div class="widget next_event">';
@@ -354,11 +434,12 @@
 						<div class="title dark">
 							<?php _e('Next Event','music-band-pro'); ?>
 							<div class="slidernav">
-								<a href=""></a>
-								<a href=""></a>
-								<a href=""></a>
+								<a href="">1</a>
+								<a href="">2</a>
+								<a href="">3</a>
 							</div>
 						</div>
+						
 						<div class="panes">
 						<?php
 						$queryObject = new WP_Query( 'post_type=event&posts_per_page=3' );
@@ -380,7 +461,7 @@
 												if(isset($month[0]) && $month[0] != '')
 													echo '<span>'.$month[0].'</span><br />';
 											?>
-											<?php the_content(); ?>
+											<?php the_excerpt(); ?>
 										</div>
 									</div>
 									
@@ -391,9 +472,8 @@
 						?>
 						</div>
 						</div>
-						<?php endif; ?>
-				
-				<?php
+						<?php endif; 
+						
 					$queryObject = new WP_Query( 'post_type=media&posts_per_page=1' );
 					if ($queryObject->have_posts()) {
 						while ($queryObject->have_posts()) {
