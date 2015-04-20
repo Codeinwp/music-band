@@ -1,5 +1,13 @@
 
 
+### 1.0.7 - 20/04/2015
+
+ Changes: 
+
+
+ * improved update system
+
+
 ### 1.0.6 - 23/02/2015
 
  Changes: 
