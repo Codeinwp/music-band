@@ -22,3 +22,12 @@ The exceptions to this license are as follows:
  * http://flowplayer.org/tools/
  * 
  */
+ 
+ * Images	 
+	 
+	License: All unsplash.com images are licensed under the terms of the Creative Commons Zero, http://creativecommons.org/publicdomain/zero/1.0/ 	  
+	 
+		 * abovefooterbg.png
+			Source: https://download.unsplash.com/photo-1429277005502-eed8e872fe52
+		 * slideone.png
+			Source: https://download.unsplash.com/reserve/RONyPwknRQOO3ag4xf3R_Kinsey.jpg
