@@ -1,5 +1,13 @@
 
 
+### 1.0.7 - 07/07/2015
+
+ Changes: 
+
+
+ * Removed non gpl images
+
+
 ### 1.0.7 - 20/04/2015
 
  Changes: 
